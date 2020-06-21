@@ -61,6 +61,16 @@ p {
   transition: all 0.3s;
 }
 
+.sq {
+  border-radius: 0.25em;
+  width: 75px;
+  height: 75px;
+}
+
+.sq:hover {
+  color: white;
+}
+
 .btn:hover {
   color: white;
   background-color: var(--flatblue);
@@ -77,3 +87,28 @@ p {
   backdrop-filter: blur(1em);
   -webkit-backdrop-filter: blur(1em);
 }
+
+
+/* SLICK */
+.services {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 5em;
+}
+.artists {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 5em;
+}
+.brands {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 5em;
+}
+
+.slick-slide img {
+  width: 100%;
+  padding: 1em;
+  border: 0 solid #fff
+}
+/* SLICK */
