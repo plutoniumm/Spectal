@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Spectal Management</title>
 
+    <link rel="preload" href="./js/./firefetch.js" as="script">
+
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
@@ -13,7 +15,9 @@
         href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script async defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script async defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async
         defer></script>
     <script src="./js/script.min.js" async defer></script>
@@ -39,7 +43,7 @@
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
-            <ul class="nav navbar-nav justify-content-end ml-auto">
+            <ul class="nav navbar-nav justify-content-end ml-auto webonly">
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-youtube"></i></a></li>
@@ -95,41 +99,33 @@
                 </div>
             </div>
         </div>
-        <div class="services text-center">
+        <div class="services row">
             <div>
-                <div class="row">
-                    <div class="col">
-                        <img
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                        <h1>Service</h1>
-                    </div>
+                <div class="col" style="border: 3px solid green;">
+                    <img
+                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
+                    <h1 style="width: auto; text-align: center;">Service1</h1>
                 </div>
             </div>
             <div>
-                <div class="row">
-                    <div class="col">
-                        <img
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                        <h1>Service</h1>
-                    </div>
+                <div class="col">
+                    <img
+                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
+                    <h1 style="width: auto; text-align: center;">Service2</h1>
                 </div>
             </div>
             <div>
-                <div class="row">
-                    <div class="col">
-                        <img
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                        <h1>Service</h1>
-                    </div>
+                <div class="col">
+                    <img
+                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
+                    <h1 style="width: auto; text-align: center;">Service3</h1>
                 </div>
             </div>
             <div>
-                <div class="row">
-                    <div class="col">
-                        <img
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                        <h1>Service</h1>
-                    </div>
+                <div class="col">
+                    <img
+                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
+                    <h1 style="width: auto; text-align: center;">Service4</h1>
                 </div>
             </div>
         </div>
@@ -159,8 +155,8 @@
                         <div class="col-5">
                             <div class="row">
                                 <div class="col">
-                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg"
-                                        style=" height: 14.1em; width: 21.25em; object-fit: cover;">
+                                    <img
+                                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg" />
                                 </div>
                             </div>
                             <div class="row">
@@ -340,7 +336,7 @@
                     <p>These are some of the best brands that we have worked with</p>
                 </div>
             </div>
-
+        </div>
     </section>
     <section id="events">
         <div class="container">
@@ -352,7 +348,7 @@
                     <h1>Our Events</h1>
                     <p>"These are some of the best events we have done"</p>
                 </div>
-            </div>
+            </div><br>
             <div class="row txtcol text-center">
                 <div class="col d-inline-block">
                     <h1>123,760</h1>
@@ -422,17 +418,31 @@
                 </div>
             </div>
         </div>
-        <div class="container text-center" style="margin-top: 41px;max-width: 100%;">
+        <div class="container text-center" style="margin-top: 3em;max-width: 100%;">
             <div class="row">
                 <div class="col">
                     <h1>Contact Us</h1>
                 </div>
             </div>
             <div class="container">
-                <div class="row" style="margin-top: 3em;">
+                <div class="row" style="margin-top: 3em; padding-right: 1em;">
                     <div class="col">
                         <div class="row">
-                            <div class="col-4"><button class="btn sq"><i class="fab fa-facebook-f"></i></button>
+                            <div class="col-4"><button class="btn sq-min"><i class="fab fa-facebook-f"></i></button>
+                            </div>
+                            <div class="col-8">
+                                <h2>contact type</h2>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col">
+                                <h4>support@spectalmanagement.com</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-4"><button class="btn sq-min"><i class="fab fa-facebook-f"></i></button>
                             </div>
                             <div class="col-8">
                                 <h3>contact type</h3>
@@ -446,21 +456,7 @@
                     </div>
                     <div class="col">
                         <div class="row">
-                            <div class="col-4"><button class="btn sq"><i class="fab fa-facebook-f"></i></button>
-                            </div>
-                            <div class="col-8">
-                                <h3>contact type</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>support@spectalmanagement.com</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col-4"><button class="btn sq"><i class="fab fa-facebook-f"></i></button>
+                            <div class="col-4"><button class="btn sq-min"><i class="fab fa-facebook-f"></i></button>
                             </div>
                             <div class="col-8">
                                 <h3>contact type</h3>

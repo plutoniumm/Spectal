@@ -55,9 +55,9 @@ p {
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
   border: 0.1em solid var(--flatblue);
-  border-radius: 0.5em;
-  width: 200px;
-  height: 75px;
+  border-radius: 0.25em;
+  width: 10em;
+  height: 4em;
   transition: all 0.3s;
 }
 
@@ -117,6 +117,13 @@ p {
   height: 75px;
 }
 
+.sq-min {
+  border-radius: 0.25em;
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+}
+
 .sq:hover {
   color: white;
 }
@@ -134,6 +141,7 @@ p {
 
 /* SLICK */
 .services {
+  text-align: center;
   width: 90%;
   margin: 0px auto;
   margin-top: 5em;
@@ -144,9 +152,49 @@ p {
   margin-top: 5em;
 }
 .brands {
-  width: 95%;
+  width: 97.5%;
   margin: 0px auto;
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
-/* SLICK */
+.artists img{
+  height: 14.1em; 
+  width: 21.25em; 
+  object-fit: cover;
+}
+
+.services img {
+  height: 17em;
+  width: 20em;
+  object-fit: cover;
+}
+
+.brands img {
+  height: 13.5em;
+  width: 26.75em;
+  object-fit: cover;
+}
+
+
+@media only screen and (max-width: 768px) { 
+  body {
+    font-size: 12px;
+  }
+
+  .webonly {
+    display: none;
+  }
+
+  #mainNav {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+  }
+
+  video {
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+  }
+
+}
