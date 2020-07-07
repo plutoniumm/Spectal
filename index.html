@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head id="head">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Spectal Management</title>
 
-    <link rel="preload" href="./js/./firefetch.js" as="script">
+    <link rel="preload" href="./js/script.min.js" as="script">
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/styles.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="./css/styles.min.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        media="none" onload="if(media!='all')media='all'">
     <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-    <script async src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-    <script async src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" media="none"
+        onload="if(media!='all')media='all'" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        media="none" onload="if(media!='all')media='all'" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async
         defer></script>
-    <script src="./js/script.min.js" async defer></script>
+    <script async src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script async src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="./js/script.min.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js" async
         defer></script>
 </head>
@@ -73,47 +75,15 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center">Our Services.</h1>
+                    <h1 id="servsHead" class="text-center"></h1>
                 </div>
             </div>
             <div class="row" style="padding-top: 2em;">
                 <div class="col-8">
-                    <p class="text-justify">
-                        “These are some of the best artists we have worked with. These are some of the best artists we
-                        have worked with. These are brands”</p>
+                    <p id="servsPara" class="text-justify"></p>
                 </div>
                 <div class="col-4" style="text-align: right;">
                     <button class="btn">Learn More</button>
-                </div>
-            </div>
-        </div>
-        <div class="services row">
-            <div>
-                <div class="col" style="border: 3px solid green;">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <h1 style="width: auto; text-align: center;">Service1</h1>
-                </div>
-            </div>
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <h1 style="width: auto; text-align: center;">Service2</h1>
-                </div>
-            </div>
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <h1 style="width: auto; text-align: center;">Service3</h1>
-                </div>
-            </div>
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <h1 style="width: auto; text-align: center;">Service4</h1>
                 </div>
             </div>
         </div>
@@ -122,157 +92,15 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center">Our Artists.</h1>
+                    <h1 id="artsHead" class="text-center">Our Artists.</h1>
                 </div>
             </div>
             <div class="row" style="padding-top: 2em;">
                 <div class="col-8">
-                    <p class="text-justify">
-                        “These are some of the best artists we have worked with. These are some of the best artists we
-                        have worked with. These are brands”</p>
+                    <p id="artsPara" class="text-justify"></p>
                 </div>
                 <div class="col-4" style="text-align: right;">
                     <button class="btn">Learn More</button>
-                </div>
-            </div>
-        </div>
-        <div class="artists">
-            <div>
-                <div class="container">
-                    <div class="row" style="width: 80%; margin: 0 auto;">
-                        <div class="col-5">
-                            <div class="row">
-                                <div class="col">
-                                    <img
-                                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="artbtn">Learn More</button></div>
-                            </div>
-                        </div>
-                        <div class="col-7" style="background-color: rgba(255,255,255,0.15); padding: 1.5em;">
-                            <div class="row">
-                                <div class="col">
-                                    <h3>Delhi // India</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h1>The Local Train</h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p style="padding-top: 1em; font-size: 100%;">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit.
-                                        Totam, ullam.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p>
-                                        <i class="fab fa-youtube articon"></i>
-                                        <i class="fab fa-facebook-f articon"></i>
-                                        <i class="fab fa-instagram articon"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="container">
-                    <div class="row" style="width: 80%; margin: 0 auto;">
-                        <div class="col-5">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg"
-                                        style=" height: 14.1em; width: 21.25em; object-fit: cover;">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="artbtn">Learn More</button></div>
-                            </div>
-                        </div>
-                        <div class="col-7" style="background-color: rgba(255,255,255,0.15); padding: 1.5em;">
-                            <div class="row">
-                                <div class="col">
-                                    <h3>Delhi // India</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h1>The Local Train</h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p style="padding-top: 1em; font-size: 100%;">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit.
-                                        Totam, ullam.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p>
-                                        <i class="fab fa-youtube articon"></i>
-                                        <i class="fab fa-facebook-f articon"></i>
-                                        <i class="fab fa-instagram articon"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="container">
-                    <div class="row" style="width: 80%; margin: 0 auto;">
-                        <div class="col-5">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg"
-                                        style=" height: 14.1em; width: 21.25em; object-fit: cover;">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="artbtn">Learn More</button></div>
-                            </div>
-                        </div>
-                        <div class="col-7" style="background-color: rgba(255,255,255,0.15); padding: 1.5em;">
-                            <div class="row">
-                                <div class="col">
-                                    <h3>Delhi // India</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h1>The Local Train</h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p style="padding-top: 1em; font-size: 100%;">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit.
-                                        Totam, ullam.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p>
-                                        <i class="fab fa-youtube articon"></i>
-                                        <i class="fab fa-facebook-f articon"></i>
-                                        <i class="fab fa-instagram articon"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -281,47 +109,15 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center">Our Brands.</h1>
+                    <h1 id="brandsHead" class="text-center"></h1>
                 </div>
             </div>
             <div class="row" style="padding-top: 2em;">
                 <div class="col-8">
-                    <p class="text-justify">
-                        “These are some of the best artists we have worked with. These are some of the best artists we
-                        have worked with. These are brands”</p>
+                    <p id="brandsPara" class="text-justify"></p>
                 </div>
                 <div class="col-4" style="text-align: right;">
                     <button class="btn">Learn More</button>
-                </div>
-            </div>
-        </div>
-        <div class="brands">
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <p>These are some of the best brands that we have worked with</p>
-                </div>
-            </div>
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <p>These are some of the best brands that we have worked with</p>
-                </div>
-            </div>
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <p>These are some of the best brands that we have worked with</p>
-                </div>
-            </div>
-            <div>
-                <div class="col">
-                    <img
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg">
-                    <p>These are some of the best brands that we have worked with</p>
                 </div>
             </div>
         </div>
