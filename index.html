@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Spectal Management</title>
 
-    <link rel="preload" href="./js/script.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js" as="script">
+    <link rel="preload" href="./js/script.js" as="script">
 
     <link rel="stylesheet" href="./css/bootstrap.min.css" media="none" onload="if(media!='all')media='all'">
     <link rel="stylesheet" href="./css/styles.min.css" media="none" onload="if(media!='all')media='all'">
@@ -17,12 +19,14 @@
         onload="if(media!='all')media='all'" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         media="none" onload="if(media!='all')media='all'" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async
         defer></script>
     <script async src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script async src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
-    <script src="./js/script.min.js" async></script>
+    <script async defer src="./js/index.js"></script>
+    <script src="./js/script.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js" async
         defer></script>
 </head>
@@ -129,59 +133,20 @@
                     <button class="btn">Learn More</button>
                 </div>
                 <div class="col-8 text-right">
-                    <h1>Our Events</h1>
-                    <p>"These are some of the best events we have done"</p>
+                    <h1 id="evensHead"></h1>
+                    <p id="evensPara"></p>
                 </div>
             </div><br>
-            <div class="row txtcol text-center">
-                <div class="col d-inline-block">
-                    <h1>123,760</h1>
-                    <p>Counter Name</p>
-                </div>
-                <div class="col d-inline-block">
-                    <h1>123,760</h1>
-                    <p>Counter Name</p>
-                </div>
-                <div class="col d-inline-block">
-                    <h1>123,760</h1>
-                    <p>Counter Name</p>
-                </div>
-                <div class="col d-inline-block">
-                    <h1>123,760</h1>
-                    <p>Counter Name</p>
-                </div>
-            </div>
+            <div id="evensList" class="row txtcol text-center"> </div>
         </div>
-        <div class="container text-center" style="margin-top: 2em;max-width: 100%;">
+        <div id="tmonsList" class="container text-center" style="margin-top: 2em;max-width: 100%;">
             <div class="row">
                 <div class="col">
-                    <h1>Testimonials</h1>
-                    <p>What others have to say about us</p>
+                    <h1 id="tmonHead"></h1>
+                    <p id="tmonPara"></p>
                 </div>
             </div>
-            <div class="row" style="background-color: rgba(255,255,255,0.25);margin-top: 1em;height: 15em;">
-                <div class="col">
-                    <div class="container text-center">
-                        <div class="row" style="margin-top: 16px;">
-                            <div class="col">
-                                <h3 style="padding: 20px;">“Raveen bhai is the reason we can sleep
-                                    peacefully the night before the event. They form life long relationships with
-                                    people”</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <h3>Siddhesh Dalvi</h3>
-                                        <h5>Waves 2019</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="tmonList" class="row tmonials"></div>
         </div>
     </section>
     <section id="contact">
@@ -205,53 +170,11 @@
         <div class="container text-center" style="margin-top: 3em;max-width: 100%;">
             <div class="row">
                 <div class="col">
-                    <h1>Contact Us</h1>
+                    <h1 id="contHead"></h1>
                 </div>
             </div>
             <div class="container">
-                <div class="row" style="margin-top: 3em; padding-right: 1em;">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col-4"><button class="btn sq-min"><i class="fab fa-facebook-f"></i></button>
-                            </div>
-                            <div class="col-8">
-                                <h2>contact type</h2>
-                            </div>
-                        </div><br>
-                        <div class="row">
-                            <div class="col">
-                                <h4>support@spectalmanagement.com</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col-4"><button class="btn sq-min"><i class="fab fa-facebook-f"></i></button>
-                            </div>
-                            <div class="col-8">
-                                <h3>contact type</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>support@spectalmanagement.com</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col-4"><button class="btn sq-min"><i class="fab fa-facebook-f"></i></button>
-                            </div>
-                            <div class="col-8">
-                                <h3>contact type</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <h3>support@spectalmanagement.com</h3>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row" id="contList" style="margin-top: 3em; padding-right: 1em;">
                 </div>
             </div>
             <div class="modal" tabindex="-1" role="dialog">

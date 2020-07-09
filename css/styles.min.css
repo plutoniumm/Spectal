@@ -13,6 +13,7 @@ body {
   background-color: #121212;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  font-size: 16px;
 }
 
 section {
@@ -27,6 +28,10 @@ section {
 
 section:not(:first-of-type){
   padding-top: 5em;
+}
+
+section:first-of-type{
+  padding-top: 2em;
 }
 
 nav{
@@ -143,14 +148,7 @@ img {
 }
 
 
-/* SLICK */
-.services {
-  text-align: center;
-  width: 90%;
-  margin: 0px auto;
-  margin-top: 5em;
-}
-.artists {
+.artists, .services {
   width: 90%;
   margin: 0px auto;
   margin-top: 5em;
@@ -161,15 +159,9 @@ img {
   margin-top: 10em;
 }
 
-.artists img{
-  height: 14.1em; 
+.artists img, .services img{
+  height: 13em; 
   width: 21.25em; 
-  object-fit: cover;
-}
-
-.services img {
-  height: 17em;
-  width: 20em;
   object-fit: cover;
 }
 
@@ -177,6 +169,82 @@ img {
   height: 13.5em;
   width: 26.75em;
   object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.brands img:hover {
+  opacity: 0;
+  border: 1px solid white;
+  box-shadow: 0 0 0.2em white;
+  transition: all 0.3s ease;
+}
+
+.brnbtn {
+  font-size: 1.075em;
+  margin-top: 1em;
+  color: var(--flatblue);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.1em solid var(--flatblue);
+  border-radius: 0.05em;
+  transition: all 0.3s;
+  width: 25em;
+  height: 5em;
+  opacity: 0;
+}
+
+.brands .col:hover .brnbtn {
+  opacity: 1;
+}
+
+.brnbtn:hover {
+  color: white;
+  background-color: var(--flatblue);
+  background-image: var(--gradblue);
+}
+
+@keyframes slideintodms {
+  0% {
+    opacity: 0;
+    transform: translateX(10em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slidedowntodms {
+  0% {
+    opacity: 0;
+    transform: translateY(-5em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slick-active .movetext, .slick-active .movetext * {
+  animation: slideintodms 0.5s ease;
+}
+
+.artists .slick-active img, .services .slick-active img {
+  animation: slidedowntodms 0.5s ease;
+}
+
+.tmonials {
+  background-color: rgba(255,255,255,0.25);
+  margin-top: 1em;
+  height: 15em;
+}
+
+.conticons {
+  font-size: 3em;
+  padding: 1em;
+  color: var(--flatblue);
 }
 
 
