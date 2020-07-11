@@ -6,7 +6,7 @@ const firebaseConfig = {
       storageBucket: 'spectal.appspot.com',
       appId: '1:867384801306:web:79c8fa283858b0357ab9a3'
 };
-var app = firebase.initializeApp( firebaseConfig ), list = "";
+var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull;
 
 const db = firebase.firestore( app );
 const home = db.collection( 'home' );
@@ -78,10 +78,11 @@ home.doc( 'services' ).get()
 
 home.doc( 'artists' ).get()
       .then( function ( querySnapshot ) {
-            getDat( 'artsHead' ).innerHTML = querySnapshot.data().heading;
-            getDat( 'artsPara' ).innerHTML = querySnapshot.data().paragraph;
+            artsFull = querySnapshot.data();
+            getDat( 'artsHead' ).innerHTML = artsFull.heading;
+            getDat( 'artsPara' ).innerHTML = artsFull.paragraph;
             list = "";
-            querySnapshot.data().artists.forEach( artist => {
+            artsFull.artists.forEach( ( artist, index ) => {
                   list += `
                   <div class="item">
                         <div class="container">
@@ -94,7 +95,7 @@ home.doc( 'artists' ).get()
                                     </div>
                                     <div class="row">
                                           <div class="col">
-                                                <button class="artbtn">Learn More</button>
+                                                <button onclick="artsModal(${index })" type="button" class="artbtn">Learn More</button>
                                           </div>
                                     </div>
                                     </div>
@@ -200,7 +201,8 @@ home.doc( 'events' ).get()
                   </div>
                   `
             } );
-            getDat( 'evensList' ).innerHTML = list;
+            getDat( 'evensList' ).innerHTML = `${ list }`;
+            lateCall();
       } );
 
 
