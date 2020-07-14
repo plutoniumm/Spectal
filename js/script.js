@@ -112,17 +112,15 @@ home.doc( 'artists' ).get()
                                     </div>
                                     <div class="row">
                                           <div class="col">
-                                                <p style="padding-top: 1em; font-size: 100%;" class="movetext">${artist.description }</p>
+                                                <p style="padding-top: 1em; font-size: 100%;" class="movetext">${artist.description.slice( 0, 120 ) }...</p>
                                           </div>
                                     </div>
                                     <div class="row">
-                                          <div class="col">
                                                 <p>
                                                 <i class="fab fa-youtube articon"></i>
                                                 <i class="fab fa-facebook-f articon"></i>
                                                 <i class="fab fa-instagram articon"></i>
                                                 </p>
-                                          </div>
                                     </div>
                                     </div>
                               </div>
