@@ -37,8 +37,12 @@
     <link rel="preload" href="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js" as="script">
     <link rel="preload" href="./js/script.js" as="script">
 
+    <link rel="prefetch" href="./services.html" as="document">
+    <link rel="prefetch" href="./events.html" as="document">
+
     <link rel="stylesheet" href="./css/bootstrap.min.css" media="none" onload="media='all'">
-    <link rel="stylesheet" href="./css/styles.min.css" media="none" onload="media='all'">
+    <link rel="stylesheet" href="./css/styles.css" media="none" onload="media='all'">
+    <link rel="stylesheet" href="./css/nav.css" media="none" onload="media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
         media="none" onload="media='all'">
     <link rel="stylesheet" type="text/css"
@@ -47,13 +51,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         media="none" onload="media='all'" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async
         defer></script>
     <script async src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
     <script async src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
     <script async src="./js/script.js"></script>
-    <script async src="./js/index.js"></script>
     <script async defer src="./js/support.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js" async
         defer></script>
@@ -61,27 +64,29 @@
 
 <body id="page-top">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Spectal Management</a>
+        <div class="container" style="padding: 0; margin: 0 10px;">
+            <a class="navbar-brand js-scroll-trigger mr-auto ml-0" href="./index.html">Spectal
+                Management</a>
             <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                 type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
                     class="fa fa-align-justify"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav flex-grow-1 justify-content-center ml-auto">
+                <ul class="nav navbar-nav justify-content-center ml-auto mr-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#artists">Artists</a></li>
                     <li class="nav-item"><a class="nav-link" href="#brands">Brands</a></li>
                     <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./team.html">Team</a></li>
                 </ul>
             </div>
-            <ul class="nav navbar-nav justify-content-end ml-auto webonly">
+            <ul class="nav navbar-nav justify-content-end ml-auto mr-0">
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-youtube"></i></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-youtube"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -96,10 +101,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <p id="aboutPara" class="text-justify" style="margin-top: 2em;">
-                    </p>
-                </div>
+                <p id="aboutPara" class="text-justify" style="margin-top: 2em;"></p>
             </div>
         </div>
     </section>
@@ -111,12 +113,7 @@
                 </div>
             </div>
             <div class="row" style="padding-top: 2em;">
-                <div class="col-8">
-                    <p id="servsPara" class="text-justify"></p>
-                </div>
-                <div class="col-4" style="text-align: right;">
-                    <button class="btn">Learn More</button>
-                </div>
+                <p id="servsPara" class="text-justify"></p>
             </div>
         </div>
     </section>
@@ -128,12 +125,7 @@
                 </div>
             </div>
             <div class="row" style="padding-top: 2em;">
-                <div class="col-8">
-                    <p id="artsPara" class="text-justify"></p>
-                </div>
-                <div class="col-4" style="text-align: right;">
-                    <button class="btn">Learn More</button>
-                </div>
+                <p id="artsPara"></p>
             </div>
         </div>
     </section>
@@ -145,12 +137,7 @@
                 </div>
             </div>
             <div class="row" style="padding-top: 2em;">
-                <div class="col-8">
-                    <p id="brandsPara" class="text-justify"></p>
-                </div>
-                <div class="col-4" style="text-align: right;">
-                    <button class="btn">Learn More</button>
-                </div>
+                <p id="brandsPara"></p>
             </div>
         </div>
     </section>
@@ -158,14 +145,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-4" style="text-align: left;">
-                    <button class="btn">Learn More</button>
+                    <button class="btn" onclick="window.location.href = './events.html'">Learn More</button>
                 </div>
                 <div class="col-8 text-right">
                     <h1 id="evensHead"></h1>
                     <p id="evensPara"></p>
                 </div>
             </div><br>
-            <div id="evensList" class="row txtcol text-center"> </div>
+            <div id="evensList" class="row txtcol text-center"></div>
         </div>
         <div id="tmonsList" class="container text-center" style="margin-top: 2em;max-width: 100%;">
             <div class="row">
@@ -178,22 +165,9 @@
         </div>
     </section>
     <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <h4>Ready to get started?</h4>
-                            <h5>Work with us at Spectal</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col text-right">
-                    <div class="row">
-                        <div class="col"><button class="btn">Job Openings</button></div>
-                    </div>
-                </div>
-            </div>
+        <div class="container text-justify">
+            <h4>Ready to get started?</h4>
+            <h5>We're always on the lookout for great Talent. Please write to us to get started!</h5>
         </div>
         <div class="container text-center" style="margin-top: 3em;max-width: 100%;">
             <div class="row">
@@ -202,27 +176,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row" id="contList" style="margin-top: 3em; padding-right: 1em;">
-                </div>
-            </div>
-            <div class="modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Modal body text goes here.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="row" id="contList" style="margin-top: 3em; padding-right: 1em;"></div>
             </div>
         </div>
     </section>

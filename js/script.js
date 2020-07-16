@@ -1,23 +1,8 @@
-const firebaseConfig = {
-      apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc',
-      authDomain: 'spectal.firebaseapp.com',
-      databaseURL: 'https://spectal.firebaseio.com',
-      projectId: 'spectal',
-      storageBucket: 'spectal.appspot.com',
-      appId: '1:867384801306:web:79c8fa283858b0357ab9a3'
-};
+function getDat ( id ) { return document.getElementById( id ) }; const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal', storageBucket: 'spectal.appspot.com', appId: '1:867384801306:web:79c8fa283858b0357ab9a3' };
 var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull;
+const db = firebase.firestore( app ); const home = db.collection( 'home' );
 
-const db = firebase.firestore( app );
-const home = db.collection( 'home' );
-
-function getDat ( id ) { return document.getElementById( id ) };
-
-home.doc( 'about' ).get()
-      .then( function ( querySnapshot ) {
-            getDat( 'aboutHead' ).innerHTML = querySnapshot.data().heading;
-            getDat( 'aboutPara' ).innerHTML = querySnapshot.data().paragraph;
-      } );
+home.doc( 'about' ).get().then( function ( querySnapshot ) { getDat( 'aboutHead' ).innerHTML = querySnapshot.data().heading; getDat( 'aboutPara' ).innerHTML = querySnapshot.data().paragraph; } );
 
 home.doc( 'services' ).get()
       .then( function ( querySnapshot ) {
@@ -91,22 +76,14 @@ home.doc( 'artists' ).get()
                                     <div class="row">
                                           <div class="col">
                                                 <img src="${artist.image }" />
-                                          </div>
-                                    </div>
-                                    <div class="row">
-                                          <div class="col">
-                                                <button onclick="artsModal(${index })" type="button" class="artbtn">Learn More</button>
+                                                <button onclick="artsModal(${index })" type="button" class="artbtn">See More</button>
                                           </div>
                                     </div>
                                     </div>
                                     <div class="col-7" style="background-color: rgba(255,255,255,0.15); padding: 1.5em;">
                                     <div class="row">
                                           <div class="col">
-                                                <h3 class="movetext">${artist.superhead }</h3>
-                                          </div>
-                                    </div>
-                                    <div class="row">
-                                          <div class="col">
+                                                <h4 class="movetext">${artist.superhead }</h4>
                                                 <h2 class="movetext">${artist.name }</h2>
                                           </div>
                                     </div>
@@ -116,11 +93,13 @@ home.doc( 'artists' ).get()
                                           </div>
                                     </div>
                                     <div class="row">
-                                                <p>
-                                                <i class="fab fa-youtube articon"></i>
-                                                <i class="fab fa-facebook-f articon"></i>
-                                                <i class="fab fa-instagram articon"></i>
-                                                </p>
+                                          <span class="artSocShow"><i class="fab fa-facebook-f articon"></i></span>
+                                          <span class="artSocShow"><i class="fab fa-instagram articon"></i></span>
+                                          <span class="artSocShow"><i class="fab fa-twitter articon"></i></span>
+                                          <span class="artSocShow"><i class="fab fa-apple articon"></i></span>
+                                          <span class="artSocShow"><i class="fab fa-spotify articon"></i></span>
+                                          <span class="artSocShow"><i class="fab fa-amazon articon"></i></span>
+                                          <span class="artSocShow"><i class="far fa-share-square articon"></i></span>
                                     </div>
                                     </div>
                               </div>
@@ -156,7 +135,7 @@ home.doc( 'brands' ).get()
                   <div>
                         <div class="col">
                               <img src="${brand.image }" style="z-index: 3;">
-                              <div class="container" style="position: absolute; top: 0; z-index:-1; padding: 1em;">
+                              <div class="d-flex align-items-center text-center" style="width: 25em;height: 12em;position: absolute; top: 0; z-index:-1; padding: 1em;">
                               ${brand.paragraph }
                               </div>
                               <button class="brnbtn btn">Learn More</button>
@@ -165,7 +144,7 @@ home.doc( 'brands' ).get()
                   <div>
                         <div class="col">
                               <img src="${brand.image }" style="z-index: 3;">
-                              <div class="container" style="position: absolute; top: 0; z-index:-1; padding: 1em;">
+                              <div class="d-flex align-items-center text-center" style="height: 12em;position: absolute; top: 0; z-index:-1; padding: 1em;">
                               ${brand.paragraph }
                               </div>
                               <button class="brnbtn btn">Learn More</button>
@@ -178,10 +157,37 @@ home.doc( 'brands' ).get()
                   $( '.brands' ).slick( {
                         centerMode: true,
                         infinite: true,
-                        slidesToShow: 3,
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         autoplay: true,
-                        autoplaySpeed: 1000
+                        autoplaySpeed: 1000,
+                        responsive: [
+                              {
+                                    breakpoint: 1600,
+                                    settings: {
+                                          slidesToShow: 4,
+                                    }
+                              },
+                              {
+                                    breakpoint: 1400,
+                                    settings: {
+                                          slidesToShow: 3,
+                                    }
+                              },
+                              {
+                                    breakpoint: 1200,
+                                    settings: {
+                                          slidesToShow: 2,
+                                    }
+                              },
+                              {
+                                    breakpoint: 768,
+                                    settings: {
+                                          slidesToShow: 1,
+                                    }
+                              },
+
+                        ]
                   } );
             } );
       } );
@@ -239,7 +245,7 @@ home.doc( 'testimonials' ).get()
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         autoplay: true,
-                        autoplaySpeed: 1500,
+                        autoplaySpeed: 2500,
                         draggable: true,
                         dots: true,
                         fade: true,
@@ -250,17 +256,24 @@ home.doc( 'testimonials' ).get()
             } );
       } )
 
+
 home.doc( 'contact' ).get()
       .then( function ( querySnapshot ) {
-            getDat( 'contHead' ).innerHTML = querySnapshot.data().heading;
+            getDat( 'contHead' ).innerHTML = querySnapshot.data().heading + '<br><br>';
             list = "";
             querySnapshot.data().contacts.forEach( cont => {
                   list += `
-                  <div class="col">
-                        <p> <i class="conticons ${cont.icon }"></i> 
-                        <br /> ${ cont.value }</p>
+                  <div class="container">
+                        <p style="text-align: justify;"> <i class="${cont.icon }" style="padding: 0.5em;"></i> ${ cont.value }</p>
                   </div>
                   `
             } );
-            getDat( 'contList' ).innerHTML = `${ list }`
+            getDat( 'contList' ).innerHTML = `
+            <div class="col">
+                  <i class="fas fa-envelope-open-text" style="color: var(--flatblue); font-size: 10em;"></i>
+            </div>
+            <div class="col">
+                  ${ list }
+            </div>
+            `
       } );
