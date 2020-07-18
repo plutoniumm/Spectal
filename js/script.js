@@ -118,7 +118,15 @@ home.doc( 'artists' ).get()
                         fade: true,
                         infinite: true,
                         cssEase: 'ease',
-                        touchThreshold: 100
+                        touchThreshold: 100,
+                        responsive: [
+                              {
+                                    breakpoint: 768,
+                                    settings: {
+                                          arrows: false
+                                    }
+                              },
+                        ]
                   } );
             } );
       } );
@@ -130,56 +138,41 @@ home.doc( 'brands' ).get()
             list = "";
             querySnapshot.data().brands.forEach( brand => {
                   list += `
-                  <div>
-                        <div class="col">
-                              <img src="${brand.image }" style="z-index: 3;">
-                              <div class="d-flex align-items-center text-center" style="width: 25em;height: 12em;position: absolute; top: 0; z-index:-1; padding: 1em;">
-                              ${brand.paragraph }
-                              </div>
-                              <button class="brnbtn btn">Learn More</button>
-                        </div>
+            <div class="col brnFull">
+                  <div class="brnImg" style="background-image: url(${brand.image })">
                   </div>
-                  <div>
-                        <div class="col">
-                              <img src="${brand.image }" style="z-index: 3;">
-                              <div class="d-flex align-items-center text-center" style="height: 12em;position: absolute; top: 0; z-index:-1; padding: 1em;">
-                              ${brand.paragraph }
-                              </div>
-                              <button class="brnbtn btn">Learn More</button>
-                        </div>
+                  <div class="brnTex d-flex align-items-center text-center">
+                        ${brand.paragraph }
                   </div>
-                  `
+                  <button class="brnbtn btn">Learn More</button>
+            </div>
+            `
             } );
             getDat( 'brands' ).innerHTML += `<div id="brandsMain" class="brands row">${ list }</div>`;
             $( document ).ready( function () {
                   $( '.brands' ).slick( {
-                        centerMode: true,
+                        cssEase: 'linear',
+                        speed: 4500,
                         infinite: true,
-                        slidesToShow: 5,
+                        slidesToShow: 3,
                         slidesToScroll: 1,
                         autoplay: true,
-                        autoplaySpeed: 1000,
+                        autoplaySpeed: 0,
                         responsive: [
                               {
                                     breakpoint: 1600,
-                                    settings: {
-                                          slidesToShow: 4,
-                                    }
-                              },
-                              {
-                                    breakpoint: 1400,
                                     settings: {
                                           slidesToShow: 3,
                                     }
                               },
                               {
-                                    breakpoint: 1200,
+                                    breakpoint: 1400,
                                     settings: {
                                           slidesToShow: 2,
                                     }
                               },
                               {
-                                    breakpoint: 768,
+                                    breakpoint: 991,
                                     settings: {
                                           slidesToShow: 1,
                                     }
@@ -198,7 +191,7 @@ home.doc( 'events' ).get()
             querySnapshot.data().events.forEach( event => {
                   list += `
                   <div class="col d-inline-block">
-                        <h1> <span data-purecounter-end="${event.value }" class="purecounter">0</span></h1>
+                        <h1><span data-purecounter-end="${event.value }" class="purecounter">0</span></h1>
                         <p>${event.name }</p>
                   </div>
                   `
@@ -215,24 +208,10 @@ home.doc( 'testimonials' ).get()
             list = "";
             querySnapshot.data().tmons.forEach( tmon => {
                   list += `
-                  <div class="col">
-                        <div class="container text-center">
-                              <div class="row" style="margin-top: 16px;">
-                                    <div class="col">
-                                          <h3 style="padding: 20px;" class"movetext">"${tmon.paragraph }"</h3>
-                                    </div>
-                              </div>
-                              <div class="row">
-                                    <div class="col">
-                                          <div class="row">
-                                          <div class="col">
-                                                <h3 class"movetext">${tmon.name }</h3>
-                                                <h5 class"movetext">${tmon.via }</h5>
-                                          </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
+                  <div class="col text-center" style="margin-top: 16px;">
+                        <p style="padding: 20px;" class"movetext">"${tmon.paragraph }"</p>
+                        <h3 class"movetext">${tmon.name }</h3>
+                        <h5 class"movetext">${tmon.via }</h5>
                   </div>
                   `
             } )
@@ -261,17 +240,8 @@ home.doc( 'contact' ).get()
             list = "";
             querySnapshot.data().contacts.forEach( cont => {
                   list += `
-                  <div class="container">
-                        <p style="text-align: justify;"> <i class="${cont.icon }" style="padding: 0.5em;"></i> ${ cont.value }</p>
-                  </div>
+                  <p style="text-align: justify;"> <i class="${cont.icon }" style="padding: 0.5em;"></i> ${ cont.value }</p>
                   `
             } );
-            getDat( 'contList' ).innerHTML = `
-            <div class="col">
-                  <i class="fas fa-envelope-open-text" style="color: var(--flatblue); font-size: 10em;"></i>
-            </div>
-            <div class="col">
-                  ${ list }
-            </div>
-            `
+            getDat( 'contList' ).innerHTML = `${ list }`
       } );
