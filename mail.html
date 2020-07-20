@@ -9,8 +9,12 @@
 
 <body>
       <style>
+            body {
+                  background-color: #ccc;
+                  color: black;
+            }
+
             td {
-                  font-family: 'Raleway', sans-serif;
                   padding: 0 0.5em;
             }
 
@@ -28,6 +32,11 @@
 
             #nameOut {
                   font-weight: bold;
+            }
+
+            #nameOut,
+            #posOut {
+                  font-family: 'Raleway', sans-serif;
             }
 
             #copyText {
@@ -81,17 +90,17 @@
             } );
       </script>
 
-      <div style="padding: 1em; background-color: #cccccc;">
+      <div style="padding: 1em;>
             Just start Typing to change the details! <br>
-            <input placeholder="Ex. Himanshu Chowdhary" type="text" name="name" id="nameIn" onkeyup="nameSign()" />
-            <input placeholder="Ex. Part Time God" type="text" name="position" id="posIn" onkeyup="posSign()" />
-            <input placeholder="+91 98765 43210" type="text" name="number" id="numIn" onkeyup="numSign()" />
-            <button class="button" type="button" id="copyText">Select Signature</button>
+            <input placeholder=" Ex. Himanshu Chowdhary" type="text" name="name" id="nameIn" onkeyup="nameSign()" />
+      <input placeholder="Ex. Part Time God" type="text" name="position" id="posIn" onkeyup="posSign()" />
+      <input placeholder="+91 98765 43210" type="text" name="number" id="numIn" onkeyup="numSign()" />
+      <button class="button" type="button" id="copyText">Select Signature</button>
       </div>
 
       <br>
       <div id="selectThisText" style="border: 1px solid black;">
-            <table>
+            <table style="background-color: white;">
                   <tr>
                         <td rowspan="5"><img src="https://plutoniumblast.github.io/spectalmgmt/assets/Spectal.png"
                                     width="100px" height="auto" alt="Logo"></td>
