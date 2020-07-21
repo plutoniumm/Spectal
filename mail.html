@@ -60,11 +60,11 @@
             var signs = JSON.parse( '[{"img":"/assets/signs/akriti.png"},{"img":"/assets/signs/chow.png"},{"img":"/assets/signs/riddhi.png"},{"img":"/assets/signs/urvi.png"},{"img":"/assets/signs/diksha.png"}]' );
 
             function Obs( signs ) {
-                  return `<div id="${ signs.img.slice( 14 ) }" style="border:1px solid black;"><table CELLSPACING=0 style="padding: 0.5em;">
+                  return `<div id="${ signs.img.slice( 14 ) }" style="border:1px solid black;"><table CELLSPACING=0>
                         <tr><td rowspan="3"><img src="https://plutoniumblast.github.io/spectalmgmt/assets/Spectal.png" width="100px" height="auto" alt="Logo"></td></tr>
-                        <tr><td>
+                        <tr><td style="padding-top:0.5em;">
                               <a href="https://www.spectalmanagement.com"><img width="200px" src="https://plutoniumblast.github.io/spectalmgmt${signs.img }"></td></tr></a>
-                        <tr><td>
+                        <tr><td style="padding-bottom:0.5em;">
                         <a href="https://www.instagram.com/spectal.management/?hl=en"><img class="icon"
                                     src="https://plutoniumblast.github.io/spectalmgmt/assets/insta.png"
                                     alt=""></a>
