@@ -51,34 +51,33 @@
                         selection.addRange( range );
                   }
             }
-            $( function () {
-                  $( '#copyText' ).click( function () { SelectText( 'selectThisText' ); } );
-                  $( '#selectThisText' ).click( function () { SelectText( 'selectThisText' ); } );
-            } );
       </script>
 
 
       <div id="cordis"></div>
 
       <script defer>
-            var signs = JSON.parse( '[{"img":"./assets/signs/akriti.png"},{"img":"./assets/signs/chow.png"},{"img":"./assets/signs/riddhi.png"},{"img":"./assets/signs/urvi.png"},{"img":"./assets/signs/diksha.png"}]' );
+            var signs = JSON.parse( '[{"img":"/assets/signs/akriti.png"},{"img":"/assets/signs/chow.png"},{"img":"/assets/signs/riddhi.png"},{"img":"/assets/signs/urvi.png"},{"img":"/assets/signs/diksha.png"}]' );
 
             function Obs( signs ) {
-                  return `<div id="selectThisText" style="border:1px solid black;"><table CELLSPACING=0 style="padding: 0.5em;">
+                  return `<div id="${ signs.img.slice( 14 ) }" style="border:1px solid black;"><table CELLSPACING=0 style="padding: 0.5em;">
                         <tr><td rowspan="3"><img src="https://plutoniumblast.github.io/spectalmgmt/assets/Spectal.png" width="100px" height="auto" alt="Logo"></td></tr>
-                        <tr><td><img width="200px" src="${signs.img }"></td></tr>
                         <tr><td>
-                        <a href=""><img class="icon"
+                              <a href="https://www.spectalmanagement.com"><img width="200px" src="https://plutoniumblast.github.io/spectalmgmt${signs.img }"></td></tr></a>
+                        <tr><td>
+                        <a href="https://www.instagram.com/spectal.management/?hl=en"><img class="icon"
                                     src="https://plutoniumblast.github.io/spectalmgmt/assets/insta.png"
                                     alt=""></a>
-                        <a href=""><img class="icon"
+                        <a href="https://m.facebook.com/spectalmanagement/"><img class="icon"
                                     src="https://plutoniumblast.github.io/spectalmgmt/assets/face.png" alt=""></a>
-                        <a href=""><img class="icon"
+                        <a href="https://twitter.com/spectalmngmnt"><img class="icon"
                                     src="https://plutoniumblast.github.io/spectalmgmt/assets/twt.png" alt=""></a>
-                        <a href=""><img class="icon"
+                        <a href="https://www.linkedin.com/company/spectal-talent-management"><img class="icon"
                                     src="https://plutoniumblast.github.io/spectalmgmt/assets/in.png" alt=""></a>
                         </td></tr>
-                  </table></div><br>`};
+                  </table></div><br>
+                  <button onclick="SelectText('${ signs.img.slice( 14 ) }')"> Select ${ signs.img.slice( 14 ).slice( 0, -4 ) }</button>
+                  `};
             document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
       </script>
 </body>
