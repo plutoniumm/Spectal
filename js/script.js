@@ -97,7 +97,7 @@ home.doc( 'artists' ).get()
                                           <span class="artSocShow"><i class="fab fa-apple articon"></i></span>
                                           <span class="artSocShow"><i class="fab fa-spotify articon"></i></span>
                                           <span class="artSocShow"><i class="fab fa-amazon articon"></i></span>
-                                          <span class="artSocShow"><i class="far fa-share-square articon"></i></span>
+                                          <span class="artSocShow"><i class="fas fa-globe articon"></i></span>
                                     </div>
                                     </div>
                               </div>
