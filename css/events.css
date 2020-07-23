@@ -19,7 +19,6 @@ backdrop-filter: blur(0.5em);
 section {
 width: 100vw;
 height: 100vh;
-padding-top: 5em;
 overflow-x: hidden;
 text-align: center;
 align-items: center;
@@ -47,4 +46,9 @@ filter: grayscale(0%);
 backdrop-filter: blur(0.2em) grayscale(10%);
 -webkit-backdrop-filter: blur(0.2em) grayscale(10%);
 color: white;
+}
+@media only screen and (max-width:991px){
+.typeImg {
+width: 33vw;
+}
 }
