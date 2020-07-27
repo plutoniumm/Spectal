@@ -1,6 +1,5 @@
 const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal', storageBucket: 'spectal.appspot.com', appId: '1:867384801306:web:79c8fa283858b0357ab9a3' }; var app = firebase.initializeApp( firebaseConfig ), evenList = ''; const db = firebase.firestore( app ); const home = db.collection( 'home' ); function getDat ( id ) { return document.getElementById( id ) };
 
-
 db.collection( 'details' ).doc( 'events' ).get()
       .then( function ( querySnapshot ) {
             evenList = querySnapshot.data().list
@@ -25,7 +24,9 @@ function evnDeet ( index = 0 ) {
             </div>
       </div>
       `
+      getDat( 'evnDeets' ).style.display = 'block';
       getDat( 'evnDeets' ).innerHTML = proto;
+      window.location.href = '#evnDeets'
 }
 
 home.doc( 'events' ).get()
@@ -46,7 +47,7 @@ home.doc( 'events' ).get()
                         slidesToScroll: 1,
                         autoplay: true,
                         arrows: false,
-                        dots: true,
+                        dots: false,
                         pauseOnHover: false,
                         autoplaySpeed: 1000,
                         responsive: [
