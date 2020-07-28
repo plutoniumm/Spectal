@@ -15,8 +15,10 @@ home.doc( 'team' ).collection( 'people' ).get().then(
                   getDat( 'team' ).innerHTML += `
                   <div class="imgbox">
                         <img class="image" src="${doc.data().image }" />
-                        <div class="text">
-                              ${doc.data().name }
+                        <div class="inbox">
+                              <h1>${doc.data().name }</h1> 
+                              <hr class="hr">
+                              <h4>${doc.data().description }</h4>
                         </div>
                   </div>
                   `

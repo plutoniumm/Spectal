@@ -27,37 +27,51 @@ body {
       border: 0;
       border-radius: 1em;
       margin: 0.5em;
-      width: 350px;
-      height: 350px;
+      width: 20em;
+      height: 20em;
 }
 
 .image {
+      border-radius: 1em;
       object-fit: cover;
   opacity: 1;
   display: block;
   width: 100%;
-  height: 300px;
+  height: 100%;
   transition: 0.3s ease;
   backface-visibility: hidden;
 }
 
-.imgbox:hover .text {
+.imgbox:hover .inbox {
   opacity: 1;
 }
 
-.text {
+.inbox {
+      border-radius: 1em;
       backdrop-filter: blur(1em);
       -webkit-backdrop-filter: blur(1em);
       -moz-backdrop-filter: blur(1em);
       width: 100%;
       height: 100%;
-  transition: 0.3s ease;
-  opacity: 0;
-  top: 0;
-  position: absolute;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1em;
+      transition: 0.3s ease;
+      opacity: 0;
+      top: 0;
+      position: absolute;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 6em 1em;
+}
+
+.hr {
+      max-width: 100%;
+      height: 3px;
+      text-align: center;
+      width: 90%;
+      margin: 10px 5%;
+      text-align: center;
+      border-radius: 3px;
+      border: 1px solid #378B89;
+      background-color: #5FB1AF;
 }
 

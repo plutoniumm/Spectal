@@ -32,7 +32,7 @@ home.doc( 'services' ).get()
                                           </div>
                                           <div class="row">
                                                 <div class="col">
-                                                      <button class="artbtn">Learn More</button>
+                                                      <button class="artbtn" onclick="window.location.href='../services.html'">Learn More</button>
                                                 </div>
                                           </div>
                                     </div>
