@@ -11,7 +11,7 @@ home.doc( 'services' ).get()
                   list += `
                   <div class="item">
                         <div class="container">
-                              <div class="row" style="width: 80%; margin: 0 auto;">
+                              <div class="row" style="width:80%; margin:0 auto;">
                                     <div class="col-5">
                                           <div class="row">
                                                 <div class="col">
@@ -19,7 +19,7 @@ home.doc( 'services' ).get()
                                                 </div>
                                           </div>
                                     </div>
-                                    <div class="col-7" style="background-color: rgba(255,255,255,0.15); padding: 1.5em;">
+                                    <div class="col-7" style="background-color:rgba(255,255,255,0.15); padding:1.5em;">
                                           <div class="row">
                                                 <div class="col">
                                                       <h2 class="movetext">${service.name }</h2>
@@ -27,7 +27,7 @@ home.doc( 'services' ).get()
                                           </div>
                                           <div class="row">
                                                 <div class="col">
-                                                      <p style="padding-top: 1em; font-size: 100%;" class="movetext">${service.description }</p>
+                                                      <p style="padding-top:1em; font-size:100%;" class="movetext">${service.description }</p>
                                                 </div>
                                           </div>
                                     </div>
@@ -58,6 +58,69 @@ function artModal ( id ) {
       home.doc( 'artists' ).collection( 'artists' ).doc( id ).get().then(
             function ( q ) {
                   console.log( q.data() );
+                  m = q.data();
+                  photos = ``; events = ``;
+                  m.images.forEach( image => {
+                        photos += `
+                        <div class="item">
+                              <img src="${image }" style="width:100%; max-height:225px; object-fit:cover;"/>
+                        </div>
+            ` } );
+                  m.events.forEach( event => { events += `<div class="row" style="padding:0.5em 1.5em; font-size:1.25em;">${ event }</div>` } );
+                  getDat( 'artistModal' ).innerHTML = `
+                  <div class="modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                              <div class="modal-header">
+                              <h2 class="modal-title">${m.name }</h2>
+                              <button type="button" class="close" onclick="$( '#artistModal' ).modal( 'toggle' );">
+                                    &times;
+                              </button>
+                              </div>
+                              <div class="modal-body">
+                                    <img class="modalArtist" src="${m.image }" alt="${ m.name }"/><br>
+                                    ${m.description } <br>
+                                    <div class="row" style="padding-top:0.5em;">
+                                          <div class="col-7 artistPics">
+                                          ${photos }
+                                          </div>
+                                          <div class="col-5 artistShows" style="padding:0 0.5em;">
+                                          ${events }
+                                          </div>
+                                    </div>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube-nocookie.com/embed/${m.video.split( '=' )[ 1 ] }" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="filter:grayscale(100%);"></iframe>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  `
+                  $( '#artistModal' ).modal( 'toggle' );
+                  $( document ).ready( function () {
+                        $( '.artistPics' ).slick( {
+                              slidesToShow: 1,
+                              arrows: false,
+                              slidesToScroll: 1,
+                              autoplay: true,
+                              autoplaySpeed: 1000,
+                              draggable: true,
+                              dots: true,
+                              infinite: true,
+                              touchThreshold: 100
+                        } );
+                  } );
+                  $( document ).ready( function () {
+                        $( '.artistShows' ).slick( {
+                              arrows: false,
+                              slidesToShow: 4,
+                              vertical: true,
+                              slidesToScroll: 1,
+                              autoplay: true,
+                              autoplaySpeed: 1000,
+                              draggable: true,
+                              dots: true,
+                              touchThreshold: 100
+                        } );
+                  } );
             } );
 }
 
@@ -74,7 +137,7 @@ home.doc( 'artists' ).get()
                               list += `
                   <div class="item">
                         <div class="artCont">
-                              <div class="row" style="margin: 0 auto;">
+                              <div class="row" style="margin:0 auto;">
                                     <div class="col-5">
                                           <div class="row">
                                                 <div class="col">
@@ -83,7 +146,7 @@ home.doc( 'artists' ).get()
                                                 </div>
                                           </div>
                                     </div>
-                                    <div class="col-7 blur" style="background-color: rgba(255,255,255,0.15); padding: 1.5em;">
+                                    <div class="col-7 blur" style="background-color:rgba(255,255,255,0.15); padding:1.5em;">
                                           <div class="row">
                                                 <div class="col">
                                                       <h2 class="movetext">${artist.name }</h2>
@@ -91,7 +154,7 @@ home.doc( 'artists' ).get()
                                           </div>
                                           <div class="row">
                                                 <div class="col">
-                                                      <p style="padding-top: 1em; font-size: 115%;" class="movetext">${artist.description.slice( 0, 160 ) }...</p>
+                                                      <p style="padding-top:1em; font-size:115%;" class="movetext">${artist.description.slice( 0, 160 ) }...</p>
                                                 </div>
                                           </div>
                                           <div class="row">
@@ -145,7 +208,7 @@ home.doc( 'brands' ).get()
             q.data().brands.forEach( brand => {
                   list += `
             <div class="col brnFull">
-                  <div class="brnImg" style="background-image: url(${brand.image })">
+                  <div class="brnImg" style="background-image:url(${brand.image })">
                   </div>
                   <div class="brnTex d-flex align-items-center text-center">
                         ${brand.description }
@@ -189,22 +252,15 @@ home.doc( 'brands' ).get()
             } );
       } );
 
-home.doc( 'events' ).get()
-      .then( function ( q ) {
-            getDat( 'evensHead' ).innerHTML = q.data().heading;
-            getDat( 'evensPara' ).innerHTML = q.data().paragraph;
-            list = "";
-            q.data().events.forEach( event => {
-                  list += `
-                  <div class="col d-inline-block">
-                        <h1><span data-purecounter-end="${event.value }" class="purecounter">0</span></h1>
-                        <p>${event.name }</p>
-                  </div>
-                  `
-            } );
-            getDat( 'evensList' ).innerHTML = `${ list }`;
-            lateCall();
-      } );
+home.doc( 'events' ).get().then( function ( q ) {
+      getDat( 'evensHead' ).innerHTML = q.data().heading; getDat( 'evensPara' ).innerHTML = q.data().paragraph; list = ""; q.data().events.forEach( event => {
+            list +=
+                  `<div class="col d-inline-block">
+                        <h1><span data-purecounter-end="${ event.value }" class="purecounter">0</span></h1>
+                        <p>${ event.name }</p>
+                  </div>`
+      } ); getDat( 'evensList' ).innerHTML = `${ list }`; lateCall();
+} );
 
 
 home.doc( 'testimonials' ).get()
@@ -214,8 +270,8 @@ home.doc( 'testimonials' ).get()
             list = "";
             q.data().tmons.forEach( tmon => {
                   list += `
-                  <div class="col text-center" style="margin-top: 16px;">
-                        <p style="padding: 20px;" class"movetext">"${tmon.paragraph }"</p>
+                  <div class="col text-center" style="margin-top:16px;">
+                        <p style="padding:20px;" class"movetext">"${tmon.paragraph }"</p>
                         <h3 class"movetext">${tmon.name }</h3>
                         <h5 class"movetext">${tmon.via }</h5>
                   </div>
@@ -240,14 +296,4 @@ home.doc( 'testimonials' ).get()
       } )
 
 
-home.doc( 'contact' ).get()
-      .then( function ( q ) {
-            getDat( 'contHead' ).innerHTML = q.data().heading + '<br><br>';
-            list = "";
-            q.data().contacts.forEach( cont => {
-                  list += `
-                  <p style="text-align: justify;"> <i class="${cont.icon }" style="padding: 0.5em;"></i> ${ cont.value }</p>
-                  `
-            } );
-            getDat( 'contList' ).innerHTML = `${ list }`
-      } );
+home.doc( 'contact' ).get().then( function ( q ) { getDat( 'contHead' ).innerHTML = q.data().heading + '<br><br>'; list = ""; q.data().contacts.forEach( cont => { list += `<p style="text-align:justify;"><i class="${ cont.icon }" style="padding:0.5em;"></i>${ cont.value }</p>` } ); getDat( 'contList' ).innerHTML = `${ list }` } );
