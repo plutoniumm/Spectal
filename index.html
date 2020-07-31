@@ -63,10 +63,10 @@
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top blur" id="mainNav">
         <div class="container w-100">
             <a class="navbar-brand js-scroll-trigger" href="./index.html">
-                <img src="./assets/logo.png" alt="Spectal" style="max-height: 1.5em; padding-right: 6em;">
+                <img src="./assets/logo.png" alt="Spectal" style="max-height: 1.75em; padding-right: 6em;">
             </a>
             <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                 type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
@@ -75,10 +75,14 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#artists">Artists</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#brands">Brands</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="dropdown nav-item">
+                        <a class="nav-link" href="javascript:void(0)" class="dropbtn">Services</a>
+                        <div class="dropdown-content blur">
+                            <a class="nav-link" href="#artists">&nbsp;Artists</a>
+                            <a class="nav-link" href="#brands">&nbsp;Brands</a>
+                            <a class="nav-link" href="#events">&nbsp;Event</a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="./team.html">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -126,7 +130,13 @@
             </div>
         </div>
     </section>
-    <section id="artists">
+    <section id="artists"
+        style="background-image:url(https://whataftercollege.com/wp-content/uploads/2019/03/Cover-image-5-1024x535.jpg); background-repeat: no-repeat; background-size: cover;">
+        <div id="modals">
+            <div class="modal fade" id="artistModal" tabindex="-1" role="dialog" aria-labelledby="artistModal"
+                aria-hidden="true">
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -135,13 +145,13 @@
             </div>
             <div class="row" style="padding-top: 2em;">
                 <div class="col">
-                    <p id="artsPara"></p>
+                    <p id="artsPara" class="text-center"></p>
                 </div>
             </div>
         </div>
     </section>
     <section id="brands">
-        <div class="container">
+        <div class="container blur">
             <div class="row">
                 <div class="col">
                     <h1 id="brandsHead" class="text-center"></h1>
@@ -155,27 +165,18 @@
         </div>
     </section>
     <section id="events">
-        <div class="container">
+        <div class="container blur">
             <div class="row">
-                <div class="col-4" style="text-align: left;">
-                    <button class="btn" onclick="window.location.href = './events.html'">Learn More</button>
-                </div>
-                <div class="col-1"></div>
-                <div class="col-7 text-right">
+                <div class="col-7 text-left">
                     <h1 id="evensHead"></h1>
                     <p id="evensPara"></p>
                 </div>
-            </div><br>
-            <div id="evensList" class="row txtcol text-center"></div>
-        </div>
-        <div id="tmonsList" class="container text-center" style="margin-top: 2em;max-width: 100%;">
-            <div class="row">
-                <div class="col">
-                    <h1 id="tmonHead"></h1>
-                    <p id="tmonPara"></p>
+                <div class="col-1"></div>
+                <div class="col-4" style="text-align: right;">
+                    <button class="btn" onclick="window.location.href = './events.html'">Learn More</button>
                 </div>
-            </div>
-            <div id="tmonList" class="row tmonials"></div>
+            </div><br>
+            <div id="evensList" class="row blur txtcol text-center"></div>
         </div>
     </section>
     <section id="contact">
@@ -200,12 +201,17 @@
             </div>
         </div>
     </section>
-    <div id="modals">
-        <div class="modal fade" id="artistModal" tabindex="-1" role="dialog" aria-labelledby="artistModal"
-            aria-hidden="true">
+    <section>
+        <div id="tmonsList" class="container text-center" style="margin-top: 2em;max-width: 100%;">
+            <div class="row">
+                <div class="col">
+                    <h1 id="tmonHead"></h1>
+                    <p id="tmonPara"></p>
+                </div>
+            </div>
+            <div id="tmonList" class="row tmonials"></div>
         </div>
-    </div>
-    A &#9762; project.
+    </section>
 </body>
 
 </html>
