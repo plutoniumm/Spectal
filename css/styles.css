@@ -9,7 +9,7 @@ max-height:100vh;
 }
 h1{font-size:2.75em;}
 .nav-item{
-	color: teal !important;
+color: teal !important;
 display:inline-block;
 }
 hr{
@@ -71,47 +71,20 @@ width:100%;
 filter:grayscale(100%);
 object-fit:cover;
 }
-.brnFull{
-width: 100%;
-margin: 0 1px;
-padding: 0;
-transition:all 0.3s;
+.card {
+margin: 0.1em 0.25em;
+width: 18rem;
+height:20em;
+border:0;padding:0;
+border-radius: 0;
+color: black;
 }
-.brnTex {
-position: absolute;
-top: 7em;
-z-index: 0;
-width: 100%;
-opacity: 0;
-}
-.brnbtn{
-font-size:1.075em;
-margin:0.5em 0;
-width:100% !important;
-opacity:0;
-}
-.brnImg {
-z-index: 0;
-filter: grayscale(100%);
-width: 100%;
-height: 15em;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-}
-.brnFull:hover .brnbtn, .brnFull:hover .brnTex{
-opacity: 1;
-transition:all 0.3s;
-}
-.brnFull:hover .brnImg{
-opacity: 0;
-transition:all 0.3s;
-}
-.brnbtn:hover{
-color:white;
-background-color:var(--flatblue);
-background-image:var(--gradblue);
-}
+.card *{transition: all 0.3s;}
+.card-img-overlay{height: 12em;}
+.card-img-top{height: 12em;object-fit: cover;}
+.card:hover .card-img-overlay{background-color: rgba(0, 0, 0, 0) !important;}
+.card:hover .card-img-top{filter: grayscale(0%);}
+.card-body{height: 5em;}
 @keyframes slideintodms{
 0%{
 opacity:0;
@@ -202,7 +175,25 @@ width:100%;
 padding:0 10%;
 }
 .artists .slick-prev:before {
-   display:none;
+display:none;
+}
+.Merchbtn {
+color: var(--flatblue);
+text-align: center;
+margin: 0 1em;
+align-items: center;
+background-color: rgba(0, 0, 0, 0);
+border: 0.1em solid var(--flatblue);
+border-radius: 0.25em;
+width: 7em;
+height: 3em;
+transition: all 0.3s;
+}
+.Merchbtn:hover {
+color: white;
+background-color: var(--flatblue);
+background-image: var(--gradblue);
+transition: all 0.3s;
 }
 
 

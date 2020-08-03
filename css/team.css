@@ -7,61 +7,14 @@ color: white;
 padding: 1em;
 padding-top: 5em;
 }
-#founder img{
-max-width: 80%;
-height: auto;
-border-radius: 1em;
-}
 #team {
 display: flex;
 flex-wrap: wrap;
-padding: 1em;
+padding: 0.5em;
 }
-.imgbox {
-position: relative;
-border: 0;
-border-radius: 1em;
-margin: 0.5em;
-width: 20em;
-height: 20em;
-}
-.image {
-border-radius: 1em;
-object-fit: cover;
-opacity: 1;
-display: block;
-width: 100%;
-height: 100%;
-transition: 0.3s ease;
-backface-visibility: hidden;
-}
-.imgbox:hover .inbox {
-opacity: 1;
-}
-.inbox {
-border-radius: 1em;
-backdrop-filter: blur(1em);
--webkit-backdrop-filter: blur(1em);
--moz-backdrop-filter: blur(1em);
-width: 100%;
-height: 100%;
-transition: 0.3s ease;
-opacity: 0;
-top: 0;
-position: absolute;
-text-align: center;
-background-color: rgba(0, 0, 0, 0.5);
-color: white;
-padding: 6em 1em;
-}
-.hr {
-max-width: 100%;
-height: 3px;
-text-align: center;
-width: 90%;
-margin: 10px 5%;
-text-align: center;
-border-radius: 3px;
-border: 1px solid #378B89;
-background-color: #5FB1AF;
-}
+.card{border: 0;padding: 0;margin: 10px;}
+.card img{object-fit: cover;}
+.card *{transition: all 0.5s ease;}
+.card:hover *{transition: all 0.5s ease;}
+.card:hover .card-img-overlay{transform: translateY(10em);opacity:0;}
+.card:hover img{filter: grayscale(0%);}

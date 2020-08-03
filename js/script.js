@@ -72,6 +72,7 @@ function artModal ( id ) {
                         <div class="modal-content">
                               <div class="modal-header">
                               <h2 class="modal-title">${m.name }</h2>
+                              <button class="Merchbtn">Get Merch</button>
                               <button type="button" class="close" onclick="$( '#artistModal' ).modal( 'toggle' );">
                                     &times;
                               </button>
@@ -165,6 +166,7 @@ home.doc( 'artists' ).get()
                                                 <span class="artSocShow"><i class="fab fa-apple articon"></i></span>
                                                 <span class="artSocShow"><i class="fab fa-spotify articon"></i></span>
                                                 <span class="artSocShow"><i class="fab fa-amazon articon"></i></span>
+                                                <span class="artSocShow"><i class="fas fa-tshirt articon"></i></span>
                                           </div>
                                     </div>
                               </div>
@@ -205,28 +207,25 @@ home.doc( 'brands' ).get()
             getDat( 'brandsHead' ).innerHTML = q.data().heading;
             getDat( 'brandsPara' ).innerHTML = q.data().paragraph;
             list = "";
-            q.data().brands.forEach( brand => {
+            q.data().brands.forEach( b => {
                   list += `
-            <div class="col brnFull">
-                  <div class="brnImg" style="background-image:url(${brand.image })">
+                  <div class="card">
+                        <img class="card-img-top" src="${b.image }" alt="Card image cap">
+                        <div class="card-img-overlay" style="background-color:${b.color };mix-blend-mode:multiply;"></div>
+                        <div class="card-body">
+                              <p class="card-text">${b.description }</p>
+                        </div>
                   </div>
-                  <div class="brnTex d-flex align-items-center text-center">
-                        ${brand.description }
-                  </div>
-                  <button class="brnbtn btn">Learn More</button>
-            </div>
             `
             } );
             getDat( 'brands' ).innerHTML += `<div id="brandsMain" class="brands row">${ list }</div>`;
             $( document ).ready( function () {
                   $( '.brands' ).slick( {
                         cssEase: 'linear',
-                        speed: 4500,
+                        speed: 500,
                         infinite: true,
-                        slidesToShow: 3,
+                        slidesToShow: 4,
                         slidesToScroll: 1,
-                        autoplay: true,
-                        autoplaySpeed: 0,
                         responsive: [
                               {
                                     breakpoint: 1600,
@@ -262,7 +261,6 @@ home.doc( 'events' ).get().then( function ( q ) {
       } ); getDat( 'evensList' ).innerHTML = `${ list }`; lateCall();
 } );
 
-
 home.doc( 'testimonials' ).get()
       .then( function ( q ) {
             getDat( 'tmonHead' ).innerHTML = q.data().heading;
@@ -293,7 +291,6 @@ home.doc( 'testimonials' ).get()
                   } );
             } );
       } )
-
 
 home.doc( 'contact' ).get().then( function ( q ) { getDat( 'contHead' ).innerHTML = q.data().heading + '<br><br>'; list = ""; q.data().contacts.forEach( cont => { list += `<p style="text-align:justify;"><i class="${ cont.icon }" style="padding:0.5em;"></i>${ cont.value }</p>` } ); getDat( 'contList' ).innerHTML = `${ list }` } );
 

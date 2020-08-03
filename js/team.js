@@ -8,18 +8,26 @@ home.doc( 'team' ).get()
             <div class="col-6"><h1>${ team.name }</h1><p>${ team.description }.${ team.description }.${ team.description }</p></div>`;
       } );
 
+function wi () {
+      w = window.innerWidth;
+      if ( w > 1400 ) return ( w / 4 - 50 )
+      if ( w > 991 && w < 1400 ) return ( w / 3 - 50 )
+      if ( w > 600 && w < 991 ) return ( w / 2 - 25 )
+      if ( w < 600 ) return ( w - 25 )
+}
+
 home.doc( 'team' ).collection( 'people' ).get().then(
       function ( querySnapshot ) {
             querySnapshot.forEach( function ( doc ) {
                   console.log( doc.data() );
                   getDat( 'team' ).innerHTML += `
-                  <div class="imgbox">
-                        <img class="image" src="${doc.data().image }" />
-                        <div class="inbox">
-                              <h1>${doc.data().name }</h1> 
-                              <hr class="hr">
-                              <h4>${doc.data().description }</h4>
+                  <div>
+                        <div class="card" style="width:${wi() }px;height:${ wi() }px;">
+                              <img class="card-img" src="${doc.data().image }" alt="Card image" style="width:${ wi() }px;height:${ wi() }px;object-fit:cover;">
+                              <div class="card-img-overlay" style="background-color:${doc.data().color };mix-blend-mode:multiply;"></div>
                         </div>
+                        <h4>${doc.data().name }</h4> 
+                        <p>${doc.data().description }</p>
                   </div>
                   `
             } );
