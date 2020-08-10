@@ -62,6 +62,10 @@ img {
   padding: 0.5em 0.5em;
   color: #378B89;
 }
+.navicon:hover {
+  transition: color 0.3s ease;
+  color: white;
+}
 .navbar{
   -webkit-backdrop-filter: grayscale(100%) blur(1em);
   -moz-backdrop-filter: grayscale(100%) blur(1em);
@@ -77,18 +81,20 @@ img {
   -webkit-backdrop-filter: blur(1em) grayscale(100%);
   -moz-backdrop-filter: blur(1em) grayscale(100%);
   background-color: rgba(0, 0, 0, 0);
-  width: 100vw;
-  left: 0;
+  width: 7em;
   z-index: 1;
 }
 .dropdown-content a {
   color: #378B89; 
-  padding: 0.75em 1em;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding: 0.75em 14em;
   text-decoration: none;
   display: block;
   text-align: center;
 }
-.dropdown-content a:hover {background-color: rgba(255, 255, 255, 1); transition: all 0.3s ease;}
+.dropdown-content a:hover {color: white !important; transition: color 0.3s ease;}
 .dropdown:hover .dropdown-content, .dropdown-content:hover {
   transition: all 0.3s ease;
   display: block;
