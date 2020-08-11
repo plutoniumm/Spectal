@@ -1,14 +1,6 @@
 :root {--flatblue: #378B89;--gradblue: linear-gradient(to bottom,#378B89, #5FB1AF, #378B89);}* {margin: 0;padding: 0;}
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: #121212;
-  font-size: 16px;
-}
-.blur {
-  backdrop-filter: blur(1em);
-  -webkit-backdrop-filter: blur(1em);
-  -moz-backdrop-filter: blur(1em);
-}
+body {font-family: Helvetica, Arial, sans-serif;background-color: #121212;font-size: 16px;}
+.blur {backdrop-filter: blur(1em);-webkit-backdrop-filter: blur(1em);-moz-backdrop-filter: blur(1em);}
 section {
   margin: 0;
   padding: 0;
@@ -51,26 +43,15 @@ img {
   height: 3em;
   margin-right: 1em;
 }
-.sq:hover {
-  color: white;
-}
-.txtcol {
-  color: var(--gradblue);
-}
+.sq:hover {color: white;}
+.txtcol {color: var(--gradblue);}
 .navicon {
   display: inline-block;
   padding: 0.5em 0.5em;
   color: #378B89;
 }
-.navicon:hover {
-  transition: color 0.3s ease;
-  color: white;
-}
-.navbar{
-  -webkit-backdrop-filter: grayscale(100%) blur(1em);
-  -moz-backdrop-filter: grayscale(100%) blur(1em);
-  backdrop-filter: grayscale(100%) blur(1em);
-}
+.navicon:hover {transition: color 0.3s ease;color: white;}
+.navbar{-webkit-backdrop-filter: grayscale(100%) blur(1em);-moz-backdrop-filter: grayscale(100%) blur(1em);backdrop-filter: grayscale(100%) blur(1em);}
 
 @media only screen and (min-width:991px){
 
