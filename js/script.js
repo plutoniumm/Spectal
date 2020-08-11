@@ -108,7 +108,7 @@ home.doc( 'artists' ).get()
                                           </div>
                                     </div>
                               </div>
-                              <div class="col-7 blur" style="background-color:rgba(255,255,255,0.15); padding:1.5em;">
+                              <div class="col-7" style="background-color:rgba(128,128,128,0.15); padding:1.5em;backdrop-filter:blur(0.1em);-webkit-backdrop-filter:blur(0.1em);-moz-backdrop-filter:blur(0.1em);">
                                     <div class="row">
                                           <div class="col">
                                                 <h2 class="movetext">${artist.name }</h2>
