@@ -151,13 +151,16 @@ background-color: var(--flatblue);
 background-image: var(--gradblue);
 transition: all 0.3s;
 }
-#team {
-display: flex;
-flex-wrap: wrap;
-padding: 0.5em;
-}
-.team{border: 0;padding: 0;margin: 10px;}.team img{object-fit: cover;}.team *{transition: all 0.5s ease;}.team:hover *{transition: all 0.5s ease;}.team:hover.team-img-overlay{transform: scaleX(0.5);opacity:0;}.team:hover img{filter: grayscale(0%);}
 .artSocShow{display: none;color: white;text-decoration: none;}
+#peeps{display: flex;flex-wrap: wrap;padding: 0 10em;}
+.teambox {position: relative;}
+.teambox *, .teambox:hover *{transition:all .5s ease;}
+.teambox img{display: block;object-fit: cover;filter: grayscale(100%);}
+.teambox .teamcol {position: absolute;top: 0;bottom: 0;left: 0;right: 0;opacity: 1;mix-blend-mode: multiply;}
+.teambox:hover .teamcol{opacity: 0;}
+.teambox:hover img{filter: grayscale(0%);}
+
+
 
 @media only screen and (max-width:991px){
 #mainNav{

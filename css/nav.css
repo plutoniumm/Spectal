@@ -9,6 +9,12 @@ section {
   max-height: 200vh;
   overflow-x: hidden;
 }
+.navbar-fixed-top.scrolled {
+  -webkit-backdrop-filter: grayscale(100%) blur(1em);
+  -moz-backdrop-filter: grayscale(100%) blur(1em);
+  backdrop-filter: grayscale(100%) blur(1em);
+  transition: background-color 200ms linear;
+}
 img {
   filter: grayscale(100%);
   max-width: 90vw;
@@ -51,7 +57,6 @@ img {
   color: #378B89;
 }
 .navicon:hover {transition: color 0.3s ease;color: white;}
-.navbar{-webkit-backdrop-filter: grayscale(100%) blur(1em);-moz-backdrop-filter: grayscale(100%) blur(1em);backdrop-filter: grayscale(100%) blur(1em);}
 
 @media only screen and (min-width:991px){
 

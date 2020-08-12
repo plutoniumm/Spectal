@@ -1,4 +1,4 @@
-function getDat ( id ) { return document.getElementById( id ) }; const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal' }; var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull; const db = firebase.firestore( app ); const home = db.collection( 'home' ); function wi () { w = window.innerWidth; if ( w > 1400 ) return ( w / 4 - 50 ); if ( w > 991 && w < 1400 ) return ( w / 3 - 50 ); if ( w > 600 && w < 991 ) return ( w / 2 - 25 ); if ( w < 600 ) return ( w - 25 ) }
+function getDat ( id ) { return document.getElementById( id ) }; const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal' }; var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull; const db = firebase.firestore( app ); const home = db.collection( 'home' ); function wi () { w = window.innerWidth; if ( w > 991 ) return ( w / 3 - 125 ); if ( w > 600 && w < 991 ) return ( w / 2 - 50 ); if ( w < 600 ) return ( w - 25 ) }
 
 home.doc( 'about' ).get().then( function ( q ) { getDat( 'aboutHead' ).innerHTML = q.data().heading; getDat( 'aboutPara' ).innerHTML = q.data().paragraph; } );
 home.doc( 'services' ).get()
@@ -131,26 +131,8 @@ home.doc( 'artists' ).get()
                         getDat( 'artists' ).innerHTML += `<div id="artsMain" class="artists slider row"> ${ list }</div> `;
                         $( document ).ready( function () {
                               $( '.artists' ).slick( {
-                                    centerMode: true,
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-                                    autoplay: true,
-                                    autoplaySpeed: 2000,
-                                    draggable: true,
-                                    dots: true,
-                                    arrows: true,
-                                    fade: true,
-                                    infinite: true,
-                                    cssEase: 'ease',
-                                    touchThreshold: 100,
-                                    responsive: [
-                                          {
-                                                breakpoint: 768,
-                                                settings: {
-                                                      arrows: false
-                                                }
-                                          },
-                                    ]
+                                    centerMode: true, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, draggable: true, dots: true, arrows: true, fade: true, infinite: true, cssEase: 'ease', touchThreshold: 100,
+                                    responsive: [ { breakpoint: 768, settings: { arrows: false } }, ]
                               } );
                         } );
                   } );
@@ -224,15 +206,15 @@ home.doc( 'contact' ).get().then( function ( q ) { getDat( 'contHead' ).innerHTM
 home.doc( 'team' ).collection( 'people' ).get().then(
       function ( querySnapshot ) {
             querySnapshot.forEach( function ( doc ) {
-                  getDat( 'team' ).innerHTML += `
-            <div>
-            <div class="team" style="width:${wi() / 1.33 }px;height:${ wi() / 1.33 }px;">
-                  <img class="team-img" src="${doc.data().image }" alt="Card image" style="width:${ wi() / 1.33 }px;height:${ wi() / 1.33 }px;object-fit:cover;">
-                        <div class="team-img-overlay" style="background-color:${doc.data().color };mix-blend-mode:multiply;"></div>
+                  getDat( 'peeps' ).innerHTML += `
+                  <div style="box-sizing:content-box;margin:0 auto;">
+                        <div class="teambox">
+                              <img src="${doc.data().image }" style="width:${ wi() }px;height:${ wi() }px;">
+                              <div class="teamcol" style="background-color: ${doc.data().color };width:${ wi() }px;height:${ wi() };px"></div>
+                        </div>
+                        <h4 style="font-weight:800;">${doc.data().name }</h4>
+                        <p style="font-weight:200;">${doc.data().description }</p>
                   </div>
-                  <h4>${doc.data().name }</h4>
-                  <p>${doc.data().description }</p>
-            </div>
       `
             } );
       } );
