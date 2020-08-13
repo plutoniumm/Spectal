@@ -55,7 +55,7 @@ margin-top:5em;
 .brands{
 width:95%;
 margin:0px auto;
-margin-top:10em;
+margin-top:4em;
 }
 .artists img,
 .services img{
@@ -86,8 +86,8 @@ color: black;
 .artists .slick-active img,.services .slick-active img{animation:slidedowntodms 0.5s ease;}
 .tmonials{
 background-color:rgba(255,255,255,0.25);
-margin-top:1em;
-height:15em;
+margin-top:3em;
+height:17em;
 }
 .conticons{
 font-size:3em;
@@ -161,6 +161,50 @@ transition: all 0.3s;
 .teambox:hover img{filter: grayscale(0%);}
 
 
+.flip-card {
+margin: 0 auto;
+  background-color: transparent;
+  width: 425px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flipper {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.flip-card-front {
+object-fit: cover;
+font-size: 2em;
+  width: 100%;
+}
+.flip-card-back {
+  background-color: #202020;
+  padding: 15% 7%;
+  color: white;
+  border-radius: 0.25em;
+  transform: rotateY(180deg);
+}
 
 @media only screen and (max-width:991px){
 #mainNav{

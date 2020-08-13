@@ -1,57 +1,57 @@
 function getDat ( id ) { return document.getElementById( id ) }; const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal' }; var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull; const db = firebase.firestore( app ); const home = db.collection( 'home' ); function wi () { w = window.innerWidth; if ( w > 991 ) return ( w / 3 - 125 ); if ( w > 600 && w < 991 ) return ( w / 2 - 50 ); if ( w < 600 ) return ( w - 25 ) }
 
 home.doc( 'about' ).get().then( function ( q ) { getDat( 'aboutHead' ).innerHTML = q.data().heading; getDat( 'aboutPara' ).innerHTML = q.data().paragraph; } );
-home.doc( 'services' ).get()
-      .then( function ( q ) {
-            getDat( 'servsHead' ).innerHTML = q.data().heading;
-            getDat( 'servsPara' ).innerHTML = q.data().paragraph;
-            list = "";
-            q.data().services.forEach( service => {
-                  list += `
-                  <div class="item">
-                        <div class="container">
-                              <div class="row" style="width:80%; margin:0 auto;">
-                                    <div class="col-5">
-                                          <div class="row">
-                                                <div class="col">
-                                                      <img src="${service.image }" />
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="col-7" style="background-color:rgba(255,255,255,0.15); padding:1.5em;">
-                                          <div class="row">
-                                                <div class="col">
-                                                      <h2 class="movetext">${service.name }</h2>
-                                                </div>
-                                          </div>
-                                          <div class="row">
-                                                <div class="col">
-                                                      <p style="padding-top:1em; font-size:100%;" class="movetext">${service.description }</p>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-                  `
-            } );
-            getDat( 'services' ).innerHTML += `<div id="servsMain" class="services slider row">${ list }</div>`;
-            $( document ).ready( function () {
-                  $( '.services' ).slick( {
-                        centerMode: true,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: true,
-                        autoplaySpeed: 2000,
-                        draggable: true,
-                        dots: true,
-                        fade: true,
-                        infinite: true,
-                        cssEase: 'ease',
-                        touchThreshold: 100
-                  } );
-            } );
-      } );
+// home.doc( 'services' ).get()
+//       .then( function ( q ) {
+//             // getDat( 'servsHead' ).innerHTML = q.data().heading;
+//             // getDat( 'servsPara' ).innerHTML = q.data().paragraph;
+//             list = "";
+//             q.data().services.forEach( service => {
+//                   list += `
+//                   <div class="item">
+//                         <div class="container">
+//                               <div class="row" style="width:80%; margin:0 auto;">
+//                                     <div class="col-5">
+//                                           <div class="row">
+//                                                 <div class="col">
+//                                                       <img src="${service.image }" />
+//                                                 </div>
+//                                           </div>
+//                                     </div>
+//                                     <div class="col-7" style="background-color:rgba(255,255,255,0.15); padding:1.5em;">
+//                                           <div class="row">
+//                                                 <div class="col">
+//                                                       <h2 class="movetext">${service.name }</h2>
+//                                                 </div>
+//                                           </div>
+//                                           <div class="row">
+//                                                 <div class="col">
+//                                                       <p style="padding-top:1em; font-size:100%;" class="movetext">${service.description }</p>
+//                                                 </div>
+//                                           </div>
+//                                     </div>
+//                               </div>
+//                         </div>
+//                   </div>
+//                   `
+//             } );
+//             getDat( 'services' ).innerHTML += `<div id="servsMain" class="services slider row">${ list }</div>`;
+//             $( document ).ready( function () {
+//                   $( '.services' ).slick( {
+//                         centerMode: true,
+//                         slidesToShow: 1,
+//                         slidesToScroll: 1,
+//                         autoplay: true,
+//                         autoplaySpeed: 2000,
+//                         draggable: true,
+//                         dots: true,
+//                         fade: true,
+//                         infinite: true,
+//                         cssEase: 'ease',
+//                         touchThreshold: 100
+//                   } );
+//             } );
+//       } );
 function artModal ( id ) {
       home.doc( 'artists' ).collection( 'artists' ).doc( id ).get().then(
             function ( q ) {
@@ -142,7 +142,7 @@ home.doc( 'brands' ).get()
             getDat( 'brandsHead' ).innerHTML = q.data().heading; getDat( 'brandsPara' ).innerHTML = q.data().paragraph; list = "";
             q.data().brands.forEach( b => {
                   list += `
-            <div class="card">
+                  <div class="card">
                   <img class="card-img-top" src="${b.image }" alt="Card image cap">
                         <div class="card-img-overlay" style="background-color:${b.color };mix-blend-mode:multiply;"></div>
                         <div class="card-body">
@@ -151,7 +151,7 @@ home.doc( 'brands' ).get()
                   </div>
       `
             } );
-            getDat( 'brands' ).innerHTML += `<div id="brandsMain" class="brands row"> ${ list }</div> `;
+            getDat( 'brands' ).innerHTML += `<div id="brandsMain" class="brands row" style="padding: 0 0.5em;"> ${ list }</div> `;
             $( document ).ready( function () {
                   $( '.brands' ).slick( {
                         cssEase: 'linear', speed: 500, infinite: true, slidesToShow: 4, slidesToScroll: 1,
@@ -189,10 +189,10 @@ home.doc( 'testimonials' ).get()
             list = "";
             q.data().tmons.forEach( tmon => {
                   list += `
-            <div class="col text-center" style="margin-top:16px;">
-                  <p style="padding:20px;" class"movetext"> "${tmon.paragraph }"</p>
-                        <h3 class"movetext"> ${ tmon.name }</h3>
-                              <h5 class"movetext"> ${ tmon.via }</h5>
+                  <div class="col text-center" style="margin-top:0.75em;">
+                        <p style="padding:1.5em;font-size:150%;" class"movetext"> "${tmon.paragraph }"</p>
+                        <h2 class"movetext"> ${ tmon.name }</h3>
+                        <h5 class"movetext"> ${ tmon.via }</h5>
                   </div>
             `
             } )

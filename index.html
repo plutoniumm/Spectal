@@ -115,15 +115,39 @@
         <div class="container" style="padding: 0.5em 0;">
             <div id="evensList" class="row blur txtcol text-center" style="padding: 0.25em 0;"></div>
         </div>
-        <div id="services">
-            <div class="row">
-                <div class="col">
-                    <h1 id="servsHead" class="text-center"></h1>
+        <div class="row" style="padding: 2em;">
+            <div class="flip-card" onclick="$('#bookings').toggleClass('flipper')">
+                <div id="bookings" class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://www.horusmusic.global/wp-content/uploads/2019/05/artist-manager.jpg"
+                            alt="Avatar" style="border-radius: 0.25em;">
+                        <span
+                            style="width: 100%; position: absolute; top: 60%;left:0;background-color: rgba(0, 0, 0, 0.75);">
+                            Bookings
+                            &#8594;</span>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolore tempore, totam
+                            tenetur
+                            quaerat rem!</p>
+                    </div>
                 </div>
             </div>
-            <div class="row" style="padding-top: 2em;">
-                <div class="col">
-                    <p id="servsPara" class="text-justify"></p>
+            <div class="flip-card" onclick="$('#production').toggleClass('flipper')">
+                <div id="production" class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://previews.123rf.com/images/navnavnav/navnavnav1501/navnavnav150100005/35416989-a-3d-illustration-of-blank-template-layout-of-empty-jazz-music-stage-stage-illuminated-by-spotlights.jpg"
+                            alt="Avatar" style="border-radius: 0.25em;">
+                        <span
+                            style="width: 100%; position: absolute; top: 60%;left:0;background-color: rgba(0, 0, 0, 0.75);">
+                            Production
+                            &#8594;</span>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolore tempore, totam
+                            tenetur
+                            quaerat rem!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,7 +163,11 @@
             <div id="tmonList" class="row tmonials"></div>
         </div>
     </section>
-    <section id="team" style="padding-top: 7.5em;">
+    <section id="team" style="padding-top: 5.5em;">
+        <div class="container" style="padding-bottom: 1em;">
+            <h1>The Team.</h1>
+            <p>The ones who make it all happen</p>
+        </div>
         <div id="peeps"></div>
     </section>
     <section id="contact" style="padding-top: 7.5em;">
