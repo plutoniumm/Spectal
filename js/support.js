@@ -1,8 +1,10 @@
 $( function () { $( document ).scroll( function () { var $nav = $( ".fixed-top" ); $nav.toggleClass( 'scrolled', $( this ).scrollTop() > $nav.height() * 5 ); } ); } );
+$( function () { $( document ).scroll( function () { var $nav = $( "#nav-dropdown" ); $nav.toggleClass( 'scrolled', $( this ).scrollTop() > $nav.height() ); } ); } );
+
 document.querySelector( '#page-top' ).innerHTML += `
 <nav class="navbar navbar-light navbar-expand-lg fixed-top navbar-fixed-top srolled" id="mainNav">
         <div class="container w-100">
-            <a class="navbar-brand js-scroll-trigger" href="./index.html">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <img src="./assets/logo.png" alt="Spectal" style="max-height: 1.5em; padding-right: 6em;">
             </a>
             <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
@@ -14,23 +16,23 @@ document.querySelector( '#page-top' ).innerHTML += `
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="dropdown nav-item">
                         <a class="nav-link" href="javascript:void(0)" class="dropbtn">Services</a>
-                        <div class="dropdown-content blur">
+                        <div id="nav-dropdown" class="dropdown-content">
                             <a class="nav-link" href="#artists">&nbsp;Artists</a>
                             <a class="nav-link" href="#brands">&nbsp;Brands</a>
                             <a class="nav-link" href="#events">&nbsp;Events</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="fb.com/spectalmanagement/"><i class="navicon fab fa-facebook-f"></i></a>
-                        <a href="instagr.am/spectal.management/"><i class="navicon fab fa-instagram"></i></a>
-                        <a href="twitter.com/spectalmngmnt"><i class="navicon fab fa-twitter"></i></a>
-                        <a href="linkedin.com/company/spectal-talent-management"><i class="navicon fab fa-linkedin-in"></i></a>
+                        <a href="https://fb.com/spectalmanagement/"><i class="navicon fab fa-facebook-f"></i></a>
+                        <a href="https://instagr.am/spectal.management/"><i class="navicon fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/spectalmngmnt"><i class="navicon fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/spectal-talent-management"><i class="navicon fab fa-linkedin-in"></i></a>
                         <a href="9876543210"><i class="navicon fab fa-whatsapp"></i></a>
                     </li>
                 </ul>

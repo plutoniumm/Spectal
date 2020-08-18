@@ -1,57 +1,6 @@
 function getDat ( id ) { return document.getElementById( id ) }; const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal' }; var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull; const db = firebase.firestore( app ); const home = db.collection( 'home' ); function wi () { w = window.innerWidth; if ( w > 991 ) return ( w / 3 - 125 ); if ( w > 600 && w < 991 ) return ( w / 2 - 50 ); if ( w < 600 ) return ( w - 25 ) }
 
 home.doc( 'about' ).get().then( function ( q ) { getDat( 'aboutHead' ).innerHTML = q.data().heading; getDat( 'aboutPara' ).innerHTML = q.data().paragraph; } );
-// home.doc( 'services' ).get()
-//       .then( function ( q ) {
-//             // getDat( 'servsHead' ).innerHTML = q.data().heading;
-//             // getDat( 'servsPara' ).innerHTML = q.data().paragraph;
-//             list = "";
-//             q.data().services.forEach( service => {
-//                   list += `
-//                   <div class="item">
-//                         <div class="container">
-//                               <div class="row" style="width:80%; margin:0 auto;">
-//                                     <div class="col-5">
-//                                           <div class="row">
-//                                                 <div class="col">
-//                                                       <img src="${service.image }" />
-//                                                 </div>
-//                                           </div>
-//                                     </div>
-//                                     <div class="col-7" style="background-color:rgba(255,255,255,0.15); padding:1.5em;">
-//                                           <div class="row">
-//                                                 <div class="col">
-//                                                       <h2 class="movetext">${service.name }</h2>
-//                                                 </div>
-//                                           </div>
-//                                           <div class="row">
-//                                                 <div class="col">
-//                                                       <p style="padding-top:1em; font-size:100%;" class="movetext">${service.description }</p>
-//                                                 </div>
-//                                           </div>
-//                                     </div>
-//                               </div>
-//                         </div>
-//                   </div>
-//                   `
-//             } );
-//             getDat( 'services' ).innerHTML += `<div id="servsMain" class="services slider row">${ list }</div>`;
-//             $( document ).ready( function () {
-//                   $( '.services' ).slick( {
-//                         centerMode: true,
-//                         slidesToShow: 1,
-//                         slidesToScroll: 1,
-//                         autoplay: true,
-//                         autoplaySpeed: 2000,
-//                         draggable: true,
-//                         dots: true,
-//                         fade: true,
-//                         infinite: true,
-//                         cssEase: 'ease',
-//                         touchThreshold: 100
-//                   } );
-//             } );
-//       } );
 function artModal ( id ) {
       home.doc( 'artists' ).collection( 'artists' ).doc( id ).get().then(
             function ( q ) {
@@ -177,7 +126,7 @@ home.doc( 'events' ).get().then( function ( q ) {
       getDat( 'evensHead' ).innerHTML = q.data().heading; getDat( 'evensPara' ).innerHTML = q.data().paragraph; list = ""; q.data().events.forEach( event => {
             list +=
                   `<div class="col d-inline-block">
-            <h1><span data-purecounter-end="${ event.value }" class="purecounter">0</span>+</h1>
+            <h1><span data-purecounter-start="${ event.value - 40 }" data-purecounter-end="${ event.value }" data-purecounter-duration="4" class="purecounter">0</span>+</h1>
             <p>${event.name }</p>
                   </div> `
       } ); getDat( 'evensList' ).innerHTML = `${ list } `; lateCall();
