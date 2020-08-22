@@ -150,7 +150,7 @@ home.doc( 'testimonials' ).get()
                   $( '.tmonials' ).slick( { centerMode: true, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000, draggable: true, dots: true, infinite: true, cssEase: 'ease', touchThreshold: 100 } );
             } );
       } )
-home.doc( 'contact' ).get().then( function ( q ) { getDat( 'contHead' ).innerHTML = q.data().heading + '<br><br>'; list = ""; q.data().contacts.forEach( cont => { list += `<p style="text-align:justify;"> <i class="${ cont.icon }" style="padding:0.5em;"></i>${ cont.value }</p> ` } ); getDat( 'contList' ).innerHTML = `${ list } ` } );
+home.doc( 'contact' ).get().then( function ( q ) { getDat( 'contHead' ).innerHTML = q.data().heading + '<br>'; list = ""; q.data().contacts.forEach( cont => { list += `<p style="text-align:justify;"> <i class="${ cont.icon }" style="padding:0.5em;"></i>${ cont.value }</p> ` } ); getDat( 'contList' ).innerHTML = `${ list } ` } );
 
 home.doc( 'team' ).collection( 'people' ).get().then(
       function ( querySnapshot ) {
@@ -158,8 +158,8 @@ home.doc( 'team' ).collection( 'people' ).get().then(
                   getDat( 'peeps' ).innerHTML += `
                   <div style="box-sizing:content-box;margin:0 auto;">
                         <div class="teambox">
-                              <img src="${doc.data().image }" style="width:${ wi() }px;height:${ wi() }px;">
-                              <div class="teamcol" style="background-color: ${doc.data().color };width:${ wi() }px;height:${ wi() };px"></div>
+                              <img src="${doc.data().image }" style="width:${ wi() / 1.1 }px;height:${ wi() / 1.1 }px;">
+                              <div class="teamcol" style="background-color: ${doc.data().color };width:${ wi() / 1.1 }px;height:${ wi() / 1.1 };px"></div>
                         </div>
                         <h4 style="font-weight:800;">${doc.data().name }</h4>
                         <p style="font-weight:200;">${doc.data().description }</p>
