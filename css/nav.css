@@ -9,12 +9,7 @@ min-height: 100vh;
 max-height: 200vh;
 overflow-x: hidden;
 }
-.scrolled {
--webkit-backdrop-filter:blur(1em);
--moz-backdrop-filter:blur(1em);
-backdrop-filter: blur(1em);
-transition: background-color 200ms linear;
-}
+.scrolled {background-color: white !important;}
 img {
 filter: grayscale(100%);
 max-width: 90vw;
