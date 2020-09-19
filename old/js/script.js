@@ -11,19 +11,19 @@ function artModal ( id ) {
                   <div class="modal-dialog-scrollable" role="document">
                         <div class="modal-content">
                               <div class="modal-header">
-                                    <h2 class="modal-title">${m.name }</h2>
-                                    <button class="Merchbtn btn" style="${disp( m.social, 'merch' ) }" onclick="window.location.href='${ m.social.merch }'">Get Merch</button>
+                                    <h2 class="modal-title">${ m.name }</h2>
+                                    <button class="Merchbtn btn" style="${ disp( m.social, 'merch' ) }" onclick="window.location.href='${ m.social.merch }'">Get Merch</button>
                                     <button type="button" class="close" onclick="$( '#artistModal' ).modal( 'toggle' );">&times;</button>
                               </div>
             <div class="modal-body">
-                  <img class="modalArtist" src="${m.image }" alt="${ m.name }" /><br>
-                        ${m.description } <br>
+                  <img class="modalArtist" src="${ m.image }" alt="${ m.name }" /><br>
+                        ${ m.description } <br>
                               <div class="row" style="padding-top:0.5em;">
-                                    <div class="col-7 artistPics">${photos }</div>
-                                    <div class="col-5 artistShows" style="padding:0 0.5em;">${events }</div>
+                                    <div class="col-7 artistPics">${ photos }</div>
+                                    <div class="col-5 artistShows" style="padding:0 0.5em;">${ events }</div>
                               </div>
                               <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube-nocookie.com/embed/${m.video.split( '=' )[ 1 ] }" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="filter:grayscale(100%);"></iframe>
+                                    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube-nocookie.com/embed/${ m.video.split( '=' )[ 1 ] }" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="filter:grayscale(100%);"></iframe>
                               </div>
                               </div>
                         </div>
@@ -52,24 +52,24 @@ home.doc( 'artists' ).get()
                               <div class="col-5">
                                     <div class="row">
                                           <div class="col">
-                                                <img src="${artist.image }" />
-                                                <button type="button" onclick="artModal('${doc.id }')" class="artbtn blur">See More</button>
+                                                <img src="${ artist.image }" />
+                                                <button type="button" onclick="artModal('${ doc.id }')" class="artbtn blur">See More</button>
                                           </div>
                                     </div>
                               </div>
                               <div class="col-7" style="background-color:rgba(128,128,128,0.15); padding:1.5em;backdrop-filter:blur(0.1em);-webkit-backdrop-filter:blur(0.1em);-moz-backdrop-filter:blur(0.1em);">
                                     <div class="row">
                                           <div class="col">
-                                                <h2 class="movetext">${artist.name }</h2>
+                                                <h2 class="movetext">${ artist.name }</h2>
                                           </div>
                                     </div>
                                     <div class="row">
                                           <div class="col">
-                                                <p style="padding-top:1em; font-size:115%;line-height:2em;" class="movetext">${artist.description.slice( 0, 280 ) }...</p>
+                                                <p style="padding-top:1em; font-size:115%;line-height:2em;" class="movetext">${ artist.description.slice( 0, 280 ) }...</p>
                                           </div>
                                     </div>
                                     <div class="row" style="position:absolute;bottom:0.75em;">
-                                          <a href="${soc.instagram }" style="display:${ disp( soc, 'instagram' ) }" class="artSocShow"><i class="fab fa-instagram articon"></i></a><a href="${ soc.facebook }" style="display:${ disp( soc, 'facebook' ) }" class="artSocShow"><i class="fab fa-facebook-f articon"></i></a><a href="${ soc.twitter }" style="display:${ disp( soc, 'twitter' ) }" class="artSocShow"><i class="fab fa-twitter articon"></i></a><a href="${ soc.website }" style="display:${ disp( soc, 'website' ) }" class="artSocShow"><i class="fas fa-globe articon"></i></a><a href="${ soc.apple }" style="display:${ disp( soc, 'apple' ) }" class="artSocShow"><i class="fab fa-apple articon"></i></a><a href="${ soc.spotify }" style="display:${ disp( soc, 'spotify' ) }" class="artSocShow"><i class="fab fa-spotify articon"></i></a><a href="${ soc.amazon }" style="display:${ disp( soc, 'amazon' ) }" class="artSocShow"><i class="fab fa-amazon articon"></i></a><a href="${ soc.merch }" style="display:${ disp( soc, 'merch' ) }" class="artSocShow"><i class="fas fa-tshirt articon"></i></a>
+                                          <a href="${ soc.instagram }" style="display:${ disp( soc, 'instagram' ) }" class="artSocShow"><i class="fab fa-instagram articon"></i></a><a href="${ soc.facebook }" style="display:${ disp( soc, 'facebook' ) }" class="artSocShow"><i class="fab fa-facebook-f articon"></i></a><a href="${ soc.twitter }" style="display:${ disp( soc, 'twitter' ) }" class="artSocShow"><i class="fab fa-twitter articon"></i></a><a href="${ soc.website }" style="display:${ disp( soc, 'website' ) }" class="artSocShow"><i class="fas fa-globe articon"></i></a><a href="${ soc.apple }" style="display:${ disp( soc, 'apple' ) }" class="artSocShow"><i class="fab fa-apple articon"></i></a><a href="${ soc.spotify }" style="display:${ disp( soc, 'spotify' ) }" class="artSocShow"><i class="fab fa-spotify articon"></i></a><a href="${ soc.amazon }" style="display:${ disp( soc, 'amazon' ) }" class="artSocShow"><i class="fab fa-amazon articon"></i></a><a href="${ soc.merch }" style="display:${ disp( soc, 'merch' ) }" class="artSocShow"><i class="fas fa-tshirt articon"></i></a>
                                     </div>
                               </div>
                         </div>
@@ -92,10 +92,10 @@ home.doc( 'brands' ).get()
             q.data().brands.forEach( b => {
                   list += `
                   <div class="card">
-                  <img class="card-img-top" src="${b.image }" alt="Card image cap">
-                        <div class="card-img-overlay" style="background-color:${b.color };mix-blend-mode:multiply;"></div>
+                  <img class="card-img-top" src="${ b.image }" alt="Card image cap">
+                        <div class="card-img-overlay" style="background-color:${ b.color };mix-blend-mode:multiply;"></div>
                         <div class="card-body">
-                              <p class="card-text" style="line-height:2em">${b.description }</p>
+                              <p class="card-text" style="line-height:2em">${ b.description }</p>
                         </div>
                   </div>
       `
@@ -127,7 +127,7 @@ home.doc( 'events' ).get().then( function ( q ) {
             list +=
                   `<div class="col d-inline-block">
             <h1><span data-purecounter-start="${ event.value - 40 }" data-purecounter-end="${ event.value }" data-purecounter-duration="4" class="purecounter">0</span>+</h1>
-            <p>${event.name }</p>
+            <p>${ event.name }</p>
                   </div> `
       } ); getDat( 'evensList' ).innerHTML = `${ list } `; lateCall();
 } );
@@ -139,7 +139,7 @@ home.doc( 'testimonials' ).get()
             q.data().tmons.forEach( tmon => {
                   list += `
                   <div class="col text-center" style="margin-top:0.75em;">
-                        <p style="padding:1.5em;font-size:150%;" class"movetext"> "${tmon.paragraph }"</p>
+                        <p style="padding:1.5em;font-size:150%;" class"movetext"> "${ tmon.paragraph }"</p>
                         <h2 class"movetext"> ${ tmon.name }</h3>
                         <h5 class"movetext"> ${ tmon.via }</h5>
                   </div>
@@ -150,7 +150,6 @@ home.doc( 'testimonials' ).get()
                   $( '.tmonials' ).slick( { centerMode: true, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000, draggable: true, dots: true, infinite: true, cssEase: 'ease', touchThreshold: 100 } );
             } );
       } )
-home.doc( 'contact' ).get().then( function ( q ) { getDat( 'contHead' ).innerHTML = q.data().heading + '<br>'; list = ""; q.data().contacts.forEach( cont => { list += `<p style="text-align:justify;"> <i class="${ cont.icon }" style="padding:0.5em;"></i>${ cont.value }</p> ` } ); getDat( 'contList' ).innerHTML = `${ list } ` } );
 
 home.doc( 'team' ).collection( 'people' ).get().then(
       function ( querySnapshot ) {
@@ -158,11 +157,11 @@ home.doc( 'team' ).collection( 'people' ).get().then(
                   getDat( 'peeps' ).innerHTML += `
                   <div style="box-sizing:content-box;margin:0 auto;">
                         <div class="teambox">
-                              <img src="${doc.data().image }" style="width:${ wi() / 1.1 }px;height:${ wi() / 1.1 }px;">
-                              <div class="teamcol" style="background-color: ${doc.data().color };width:${ wi() / 1.1 }px;height:${ wi() / 1.1 };px"></div>
+                              <img src="${ doc.data().image }" style="width:${ wi() / 1.1 }px;height:${ wi() / 1.1 }px;">
+                              <div class="teamcol" style="background-color: ${ doc.data().color };width:${ wi() / 1.1 }px;height:${ wi() / 1.1 };px"></div>
                         </div>
-                        <h4 style="font-weight:800;">${doc.data().name }</h4>
-                        <p style="font-weight:200;">${doc.data().description }</p>
+                        <h4 style="font-weight:800;">${ doc.data().name }</h4>
+                        <p style="font-weight:200;">${ doc.data().description }</p>
                   </div>
       `
             } );

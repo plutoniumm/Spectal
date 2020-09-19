@@ -10,5 +10,25 @@
             "email": "support.spectalmanagement.com",
             "phone": "+91 98765 43210",
             "address": "BITS Pilani, KK Birla Goa Campus"
-      }
+      },
+      "team": [
+            {
+                  "name": "Urvi Varmani",
+                  "pos": "Social Media",
+                  "img": "/assets/team/chow.jpeg",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            },
+            {
+                  "name": "Himanshu Chowdhary",
+                  "pos": "Founder",
+                  "img": "/assets/team/chow.jpeg",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            },
+            {
+                  "name": "Riddhi Diwan",
+                  "pos": "Artist Manager",
+                  "img": "/assets/team/chow.jpeg",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            }
+      ]
 }

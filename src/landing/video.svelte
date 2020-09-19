@@ -16,7 +16,7 @@
     max-height: 100vh;
   }
   video {
-    object-fit: fill;
+    object-fit: cover;
   }
 </style>
 

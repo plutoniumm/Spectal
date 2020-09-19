@@ -3,7 +3,7 @@
 </script>
 
 <style>
-  main {
+  section {
     z-index: 1;
     padding: 1em 1.5em;
   }
@@ -26,7 +26,7 @@
   }
 </style>
 
-<main>
+<section>
   <h1><span class="level1">Get in Touch.</span></h1>
   <p style="font-size:1.5em;font-weight:400;padding:0.25em;">
     We're always on the lookout for exceptional talent. Please write to us to
@@ -72,4 +72,4 @@
       </div>
     </div>
   </div>
-</main>
+</section>
