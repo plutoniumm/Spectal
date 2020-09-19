@@ -15,18 +15,30 @@
     z-index: 3;
     ul {
       margin: 0;
-      padding: 0;
+      padding: 0.2em;
       list-style: none;
       overflow: hidden;
     }
     li {
       a {
+        color: rgba($color: #333, $alpha: 0.66);
         display: block;
+        margin: 1em;
+        padding: 0.25em;
+        background-image: url(/assets/deco/grad-pplOg.svg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 0 0.33em;
         &:hover {
-          background-image: url(/assets/grad-pplOg.svg);
-          background-position: bottom;
+          color: #000;
+          background-size: 100% 0.33em;
+          transition: all 0.3s ease;
         }
       }
+    }
+    .socials a {
+      margin: 1em 0;
+      padding: 0.25em;
     }
     .menu-btn {
       &:hover {
@@ -36,7 +48,7 @@
       &:checked {
         ~ {
           .menu {
-            max-height: 240px;
+            max-height: 100%;
           }
           .menu-icon {
             .navicon {
@@ -63,10 +75,9 @@
       }
     }
     .logo {
-      display: block;
-      float: left;
-      font-size: 2em;
-      padding: 10px 20px;
+      display: inline-block;
+      padding: 1em;
+      transform: scale(1.25);
       text-decoration: none;
     }
     .menu {
@@ -111,8 +122,8 @@
     }
   }
   svg {
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
   }
   @media (min-width: 48em) {
     .header {
@@ -126,16 +137,6 @@
       }
       .menu-icon {
         display: none;
-      }
-    }
-    .socials {
-      a {
-        padding: 1em 1em;
-      }
-    }
-    .menu {
-      a {
-        padding: 1em 2em;
       }
     }
   }

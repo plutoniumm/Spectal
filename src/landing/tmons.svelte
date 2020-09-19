@@ -1,5 +1,4 @@
 <script>
-  export let details
 </script>
 
 <style>
@@ -21,14 +20,4 @@
     We're always on the lookout for exceptional talent. Please write to us to
     get started!
   </p>
-  <div>
-    <div style="display:flex">
-      <div>Logo</div>
-      <div>
-        <span style="font-weight:500;">{details.email}</span>
-        <br />
-        <span>Desc</span>
-      </div>
-    </div>
-  </div>
 </main>
