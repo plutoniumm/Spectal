@@ -119,7 +119,8 @@
           </div>
         </div>
         <div class="meDeets">
-          <span style="font-weight:600"> {me.name} |</span>{me.pos}
+          <span style="font-weight:600;font-size:0.9em;"> {me.name} |</span>
+          {me.pos}
         </div>
       </div>
     {/each}

@@ -902,9 +902,10 @@ var app = (function () {
     	let t3_value = /*me*/ ctx[1].name + "";
     	let t3;
     	let t4;
-    	let t5_value = /*me*/ ctx[1].pos + "";
     	let t5;
+    	let t6_value = /*me*/ ctx[1].pos + "";
     	let t6;
+    	let t7;
 
     	const block = {
     		c: function create() {
@@ -921,8 +922,9 @@ var app = (function () {
     			span1 = element("span");
     			t3 = text(t3_value);
     			t4 = text(" |");
-    			t5 = text(t5_value);
-    			t6 = space();
+    			t5 = space();
+    			t6 = text(t6_value);
+    			t7 = space();
     			if (img.src !== (img_src_value = /*me*/ ctx[1].img)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*me*/ ctx[1].name);
     			attr_dev(img, "class", "svelte-1yeewye");
@@ -939,6 +941,7 @@ var app = (function () {
     			attr_dev(div2, "class", "flip-card-inner svelte-1yeewye");
     			add_location(div2, file$2, 98, 8, 1904);
     			set_style(span1, "font-weight", "600");
+    			set_style(span1, "font-size", "0.9em");
     			add_location(span1, file$2, 108, 10, 2274);
     			attr_dev(div3, "class", "meDeets svelte-1yeewye");
     			add_location(div3, file$2, 107, 8, 2242);
@@ -960,7 +963,8 @@ var app = (function () {
     			append_dev(span1, t3);
     			append_dev(span1, t4);
     			append_dev(div3, t5);
-    			append_dev(div4, t6);
+    			append_dev(div3, t6);
+    			append_dev(div4, t7);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*team*/ 1 && img.src !== (img_src_value = /*me*/ ctx[1].img)) {
@@ -973,7 +977,7 @@ var app = (function () {
 
     			if (dirty & /*team*/ 1 && t1_value !== (t1_value = /*me*/ ctx[1].text + "")) set_data_dev(t1, t1_value);
     			if (dirty & /*team*/ 1 && t3_value !== (t3_value = /*me*/ ctx[1].name + "")) set_data_dev(t3, t3_value);
-    			if (dirty & /*team*/ 1 && t5_value !== (t5_value = /*me*/ ctx[1].pos + "")) set_data_dev(t5, t5_value);
+    			if (dirty & /*team*/ 1 && t6_value !== (t6_value = /*me*/ ctx[1].pos + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div4);
@@ -1170,8 +1174,8 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[32] = list[i];
-    	child_ctx[34] = i;
+    	child_ctx[33] = list[i];
+    	child_ctx[35] = i;
     	return child_ctx;
     }
 
@@ -1188,10 +1192,10 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	const left_control_slot_template = /*#slots*/ ctx[24]["left-control"];
-    	const left_control_slot = create_slot(left_control_slot_template, ctx, /*$$scope*/ ctx[23], get_left_control_slot_context);
-    	const right_control_slot_template = /*#slots*/ ctx[24]["right-control"];
-    	const right_control_slot = create_slot(right_control_slot_template, ctx, /*$$scope*/ ctx[23], get_right_control_slot_context);
+    	const left_control_slot_template = /*#slots*/ ctx[25]["left-control"];
+    	const left_control_slot = create_slot(left_control_slot_template, ctx, /*$$scope*/ ctx[24], get_left_control_slot_context);
+    	const right_control_slot_template = /*#slots*/ ctx[25]["right-control"];
+    	const right_control_slot = create_slot(right_control_slot_template, ctx, /*$$scope*/ ctx[24], get_right_control_slot_context);
 
     	const block = {
     		c: function create() {
@@ -1200,10 +1204,10 @@ var app = (function () {
     			t = space();
     			button1 = element("button");
     			if (right_control_slot) right_control_slot.c();
-    			attr_dev(button0, "class", "left svelte-1ppqxio");
+    			attr_dev(button0, "class", "left svelte-poqy6m");
     			attr_dev(button0, "aria-label", "left");
     			add_location(button0, file$3, 5, 1, 119);
-    			attr_dev(button1, "class", "right svelte-1ppqxio");
+    			attr_dev(button1, "class", "right svelte-poqy6m");
     			attr_dev(button1, "aria-label", "right");
     			add_location(button1, file$3, 8, 1, 223);
     		},
@@ -1225,8 +1229,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*left*/ ctx[4], false, false, false),
-    					listen_dev(button1, "click", /*right*/ ctx[5], false, false, false)
+    					listen_dev(button0, "click", /*left*/ ctx[5], false, false, false),
+    					listen_dev(button1, "click", /*right*/ ctx[6], false, false, false)
     				];
 
     				mounted = true;
@@ -1234,14 +1238,14 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (left_control_slot) {
-    				if (left_control_slot.p && dirty[0] & /*$$scope*/ 8388608) {
-    					update_slot(left_control_slot, left_control_slot_template, ctx, /*$$scope*/ ctx[23], dirty, get_left_control_slot_changes, get_left_control_slot_context);
+    				if (left_control_slot.p && dirty[0] & /*$$scope*/ 16777216) {
+    					update_slot(left_control_slot, left_control_slot_template, ctx, /*$$scope*/ ctx[24], dirty, get_left_control_slot_changes, get_left_control_slot_context);
     				}
     			}
 
     			if (right_control_slot) {
-    				if (right_control_slot.p && dirty[0] & /*$$scope*/ 8388608) {
-    					update_slot(right_control_slot, right_control_slot_template, ctx, /*$$scope*/ ctx[23], dirty, get_right_control_slot_changes, get_right_control_slot_context);
+    				if (right_control_slot.p && dirty[0] & /*$$scope*/ 16777216) {
+    					update_slot(right_control_slot, right_control_slot_template, ctx, /*$$scope*/ ctx[24], dirty, get_right_control_slot_changes, get_right_control_slot_context);
     				}
     			}
     		},
@@ -1281,7 +1285,8 @@ var app = (function () {
     // (13:4) {#if dots}
     function create_if_block(ctx) {
     	let ul;
-    	let each_value = { length: /*totalDots*/ ctx[10] };
+    	let ul_class_value;
+    	let each_value = { length: /*totalDots*/ ctx[11] };
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1297,7 +1302,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", "svelte-1ppqxio");
+    			attr_dev(ul, "class", ul_class_value = "" + (null_to_empty(/*dotStyle*/ ctx[1]) + " svelte-poqy6m"));
     			add_location(ul, file$3, 13, 1, 353);
     		},
     		m: function mount(target, anchor) {
@@ -1308,8 +1313,8 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*isDotActive, currentIndex, go, currentPerPage, totalDots*/ 1736) {
-    				each_value = { length: /*totalDots*/ ctx[10] };
+    			if (dirty[0] & /*isDotActive, currentIndex, go, currentPerPage, totalDots*/ 3472) {
+    				each_value = { length: /*totalDots*/ ctx[11] };
     				validate_each_argument(each_value);
     				let i;
 
@@ -1330,6 +1335,10 @@ var app = (function () {
     				}
 
     				each_blocks.length = each_value.length;
+    			}
+
+    			if (dirty[0] & /*dotStyle*/ 2 && ul_class_value !== (ul_class_value = "" + (null_to_empty(/*dotStyle*/ ctx[1]) + " svelte-poqy6m"))) {
+    				attr_dev(ul, "class", ul_class_value);
     			}
     		},
     		d: function destroy(detaching) {
@@ -1357,18 +1366,18 @@ var app = (function () {
     	let dispose;
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[26](/*i*/ ctx[34], ...args);
+    		return /*click_handler*/ ctx[27](/*i*/ ctx[35], ...args);
     	}
 
     	const block = {
     		c: function create() {
     			li = element("li");
 
-    			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[3](/*currentIndex*/ ctx[7], /*i*/ ctx[34])
+    			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[4](/*currentIndex*/ ctx[8], /*i*/ ctx[35])
     			? "active"
-    			: "") + " svelte-1ppqxio"));
+    			: "") + " svelte-poqy6m"));
 
-    			add_location(li, file$3, 15, 2, 398);
+    			add_location(li, file$3, 15, 2, 415);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1381,9 +1390,9 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*currentIndex*/ 128 && li_class_value !== (li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[3](/*currentIndex*/ ctx[7], /*i*/ ctx[34])
+    			if (dirty[0] & /*currentIndex*/ 256 && li_class_value !== (li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[4](/*currentIndex*/ ctx[8], /*i*/ ctx[35])
     			? "active"
-    			: "") + " svelte-1ppqxio"))) {
+    			: "") + " svelte-poqy6m"))) {
     				attr_dev(li, "class", li_class_value);
     			}
     		},
@@ -1412,10 +1421,10 @@ var app = (function () {
     	let t1;
     	let div1_class_value;
     	let current;
-    	const default_slot_template = /*#slots*/ ctx[24].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[23], null);
-    	let if_block0 = /*controls*/ ctx[2] && create_if_block_1(ctx);
-    	let if_block1 = /*dots*/ ctx[1] && create_if_block(ctx);
+    	const default_slot_template = /*#slots*/ ctx[25].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[24], null);
+    	let if_block0 = /*controls*/ ctx[3] && create_if_block_1(ctx);
+    	let if_block1 = /*dots*/ ctx[2] && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -1428,7 +1437,7 @@ var app = (function () {
     			if (if_block1) if_block1.c();
     			attr_dev(div0, "class", "slides");
     			add_location(div0, file$3, 1, 1, 39);
-    			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty("carousel " + /*localizer*/ ctx[0]) + " svelte-1ppqxio"));
+    			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty("carousel " + /*localizer*/ ctx[0]) + " svelte-poqy6m"));
     			add_location(div1, file$3, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1442,7 +1451,7 @@ var app = (function () {
     				default_slot.m(div0, null);
     			}
 
-    			/*div0_binding*/ ctx[25](div0);
+    			/*div0_binding*/ ctx[26](div0);
     			append_dev(div1, t0);
     			if (if_block0) if_block0.m(div1, null);
     			append_dev(div1, t1);
@@ -1451,16 +1460,16 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (default_slot) {
-    				if (default_slot.p && dirty[0] & /*$$scope*/ 8388608) {
-    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[23], dirty, null, null);
+    				if (default_slot.p && dirty[0] & /*$$scope*/ 16777216) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[24], dirty, null, null);
     				}
     			}
 
-    			if (/*controls*/ ctx[2]) {
+    			if (/*controls*/ ctx[3]) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
 
-    					if (dirty[0] & /*controls*/ 4) {
+    					if (dirty[0] & /*controls*/ 8) {
     						transition_in(if_block0, 1);
     					}
     				} else {
@@ -1479,7 +1488,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*dots*/ ctx[1]) {
+    			if (/*dots*/ ctx[2]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
@@ -1492,7 +1501,7 @@ var app = (function () {
     				if_block1 = null;
     			}
 
-    			if (!current || dirty[0] & /*localizer*/ 1 && div1_class_value !== (div1_class_value = "" + (null_to_empty("carousel " + /*localizer*/ ctx[0]) + " svelte-1ppqxio"))) {
+    			if (!current || dirty[0] & /*localizer*/ 1 && div1_class_value !== (div1_class_value = "" + (null_to_empty("carousel " + /*localizer*/ ctx[0]) + " svelte-poqy6m"))) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -1510,7 +1519,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (default_slot) default_slot.d(detaching);
-    			/*div0_binding*/ ctx[25](null);
+    			/*div0_binding*/ ctx[26](null);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     		}
@@ -1531,6 +1540,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Carousel", slots, ['default','left-control','right-control']);
     	let { localizer = "" } = $$props;
+    	let { dotStyle = "" } = $$props;
     	let { perPage = 3 } = $$props;
     	let { loop = true } = $$props;
     	let { autoplay = 0 } = $$props;
@@ -1550,7 +1560,7 @@ var app = (function () {
     	const dispatch = createEventDispatcher();
 
     	onMount(() => {
-    		$$invalidate(27, controller = new siema_min({
+    		$$invalidate(28, controller = new siema_min({
     				selector: siema,
     				perPage: typeof perPage === "object" ? perPage : Number(perPage),
     				loop,
@@ -1602,7 +1612,7 @@ var app = (function () {
     	}
 
     	function handleChange(event) {
-    		$$invalidate(7, currentIndex = controller.currentSlide);
+    		$$invalidate(8, currentIndex = controller.currentSlide);
 
     		dispatch("change", {
     			currentSlide: controller.currentSlide,
@@ -1612,6 +1622,7 @@ var app = (function () {
 
     	const writable_props = [
     		"localizer",
+    		"dotStyle",
     		"perPage",
     		"loop",
     		"autoplay",
@@ -1633,7 +1644,7 @@ var app = (function () {
     	function div0_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
     			siema = $$value;
-    			$$invalidate(8, siema);
+    			$$invalidate(9, siema);
     		});
     	}
 
@@ -1641,19 +1652,20 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ("localizer" in $$props) $$invalidate(0, localizer = $$props.localizer);
-    		if ("perPage" in $$props) $$invalidate(11, perPage = $$props.perPage);
-    		if ("loop" in $$props) $$invalidate(12, loop = $$props.loop);
-    		if ("autoplay" in $$props) $$invalidate(13, autoplay = $$props.autoplay);
-    		if ("duration" in $$props) $$invalidate(14, duration = $$props.duration);
-    		if ("easing" in $$props) $$invalidate(15, easing = $$props.easing);
-    		if ("startIndex" in $$props) $$invalidate(16, startIndex = $$props.startIndex);
-    		if ("draggable" in $$props) $$invalidate(17, draggable = $$props.draggable);
-    		if ("multipleDrag" in $$props) $$invalidate(18, multipleDrag = $$props.multipleDrag);
-    		if ("dots" in $$props) $$invalidate(1, dots = $$props.dots);
-    		if ("controls" in $$props) $$invalidate(2, controls = $$props.controls);
-    		if ("threshold" in $$props) $$invalidate(19, threshold = $$props.threshold);
-    		if ("rtl" in $$props) $$invalidate(20, rtl = $$props.rtl);
-    		if ("$$scope" in $$props) $$invalidate(23, $$scope = $$props.$$scope);
+    		if ("dotStyle" in $$props) $$invalidate(1, dotStyle = $$props.dotStyle);
+    		if ("perPage" in $$props) $$invalidate(12, perPage = $$props.perPage);
+    		if ("loop" in $$props) $$invalidate(13, loop = $$props.loop);
+    		if ("autoplay" in $$props) $$invalidate(14, autoplay = $$props.autoplay);
+    		if ("duration" in $$props) $$invalidate(15, duration = $$props.duration);
+    		if ("easing" in $$props) $$invalidate(16, easing = $$props.easing);
+    		if ("startIndex" in $$props) $$invalidate(17, startIndex = $$props.startIndex);
+    		if ("draggable" in $$props) $$invalidate(18, draggable = $$props.draggable);
+    		if ("multipleDrag" in $$props) $$invalidate(19, multipleDrag = $$props.multipleDrag);
+    		if ("dots" in $$props) $$invalidate(2, dots = $$props.dots);
+    		if ("controls" in $$props) $$invalidate(3, controls = $$props.controls);
+    		if ("threshold" in $$props) $$invalidate(20, threshold = $$props.threshold);
+    		if ("rtl" in $$props) $$invalidate(21, rtl = $$props.rtl);
+    		if ("$$scope" in $$props) $$invalidate(24, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1661,6 +1673,7 @@ var app = (function () {
     		onMount,
     		createEventDispatcher,
     		localizer,
+    		dotStyle,
     		perPage,
     		loop,
     		autoplay,
@@ -1692,25 +1705,26 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("localizer" in $$props) $$invalidate(0, localizer = $$props.localizer);
-    		if ("perPage" in $$props) $$invalidate(11, perPage = $$props.perPage);
-    		if ("loop" in $$props) $$invalidate(12, loop = $$props.loop);
-    		if ("autoplay" in $$props) $$invalidate(13, autoplay = $$props.autoplay);
-    		if ("duration" in $$props) $$invalidate(14, duration = $$props.duration);
-    		if ("easing" in $$props) $$invalidate(15, easing = $$props.easing);
-    		if ("startIndex" in $$props) $$invalidate(16, startIndex = $$props.startIndex);
-    		if ("draggable" in $$props) $$invalidate(17, draggable = $$props.draggable);
-    		if ("multipleDrag" in $$props) $$invalidate(18, multipleDrag = $$props.multipleDrag);
-    		if ("dots" in $$props) $$invalidate(1, dots = $$props.dots);
-    		if ("controls" in $$props) $$invalidate(2, controls = $$props.controls);
-    		if ("threshold" in $$props) $$invalidate(19, threshold = $$props.threshold);
-    		if ("rtl" in $$props) $$invalidate(20, rtl = $$props.rtl);
-    		if ("currentIndex" in $$props) $$invalidate(7, currentIndex = $$props.currentIndex);
-    		if ("siema" in $$props) $$invalidate(8, siema = $$props.siema);
-    		if ("controller" in $$props) $$invalidate(27, controller = $$props.controller);
+    		if ("dotStyle" in $$props) $$invalidate(1, dotStyle = $$props.dotStyle);
+    		if ("perPage" in $$props) $$invalidate(12, perPage = $$props.perPage);
+    		if ("loop" in $$props) $$invalidate(13, loop = $$props.loop);
+    		if ("autoplay" in $$props) $$invalidate(14, autoplay = $$props.autoplay);
+    		if ("duration" in $$props) $$invalidate(15, duration = $$props.duration);
+    		if ("easing" in $$props) $$invalidate(16, easing = $$props.easing);
+    		if ("startIndex" in $$props) $$invalidate(17, startIndex = $$props.startIndex);
+    		if ("draggable" in $$props) $$invalidate(18, draggable = $$props.draggable);
+    		if ("multipleDrag" in $$props) $$invalidate(19, multipleDrag = $$props.multipleDrag);
+    		if ("dots" in $$props) $$invalidate(2, dots = $$props.dots);
+    		if ("controls" in $$props) $$invalidate(3, controls = $$props.controls);
+    		if ("threshold" in $$props) $$invalidate(20, threshold = $$props.threshold);
+    		if ("rtl" in $$props) $$invalidate(21, rtl = $$props.rtl);
+    		if ("currentIndex" in $$props) $$invalidate(8, currentIndex = $$props.currentIndex);
+    		if ("siema" in $$props) $$invalidate(9, siema = $$props.siema);
+    		if ("controller" in $$props) $$invalidate(28, controller = $$props.controller);
     		if ("timer" in $$props) timer = $$props.timer;
     		if ("pips" in $$props) pips = $$props.pips;
-    		if ("currentPerPage" in $$props) $$invalidate(9, currentPerPage = $$props.currentPerPage);
-    		if ("totalDots" in $$props) $$invalidate(10, totalDots = $$props.totalDots);
+    		if ("currentPerPage" in $$props) $$invalidate(10, currentPerPage = $$props.currentPerPage);
+    		if ("totalDots" in $$props) $$invalidate(11, totalDots = $$props.totalDots);
     	};
 
     	let pips;
@@ -1722,16 +1736,16 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*controller*/ 134217728) {
+    		if ($$self.$$.dirty[0] & /*controller*/ 268435456) {
     			 pips = controller ? controller.innerElements : [];
     		}
 
-    		if ($$self.$$.dirty[0] & /*controller, perPage*/ 134219776) {
-    			 $$invalidate(9, currentPerPage = controller ? controller.perPage : perPage);
+    		if ($$self.$$.dirty[0] & /*controller, perPage*/ 268439552) {
+    			 $$invalidate(10, currentPerPage = controller ? controller.perPage : perPage);
     		}
 
-    		if ($$self.$$.dirty[0] & /*controller, currentPerPage*/ 134218240) {
-    			 $$invalidate(10, totalDots = controller
+    		if ($$self.$$.dirty[0] & /*controller, currentPerPage*/ 268436480) {
+    			 $$invalidate(11, totalDots = controller
     			? Math.ceil(controller.innerElements.length / currentPerPage)
     			: []);
     		}
@@ -1739,6 +1753,7 @@ var app = (function () {
 
     	return [
     		localizer,
+    		dotStyle,
     		dots,
     		controls,
     		isDotActive,
@@ -1780,24 +1795,25 @@ var app = (function () {
     			safe_not_equal,
     			{
     				localizer: 0,
-    				perPage: 11,
-    				loop: 12,
-    				autoplay: 13,
-    				duration: 14,
-    				easing: 15,
-    				startIndex: 16,
-    				draggable: 17,
-    				multipleDrag: 18,
-    				dots: 1,
-    				controls: 2,
-    				threshold: 19,
-    				rtl: 20,
-    				isDotActive: 3,
-    				left: 4,
-    				right: 5,
-    				go: 6,
-    				pause: 21,
-    				resume: 22
+    				dotStyle: 1,
+    				perPage: 12,
+    				loop: 13,
+    				autoplay: 14,
+    				duration: 15,
+    				easing: 16,
+    				startIndex: 17,
+    				draggable: 18,
+    				multipleDrag: 19,
+    				dots: 2,
+    				controls: 3,
+    				threshold: 20,
+    				rtl: 21,
+    				isDotActive: 4,
+    				left: 5,
+    				right: 6,
+    				go: 7,
+    				pause: 22,
+    				resume: 23
     			},
     			[-1, -1]
     		);
@@ -1815,6 +1831,14 @@ var app = (function () {
     	}
 
     	set localizer(value) {
+    		throw new Error("<Carousel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get dotStyle() {
+    		throw new Error("<Carousel>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set dotStyle(value) {
     		throw new Error("<Carousel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
@@ -1915,7 +1939,7 @@ var app = (function () {
     	}
 
     	get isDotActive() {
-    		return this.$$.ctx[3];
+    		return this.$$.ctx[4];
     	}
 
     	set isDotActive(value) {
@@ -1923,7 +1947,7 @@ var app = (function () {
     	}
 
     	get left() {
-    		return this.$$.ctx[4];
+    		return this.$$.ctx[5];
     	}
 
     	set left(value) {
@@ -1931,7 +1955,7 @@ var app = (function () {
     	}
 
     	get right() {
-    		return this.$$.ctx[5];
+    		return this.$$.ctx[6];
     	}
 
     	set right(value) {
@@ -1939,7 +1963,7 @@ var app = (function () {
     	}
 
     	get go() {
-    		return this.$$.ctx[6];
+    		return this.$$.ctx[7];
     	}
 
     	set go(value) {
@@ -1947,7 +1971,7 @@ var app = (function () {
     	}
 
     	get pause() {
-    		return this.$$.ctx[21];
+    		return this.$$.ctx[22];
     	}
 
     	set pause(value) {
@@ -1955,7 +1979,7 @@ var app = (function () {
     	}
 
     	get resume() {
-    		return this.$$.ctx[22];
+    		return this.$$.ctx[23];
     	}
 
     	set resume(value) {
@@ -2236,7 +2260,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (30:4) <span class="control" slot="left-control">
+    // (52:4) <span class="control" slot="left-control">
     function create_left_control_slot(ctx) {
     	let span;
     	let chevronlefticon;
@@ -2247,9 +2271,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronlefticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-1iat8lj");
+    			attr_dev(span, "class", "control svelte-s8btni");
     			attr_dev(span, "slot", "left-control");
-    			add_location(span, file$6, 29, 4, 528);
+    			add_location(span, file$6, 51, 4, 913);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2275,32 +2299,67 @@ var app = (function () {
     		block,
     		id: create_left_control_slot.name,
     		type: "slot",
-    		source: "(30:4) <span class=\\\"control\\\" slot=\\\"left-control\\\">",
+    		source: "(52:4) <span class=\\\"control\\\" slot=\\\"left-control\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:4) {#each tmons as tmn}
+    // (55:4) {#each tmons as tmn}
     function create_each_block$2(ctx) {
     	let div;
-    	let t_value = /*tmn*/ ctx[1].name + "";
-    	let t;
+    	let h1;
+    	let t0_value = /*tmn*/ ctx[1].text + "";
+    	let t0;
+    	let t1;
+    	let span1;
+    	let t2_value = /*tmn*/ ctx[1].name + "";
+    	let t2;
+    	let t3;
+    	let span0;
+    	let t4;
+    	let t5_value = /*tmn*/ ctx[1].via + "";
+    	let t5;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			t = text(t_value);
-    			attr_dev(div, "class", "slide-content svelte-1iat8lj");
-    			add_location(div, file$6, 33, 6, 640);
+    			h1 = element("h1");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			span1 = element("span");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			span0 = element("span");
+    			t4 = text(", ");
+    			t5 = text(t5_value);
+    			attr_dev(h1, "class", "tmonText svelte-s8btni");
+    			add_location(h1, file$6, 56, 8, 1061);
+    			set_style(span0, "font-weight", "600");
+    			set_style(span0, "font-size", "0.9em");
+    			add_location(span0, file$6, 59, 10, 1170);
+    			set_style(span1, "font-size", "1.25em");
+    			add_location(span1, file$6, 57, 8, 1106);
+    			attr_dev(div, "class", "slide-content svelte-s8btni");
+    			add_location(div, file$6, 55, 6, 1025);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, t);
+    			append_dev(div, h1);
+    			append_dev(h1, t0);
+    			append_dev(div, t1);
+    			append_dev(div, span1);
+    			append_dev(span1, t2);
+    			append_dev(span1, t3);
+    			append_dev(span1, span0);
+    			append_dev(span0, t4);
+    			append_dev(span0, t5);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*tmons*/ 1 && t_value !== (t_value = /*tmn*/ ctx[1].name + "")) set_data_dev(t, t_value);
+    			if (dirty & /*tmons*/ 1 && t0_value !== (t0_value = /*tmn*/ ctx[1].text + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*tmons*/ 1 && t2_value !== (t2_value = /*tmn*/ ctx[1].name + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*tmons*/ 1 && t5_value !== (t5_value = /*tmn*/ ctx[1].via + "")) set_data_dev(t5, t5_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -2311,14 +2370,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(33:4) {#each tmons as tmn}",
+    		source: "(55:4) {#each tmons as tmn}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:4) <span class="control" slot="right-control">
+    // (64:4) <span class="control" slot="right-control">
     function create_right_control_slot(ctx) {
     	let span;
     	let chevronrighticon;
@@ -2329,9 +2388,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronrighticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-1iat8lj");
+    			attr_dev(span, "class", "control svelte-s8btni");
     			attr_dev(span, "slot", "right-control");
-    			add_location(span, file$6, 35, 4, 700);
+    			add_location(span, file$6, 63, 4, 1282);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2357,14 +2416,14 @@ var app = (function () {
     		block,
     		id: create_right_control_slot.name,
     		type: "slot",
-    		source: "(36:4) <span class=\\\"control\\\" slot=\\\"right-control\\\">",
+    		source: "(64:4) <span class=\\\"control\\\" slot=\\\"right-control\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (29:2) <Carousel localizer="tmonCar" perPage="1">
+    // (51:2) <Carousel localizer="tmonCar" perPage="1" dotStyle="tmonDots">
     function create_default_slot(ctx) {
     	let t0;
     	let t1;
@@ -2433,7 +2492,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(29:2) <Carousel localizer=\\\"tmonCar\\\" perPage=\\\"1\\\">",
+    		source: "(51:2) <Carousel localizer=\\\"tmonCar\\\" perPage=\\\"1\\\" dotStyle=\\\"tmonDots\\\">",
     		ctx
     	});
 
@@ -2442,6 +2501,7 @@ var app = (function () {
 
     function create_fragment$6(ctx) {
     	let main;
+    	let t;
     	let carousel;
     	let current;
 
@@ -2449,6 +2509,7 @@ var app = (function () {
     			props: {
     				localizer: "tmonCar",
     				perPage: "1",
+    				dotStyle: "tmonDots",
     				$$slots: {
     					default: [create_default_slot],
     					"right-control": [create_right_control_slot],
@@ -2462,15 +2523,17 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
+    			t = text("Testimonials\n  ");
     			create_component(carousel.$$.fragment);
-    			attr_dev(main, "class", "svelte-1iat8lj");
-    			add_location(main, file$6, 27, 0, 472);
+    			attr_dev(main, "class", "svelte-s8btni");
+    			add_location(main, file$6, 48, 0, 822);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			append_dev(main, t);
     			mount_component(carousel, main, null);
     			current = true;
     		},
@@ -2943,18 +3006,51 @@ var app = (function () {
 
     function create_fragment$8(ctx) {
     	let main;
+    	let navbar;
+    	let t0;
+    	let video;
+    	let t1;
     	let tmons;
+    	let t2;
+    	let team;
+    	let t3;
+    	let contact;
     	let current;
+
+    	navbar = new Navbar({
+    			props: { socials: data.socials },
+    			$$inline: true
+    		});
+
+    	video = new Video({ $$inline: true });
 
     	tmons = new Tmons({
     			props: { tmons: data.tmons },
     			$$inline: true
     		});
 
+    	team = new Team({
+    			props: { team: data.team },
+    			$$inline: true
+    		});
+
+    	contact = new Contact({
+    			props: { details: data.contact },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			main = element("main");
+    			create_component(navbar.$$.fragment);
+    			t0 = space();
+    			create_component(video.$$.fragment);
+    			t1 = space();
     			create_component(tmons.$$.fragment);
+    			t2 = space();
+    			create_component(team.$$.fragment);
+    			t3 = space();
+    			create_component(contact.$$.fragment);
     			add_location(main, file$8, 12, 0, 292);
     		},
     		l: function claim(nodes) {
@@ -2962,22 +3058,42 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			mount_component(navbar, main, null);
+    			append_dev(main, t0);
+    			mount_component(video, main, null);
+    			append_dev(main, t1);
     			mount_component(tmons, main, null);
+    			append_dev(main, t2);
+    			mount_component(team, main, null);
+    			append_dev(main, t3);
+    			mount_component(contact, main, null);
     			current = true;
     		},
     		p: noop,
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(navbar.$$.fragment, local);
+    			transition_in(video.$$.fragment, local);
     			transition_in(tmons.$$.fragment, local);
+    			transition_in(team.$$.fragment, local);
+    			transition_in(contact.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(navbar.$$.fragment, local);
+    			transition_out(video.$$.fragment, local);
     			transition_out(tmons.$$.fragment, local);
+    			transition_out(team.$$.fragment, local);
+    			transition_out(contact.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+    			destroy_component(navbar);
+    			destroy_component(video);
     			destroy_component(tmons);
+    			destroy_component(team);
+    			destroy_component(contact);
     		}
     	};
 

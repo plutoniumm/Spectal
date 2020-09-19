@@ -11,9 +11,9 @@
 </style>
 
 <main>
-  <!-- <Navbar socials={data.socials} />
-  <Video /> -->
+  <Navbar socials={data.socials} />
+  <Video />
   <Tmons tmons={data.tmons} />
-  <!-- <Team team={data.team} />
-  <Contact details={data.contact} /> -->
+  <Team team={data.team} />
+  <Contact details={data.contact} />
 </main>
