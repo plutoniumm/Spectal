@@ -9,7 +9,7 @@
 </style>
 
 <main>
-  <!-- <Navbar socials={data.socials} /> -->
-  <!-- <Video /> -->
+  <Navbar socials={data.socials} />
+  <Video />
   <Contact details={data.contact} />
 </main>

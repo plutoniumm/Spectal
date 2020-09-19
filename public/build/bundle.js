@@ -772,18 +772,52 @@ var app = (function () {
     	let t1;
     	let p;
     	let t3;
-    	let div3;
+    	let div9;
     	let div2;
     	let div0;
-    	let t5;
+    	let svg0;
+    	let path0;
+    	let t4;
     	let div1;
     	let span1;
-    	let t6_value = /*details*/ ctx[0].email + "";
+    	let t5_value = /*details*/ ctx[0].email + "";
+    	let t5;
     	let t6;
+    	let br0;
     	let t7;
-    	let br;
-    	let t8;
     	let span2;
+    	let t9;
+    	let br1;
+    	let t10;
+    	let div5;
+    	let div3;
+    	let svg1;
+    	let path1;
+    	let t11;
+    	let div4;
+    	let span3;
+    	let t12_value = /*details*/ ctx[0].address + "";
+    	let t12;
+    	let t13;
+    	let br2;
+    	let t14;
+    	let span4;
+    	let t16;
+    	let br3;
+    	let t17;
+    	let div8;
+    	let div6;
+    	let svg2;
+    	let path2;
+    	let t18;
+    	let div7;
+    	let span5;
+    	let t19_value = /*details*/ ctx[0].phone + "";
+    	let t19;
+    	let t20;
+    	let br4;
+    	let t21;
+    	let span6;
 
     	const block = {
     		c: function create() {
@@ -795,38 +829,118 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "We're always on the lookout for exceptional talent. Please write to us to\n    get started!";
     			t3 = space();
-    			div3 = element("div");
+    			div9 = element("div");
     			div2 = element("div");
     			div0 = element("div");
-    			div0.textContent = "Logo";
-    			t5 = space();
+    			svg0 = svg_element("svg");
+    			path0 = svg_element("path");
+    			t4 = space();
     			div1 = element("div");
     			span1 = element("span");
-    			t6 = text(t6_value);
+    			t5 = text(t5_value);
+    			t6 = space();
+    			br0 = element("br");
     			t7 = space();
-    			br = element("br");
-    			t8 = space();
     			span2 = element("span");
-    			span2.textContent = "Desc";
+    			span2.textContent = "Email";
+    			t9 = space();
+    			br1 = element("br");
+    			t10 = space();
+    			div5 = element("div");
+    			div3 = element("div");
+    			svg1 = svg_element("svg");
+    			path1 = svg_element("path");
+    			t11 = space();
+    			div4 = element("div");
+    			span3 = element("span");
+    			t12 = text(t12_value);
+    			t13 = space();
+    			br2 = element("br");
+    			t14 = space();
+    			span4 = element("span");
+    			span4.textContent = "Address";
+    			t16 = space();
+    			br3 = element("br");
+    			t17 = space();
+    			div8 = element("div");
+    			div6 = element("div");
+    			svg2 = svg_element("svg");
+    			path2 = svg_element("path");
+    			t18 = space();
+    			div7 = element("div");
+    			span5 = element("span");
+    			t19 = text(t19_value);
+    			t20 = space();
+    			br4 = element("br");
+    			t21 = space();
+    			span6 = element("span");
+    			span6.textContent = "Phone";
     			attr_dev(span0, "class", "level1");
-    			add_location(span0, file$2, 18, 6, 219);
-    			attr_dev(h1, "class", "svelte-uv2mwx");
-    			add_location(h1, file$2, 18, 2, 215);
+    			add_location(span0, file$2, 29, 6, 385);
+    			attr_dev(h1, "class", "svelte-w91y8e");
+    			add_location(h1, file$2, 29, 2, 381);
     			set_style(p, "font-size", "1.5em");
     			set_style(p, "font-weight", "400");
     			set_style(p, "padding", "0.25em");
-    			add_location(p, file$2, 19, 2, 268);
-    			add_location(div0, file$2, 25, 6, 474);
-    			set_style(span1, "font-weight", "500");
-    			add_location(span1, file$2, 27, 8, 510);
-    			add_location(br, file$2, 28, 8, 572);
-    			add_location(span2, file$2, 29, 8, 587);
-    			add_location(div1, file$2, 26, 6, 496);
-    			set_style(div2, "display", "flex");
-    			add_location(div2, file$2, 24, 4, 441);
-    			add_location(div3, file$2, 23, 2, 431);
-    			attr_dev(main, "class", "svelte-uv2mwx");
-    			add_location(main, file$2, 17, 0, 206);
+    			add_location(p, file$2, 30, 2, 434);
+    			attr_dev(path0, "d", "M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z");
+    			add_location(path0, file$2, 38, 70, 791);
+    			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
+    			attr_dev(svg0, "viewBox", "0 0 512 512");
+    			attr_dev(svg0, "class", "svelte-w91y8e");
+    			add_location(svg0, file$2, 38, 8, 729);
+    			add_location(div0, file$2, 37, 6, 715);
+    			set_style(span1, "font-weight", "700");
+    			set_style(span1, "line-height", "2em");
+    			add_location(span1, file$2, 42, 8, 1069);
+    			add_location(br0, file$2, 43, 8, 1147);
+    			add_location(span2, file$2, 44, 8, 1162);
+    			add_location(div1, file$2, 41, 6, 1055);
+    			set_style(div2, "align-items", "center");
+    			set_style(div2, "margin", "0 auto");
+    			set_style(div2, "text-align", "center");
+    			add_location(div2, file$2, 36, 4, 643);
+    			add_location(br1, file$2, 47, 4, 1209);
+    			attr_dev(path1, "xmlns", "http://www.w3.org/2000/svg");
+    			attr_dev(path1, "d", "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z");
+    			add_location(path1, file$2, 51, 70, 1389);
+    			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
+    			attr_dev(svg1, "viewBox", "0 0 384 512");
+    			attr_dev(svg1, "class", "svelte-w91y8e");
+    			add_location(svg1, file$2, 51, 8, 1327);
+    			add_location(div3, file$2, 50, 6, 1313);
+    			set_style(span3, "font-weight", "700");
+    			set_style(span3, "line-height", "2em");
+    			add_location(span3, file$2, 56, 8, 1745);
+    			add_location(br2, file$2, 57, 8, 1825);
+    			add_location(span4, file$2, 58, 8, 1840);
+    			add_location(div4, file$2, 55, 6, 1731);
+    			set_style(div5, "align-items", "center");
+    			set_style(div5, "margin", "0 auto");
+    			set_style(div5, "text-align", "center");
+    			add_location(div5, file$2, 49, 4, 1241);
+    			add_location(br3, file$2, 60, 10, 1884);
+    			attr_dev(path2, "d", "M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z");
+    			add_location(path2, file$2, 64, 70, 2063);
+    			attr_dev(svg2, "xmlns", "http://www.w3.org/2000/svg");
+    			attr_dev(svg2, "viewBox", "0 0 512 512");
+    			attr_dev(svg2, "class", "svelte-w91y8e");
+    			add_location(svg2, file$2, 64, 8, 2001);
+    			add_location(div6, file$2, 63, 6, 1987);
+    			set_style(span5, "font-weight", "700");
+    			set_style(span5, "line-height", "2em");
+    			add_location(span5, file$2, 68, 8, 2392);
+    			add_location(br4, file$2, 69, 8, 2470);
+    			add_location(span6, file$2, 70, 8, 2485);
+    			add_location(div7, file$2, 67, 6, 2378);
+    			set_style(div8, "align-items", "center");
+    			set_style(div8, "margin", "0 auto");
+    			set_style(div8, "text-align", "center");
+    			add_location(div8, file$2, 62, 4, 1915);
+    			attr_dev(div9, "class", "details svelte-w91y8e");
+    			add_location(div9, file$2, 34, 2, 598);
+    			attr_dev(main, "class", "svelte-w91y8e");
+    			add_location(main, file$2, 28, 0, 372);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -838,20 +952,54 @@ var app = (function () {
     			append_dev(main, t1);
     			append_dev(main, p);
     			append_dev(main, t3);
-    			append_dev(main, div3);
-    			append_dev(div3, div2);
+    			append_dev(main, div9);
+    			append_dev(div9, div2);
     			append_dev(div2, div0);
-    			append_dev(div2, t5);
+    			append_dev(div0, svg0);
+    			append_dev(svg0, path0);
+    			append_dev(div2, t4);
     			append_dev(div2, div1);
     			append_dev(div1, span1);
-    			append_dev(span1, t6);
+    			append_dev(span1, t5);
+    			append_dev(div1, t6);
+    			append_dev(div1, br0);
     			append_dev(div1, t7);
-    			append_dev(div1, br);
-    			append_dev(div1, t8);
     			append_dev(div1, span2);
+    			append_dev(div9, t9);
+    			append_dev(div9, br1);
+    			append_dev(div9, t10);
+    			append_dev(div9, div5);
+    			append_dev(div5, div3);
+    			append_dev(div3, svg1);
+    			append_dev(svg1, path1);
+    			append_dev(div5, t11);
+    			append_dev(div5, div4);
+    			append_dev(div4, span3);
+    			append_dev(span3, t12);
+    			append_dev(div4, t13);
+    			append_dev(div4, br2);
+    			append_dev(div4, t14);
+    			append_dev(div4, span4);
+    			append_dev(div5, t16);
+    			append_dev(div9, br3);
+    			append_dev(div9, t17);
+    			append_dev(div9, div8);
+    			append_dev(div8, div6);
+    			append_dev(div6, svg2);
+    			append_dev(svg2, path2);
+    			append_dev(div8, t18);
+    			append_dev(div8, div7);
+    			append_dev(div7, span5);
+    			append_dev(span5, t19);
+    			append_dev(div7, t20);
+    			append_dev(div7, br4);
+    			append_dev(div7, t21);
+    			append_dev(div7, span6);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*details*/ 1 && t6_value !== (t6_value = /*details*/ ctx[0].email + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*details*/ 1 && t5_value !== (t5_value = /*details*/ ctx[0].email + "")) set_data_dev(t5, t5_value);
+    			if (dirty & /*details*/ 1 && t12_value !== (t12_value = /*details*/ ctx[0].address + "")) set_data_dev(t12, t12_value);
+    			if (dirty & /*details*/ 1 && t19_value !== (t19_value = /*details*/ ctx[0].phone + "")) set_data_dev(t19, t19_value);
     		},
     		i: noop,
     		o: noop,
@@ -937,7 +1085,7 @@ var app = (function () {
     var contact = {
     	email: "support.spectalmanagement.com",
     	phone: "+91 98765 43210",
-    	address: ""
+    	address: "BITS Pilani, KK Birla Goa Campus"
     };
     var data = {
     	socials: socials,
@@ -949,8 +1097,19 @@ var app = (function () {
 
     function create_fragment$3(ctx) {
     	let main;
+    	let navbar;
+    	let t0;
+    	let video;
+    	let t1;
     	let contact;
     	let current;
+
+    	navbar = new Navbar({
+    			props: { socials: data.socials },
+    			$$inline: true
+    		});
+
+    	video = new Video({ $$inline: true });
 
     	contact = new Contact({
     			props: { details: data.contact },
@@ -960,6 +1119,10 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
+    			create_component(navbar.$$.fragment);
+    			t0 = space();
+    			create_component(video.$$.fragment);
+    			t1 = space();
     			create_component(contact.$$.fragment);
     			add_location(main, file$3, 10, 0, 204);
     		},
@@ -968,21 +1131,31 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			mount_component(navbar, main, null);
+    			append_dev(main, t0);
+    			mount_component(video, main, null);
+    			append_dev(main, t1);
     			mount_component(contact, main, null);
     			current = true;
     		},
     		p: noop,
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(navbar.$$.fragment, local);
+    			transition_in(video.$$.fragment, local);
     			transition_in(contact.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(navbar.$$.fragment, local);
+    			transition_out(video.$$.fragment, local);
     			transition_out(contact.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+    			destroy_component(navbar);
+    			destroy_component(video);
     			destroy_component(contact);
     		}
     	};
