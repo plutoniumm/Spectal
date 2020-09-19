@@ -1,23 +1,40 @@
 <script>
+  export let tmons = []
+  import Carousel from '@beyonk/svelte-carousel'
+  import { ChevronLeftIcon, ChevronRightIcon } from 'svelte-feather-icons'
 </script>
 
 <style>
   main {
     z-index: 1;
-    padding: 1em 1.5em;
+    padding: 1em 0;
   }
-  h1 {
+  .control :global(svg) {
+    width: 100%;
+    height: 100%;
     color: #fff;
-    font-size: 4em;
-    line-height: 0.5em;
-    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  :global(.tmonCar) {
+    background-color: green;
+  }
+  .slide-content {
+    text-align: center;
   }
 </style>
 
 <main>
-  <h1><span class="level1">Get in Touch.</span></h1>
-  <p style="font-size:1.5em;font-weight:400;padding:0.25em">
-    We're always on the lookout for exceptional talent. Please write to us to
-    get started!
-  </p>
+  <Carousel localizer="tmonCar" perPage="1">
+    <span class="control" slot="left-control">
+      <ChevronLeftIcon />
+    </span>
+    {#each tmons as tmn}
+      <div class="slide-content">{tmn.name}</div>
+    {/each}
+    <span class="control" slot="right-control">
+      <ChevronRightIcon />
+    </span>
+  </Carousel>
 </main>

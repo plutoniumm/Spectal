@@ -2,6 +2,7 @@
   import Navbar from './navbar.svelte'
   import Video from './landing/video.svelte'
   import Team from './landing/team.svelte'
+  import Tmons from './landing/tmons.svelte'
   import Contact from './landing/contact.svelte'
   import data from './data.json'
 </script>
@@ -10,8 +11,9 @@
 </style>
 
 <main>
-  <Navbar socials={data.socials} />
-  <Video />
-  <Team team={data.team} />
-  <Contact details={data.contact} />
+  <!-- <Navbar socials={data.socials} />
+  <Video /> -->
+  <Tmons tmons={data.tmons} />
+  <!-- <Team team={data.team} />
+  <Contact details={data.contact} /> -->
 </main>

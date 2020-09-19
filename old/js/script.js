@@ -150,19 +150,3 @@ home.doc( 'testimonials' ).get()
                   $( '.tmonials' ).slick( { centerMode: true, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000, draggable: true, dots: true, infinite: true, cssEase: 'ease', touchThreshold: 100 } );
             } );
       } )
-
-home.doc( 'team' ).collection( 'people' ).get().then(
-      function ( querySnapshot ) {
-            querySnapshot.forEach( function ( doc ) {
-                  getDat( 'peeps' ).innerHTML += `
-                  <div style="box-sizing:content-box;margin:0 auto;">
-                        <div class="teambox">
-                              <img src="${ doc.data().image }" style="width:${ wi() / 1.1 }px;height:${ wi() / 1.1 }px;">
-                              <div class="teamcol" style="background-color: ${ doc.data().color };width:${ wi() / 1.1 }px;height:${ wi() / 1.1 };px"></div>
-                        </div>
-                        <h4 style="font-weight:800;">${ doc.data().name }</h4>
-                        <p style="font-weight:200;">${ doc.data().description }</p>
-                  </div>
-      `
-            } );
-      } );

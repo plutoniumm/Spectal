@@ -15,20 +15,42 @@
             {
                   "name": "Urvi Varmani",
                   "pos": "Social Media",
-                  "img": "/assets/team/chow.jpeg",
+                  "img": "./assets/team/chow.jpeg",
                   "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
             },
             {
                   "name": "Himanshu Chowdhary",
                   "pos": "Founder",
-                  "img": "/assets/team/chow.jpeg",
+                  "img": "./assets/team/chow.jpeg",
                   "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
             },
             {
                   "name": "Riddhi Diwan",
                   "pos": "Artist Manager",
-                  "img": "/assets/team/chow.jpeg",
+                  "img": "./assets/team/chow.jpeg",
                   "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            }
+      ],
+      "tmons": [
+            {
+                  "name": "Siddhesh Dalvi",
+                  "via": "Waves 2019",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            },
+            {
+                  "name": "Akshat Adarsh",
+                  "via": "Twitter",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            },
+            {
+                  "name": "Debapriya Kar",
+                  "via": "Instagram",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+            },
+            {
+                  "name": "Test Name",
+                  "via": "Facebook",
+                  "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
             }
       ]
 }

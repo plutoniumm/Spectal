@@ -1,5 +1,5 @@
 <script>
-  const logo = '/assets/logo.png'
+  const logo = './assets/logo.png'
   export let socials
 </script>
 
@@ -25,7 +25,7 @@
         display: block;
         margin: 1em;
         padding: 0.25em;
-        background-image: url(/assets/deco/grad-pplOg.svg);
+        background-image: url(./assets/deco/grad-pplOg.svg);
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: 0 0.33em;

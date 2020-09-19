@@ -22,6 +22,6 @@
 
 <div class="videoBgWrapper">
   <video loop autoplay class="videoBg">
-    <source src="/assets/video.mp4" type="video/mp4" />
+    <source src="./assets/video.mp4" type="video/mp4" />
   </video>
 </div>
