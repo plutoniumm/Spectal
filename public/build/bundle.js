@@ -883,7 +883,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (97:4) {#each team as me}
+    // (101:4) {#each team as me}
     function create_each_block(ctx) {
     	let div4;
     	let div2;
@@ -894,7 +894,7 @@ var app = (function () {
     	let t0;
     	let div1;
     	let span0;
-    	let t1_value = /*me*/ ctx[1].text + "";
+    	let t1_value = /*me*/ ctx[1].text.slice(0, 180) + "";
     	let t1;
     	let t2;
     	let div3;
@@ -927,26 +927,26 @@ var app = (function () {
     			t7 = space();
     			if (img.src !== (img_src_value = /*me*/ ctx[1].img)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*me*/ ctx[1].name);
-    			attr_dev(img, "class", "svelte-1yeewye");
-    			add_location(img, file$2, 99, 39, 1973);
-    			attr_dev(div0, "class", "flip-card-front svelte-1yeewye");
-    			add_location(div0, file$2, 99, 10, 1944);
+    			attr_dev(img, "class", "svelte-1sofv49");
+    			add_location(img, file$2, 103, 39, 2066);
+    			attr_dev(div0, "class", "flip-card-front svelte-1sofv49");
+    			add_location(div0, file$2, 103, 10, 2037);
     			set_style(span0, "padding", "1.5em");
     			set_style(span0, "text-align", "left");
     			set_style(span0, "font-weight", "500");
     			set_style(span0, "line-height", "1.5em");
-    			add_location(span0, file$2, 101, 12, 2065);
-    			attr_dev(div1, "class", "flip-card-back svelte-1yeewye");
-    			add_location(div1, file$2, 100, 10, 2024);
-    			attr_dev(div2, "class", "flip-card-inner svelte-1yeewye");
-    			add_location(div2, file$2, 98, 8, 1904);
+    			add_location(span0, file$2, 105, 12, 2158);
+    			attr_dev(div1, "class", "flip-card-back svelte-1sofv49");
+    			add_location(div1, file$2, 104, 10, 2117);
+    			attr_dev(div2, "class", "flip-card-inner svelte-1sofv49");
+    			add_location(div2, file$2, 102, 8, 1997);
     			set_style(span1, "font-weight", "600");
     			set_style(span1, "font-size", "0.9em");
-    			add_location(span1, file$2, 108, 10, 2274);
-    			attr_dev(div3, "class", "meDeets svelte-1yeewye");
-    			add_location(div3, file$2, 107, 8, 2242);
-    			attr_dev(div4, "class", "flip-card svelte-1yeewye");
-    			add_location(div4, file$2, 97, 6, 1872);
+    			add_location(span1, file$2, 112, 10, 2381);
+    			attr_dev(div3, "class", "meDeets svelte-1sofv49");
+    			add_location(div3, file$2, 111, 8, 2349);
+    			attr_dev(div4, "class", "flip-card svelte-1sofv49");
+    			add_location(div4, file$2, 101, 6, 1965);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -975,7 +975,7 @@ var app = (function () {
     				attr_dev(img, "alt", img_alt_value);
     			}
 
-    			if (dirty & /*team*/ 1 && t1_value !== (t1_value = /*me*/ ctx[1].text + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*team*/ 1 && t1_value !== (t1_value = /*me*/ ctx[1].text.slice(0, 180) + "")) set_data_dev(t1, t1_value);
     			if (dirty & /*team*/ 1 && t3_value !== (t3_value = /*me*/ ctx[1].name + "")) set_data_dev(t3, t3_value);
     			if (dirty & /*team*/ 1 && t6_value !== (t6_value = /*me*/ ctx[1].pos + "")) set_data_dev(t6, t6_value);
     		},
@@ -988,7 +988,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(97:4) {#each team as me}",
+    		source: "(101:4) {#each team as me}",
     		ctx
     	});
 
@@ -1028,17 +1028,17 @@ var app = (function () {
     			}
 
     			attr_dev(span, "class", "level1");
-    			add_location(span, file$2, 90, 6, 1616);
-    			attr_dev(h1, "class", "svelte-1yeewye");
-    			add_location(h1, file$2, 90, 2, 1612);
+    			add_location(span, file$2, 94, 6, 1709);
+    			attr_dev(h1, "class", "svelte-1sofv49");
+    			add_location(h1, file$2, 94, 2, 1705);
     			set_style(p, "font-size", "1.5em");
     			set_style(p, "font-weight", "400");
     			set_style(p, "padding", "0.25em");
-    			add_location(p, file$2, 91, 2, 1663);
-    			attr_dev(div, "class", "meContainer svelte-1yeewye");
-    			add_location(div, file$2, 95, 2, 1817);
-    			attr_dev(section, "class", "svelte-1yeewye");
-    			add_location(section, file$2, 89, 0, 1600);
+    			add_location(p, file$2, 95, 2, 1756);
+    			attr_dev(div, "class", "meContainer svelte-1sofv49");
+    			add_location(div, file$2, 99, 2, 1910);
+    			attr_dev(section, "class", "svelte-1sofv49");
+    			add_location(section, file$2, 93, 0, 1693);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1174,8 +1174,8 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[33] = list[i];
-    	child_ctx[35] = i;
+    	child_ctx[34] = list[i];
+    	child_ctx[36] = i;
     	return child_ctx;
     }
 
@@ -1184,7 +1184,7 @@ var app = (function () {
     const get_left_control_slot_changes = dirty => ({});
     const get_left_control_slot_context = ctx => ({});
 
-    // (5:1) {#if controls}
+    // (14:1) {#if controls}
     function create_if_block_1(ctx) {
     	let button0;
     	let t;
@@ -1192,10 +1192,10 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	const left_control_slot_template = /*#slots*/ ctx[25]["left-control"];
-    	const left_control_slot = create_slot(left_control_slot_template, ctx, /*$$scope*/ ctx[24], get_left_control_slot_context);
-    	const right_control_slot_template = /*#slots*/ ctx[25]["right-control"];
-    	const right_control_slot = create_slot(right_control_slot_template, ctx, /*$$scope*/ ctx[24], get_right_control_slot_context);
+    	const left_control_slot_template = /*#slots*/ ctx[26]["left-control"];
+    	const left_control_slot = create_slot(left_control_slot_template, ctx, /*$$scope*/ ctx[25], get_left_control_slot_context);
+    	const right_control_slot_template = /*#slots*/ ctx[26]["right-control"];
+    	const right_control_slot = create_slot(right_control_slot_template, ctx, /*$$scope*/ ctx[25], get_right_control_slot_context);
 
     	const block = {
     		c: function create() {
@@ -1206,10 +1206,10 @@ var app = (function () {
     			if (right_control_slot) right_control_slot.c();
     			attr_dev(button0, "class", "left svelte-poqy6m");
     			attr_dev(button0, "aria-label", "left");
-    			add_location(button0, file$3, 5, 1, 119);
+    			add_location(button0, file$3, 14, 1, 459);
     			attr_dev(button1, "class", "right svelte-poqy6m");
     			attr_dev(button1, "aria-label", "right");
-    			add_location(button1, file$3, 8, 1, 223);
+    			add_location(button1, file$3, 17, 1, 563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button0, anchor);
@@ -1229,8 +1229,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*left*/ ctx[5], false, false, false),
-    					listen_dev(button1, "click", /*right*/ ctx[6], false, false, false)
+    					listen_dev(button0, "click", /*left*/ ctx[6], false, false, false),
+    					listen_dev(button1, "click", /*right*/ ctx[7], false, false, false)
     				];
 
     				mounted = true;
@@ -1238,14 +1238,14 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (left_control_slot) {
-    				if (left_control_slot.p && dirty[0] & /*$$scope*/ 16777216) {
-    					update_slot(left_control_slot, left_control_slot_template, ctx, /*$$scope*/ ctx[24], dirty, get_left_control_slot_changes, get_left_control_slot_context);
+    				if (left_control_slot.p && dirty[0] & /*$$scope*/ 33554432) {
+    					update_slot(left_control_slot, left_control_slot_template, ctx, /*$$scope*/ ctx[25], dirty, get_left_control_slot_changes, get_left_control_slot_context);
     				}
     			}
 
     			if (right_control_slot) {
-    				if (right_control_slot.p && dirty[0] & /*$$scope*/ 16777216) {
-    					update_slot(right_control_slot, right_control_slot_template, ctx, /*$$scope*/ ctx[24], dirty, get_right_control_slot_changes, get_right_control_slot_context);
+    				if (right_control_slot.p && dirty[0] & /*$$scope*/ 33554432) {
+    					update_slot(right_control_slot, right_control_slot_template, ctx, /*$$scope*/ ctx[25], dirty, get_right_control_slot_changes, get_right_control_slot_context);
     				}
     			}
     		},
@@ -1275,18 +1275,18 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(5:1) {#if controls}",
+    		source: "(14:1) {#if controls}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:4) {#if dots}
+    // (22:4) {#if dots}
     function create_if_block(ctx) {
     	let ul;
     	let ul_class_value;
-    	let each_value = { length: /*totalDots*/ ctx[11] };
+    	let each_value = { length: /*totalDots*/ ctx[12] };
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1302,8 +1302,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", ul_class_value = "" + (null_to_empty(/*dotStyle*/ ctx[1]) + " svelte-poqy6m"));
-    			add_location(ul, file$3, 13, 1, 353);
+    			attr_dev(ul, "class", ul_class_value = "" + (null_to_empty(/*dotStyle*/ ctx[2]) + " svelte-poqy6m"));
+    			set_style(ul, "position", "absolute");
+    			set_style(ul, "bottom", "0.5em");
+    			add_location(ul, file$3, 22, 1, 693);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -1313,8 +1315,8 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*isDotActive, currentIndex, go, currentPerPage, totalDots*/ 3472) {
-    				each_value = { length: /*totalDots*/ ctx[11] };
+    			if (dirty[0] & /*isDotActive, currentIndex, go, currentPerPage, totalDots*/ 6944) {
+    				each_value = { length: /*totalDots*/ ctx[12] };
     				validate_each_argument(each_value);
     				let i;
 
@@ -1337,7 +1339,7 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty[0] & /*dotStyle*/ 2 && ul_class_value !== (ul_class_value = "" + (null_to_empty(/*dotStyle*/ ctx[1]) + " svelte-poqy6m"))) {
+    			if (dirty[0] & /*dotStyle*/ 4 && ul_class_value !== (ul_class_value = "" + (null_to_empty(/*dotStyle*/ ctx[2]) + " svelte-poqy6m"))) {
     				attr_dev(ul, "class", ul_class_value);
     			}
     		},
@@ -1351,14 +1353,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(13:4) {#if dots}",
+    		source: "(22:4) {#if dots}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (15:2) {#each {length: totalDots} as _, i}
+    // (24:2) {#each {length: totalDots} as _, i}
     function create_each_block$1(ctx) {
     	let li;
     	let li_class_value;
@@ -1366,18 +1368,18 @@ var app = (function () {
     	let dispose;
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[27](/*i*/ ctx[35], ...args);
+    		return /*click_handler*/ ctx[28](/*i*/ ctx[36], ...args);
     	}
 
     	const block = {
     		c: function create() {
     			li = element("li");
 
-    			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[4](/*currentIndex*/ ctx[8], /*i*/ ctx[35])
+    			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[5](/*currentIndex*/ ctx[9], /*i*/ ctx[36])
     			? "active"
     			: "") + " svelte-poqy6m"));
 
-    			add_location(li, file$3, 15, 2, 415);
+    			add_location(li, file$3, 24, 2, 794);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1390,7 +1392,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*currentIndex*/ 256 && li_class_value !== (li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[4](/*currentIndex*/ ctx[8], /*i*/ ctx[35])
+    			if (dirty[0] & /*currentIndex*/ 512 && li_class_value !== (li_class_value = "" + (null_to_empty(/*isDotActive*/ ctx[5](/*currentIndex*/ ctx[9], /*i*/ ctx[36])
     			? "active"
     			: "") + " svelte-poqy6m"))) {
     				attr_dev(li, "class", li_class_value);
@@ -1407,7 +1409,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(15:2) {#each {length: totalDots} as _, i}",
+    		source: "(24:2) {#each {length: totalDots} as _, i}",
     		ctx
     	});
 
@@ -1416,27 +1418,48 @@ var app = (function () {
 
     function create_fragment$3(ctx) {
     	let div1;
-    	let div0;
+    	let h1;
+    	let span;
     	let t0;
     	let t1;
+    	let div0;
+    	let t2;
+    	let t3;
     	let div1_class_value;
     	let current;
-    	const default_slot_template = /*#slots*/ ctx[25].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[24], null);
-    	let if_block0 = /*controls*/ ctx[3] && create_if_block_1(ctx);
-    	let if_block1 = /*dots*/ ctx[2] && create_if_block(ctx);
+    	const default_slot_template = /*#slots*/ ctx[26].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[25], null);
+    	let if_block0 = /*controls*/ ctx[4] && create_if_block_1(ctx);
+    	let if_block1 = /*dots*/ ctx[3] && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
     			div1 = element("div");
+    			h1 = element("h1");
+    			span = element("span");
+    			t0 = text(/*CarTitle*/ ctx[1]);
+    			t1 = space();
     			div0 = element("div");
     			if (default_slot) default_slot.c();
-    			t0 = space();
+    			t2 = space();
     			if (if_block0) if_block0.c();
-    			t1 = space();
+    			t3 = space();
     			if (if_block1) if_block1.c();
+    			set_style(span, "padding", "0.2em");
+    			set_style(span, "background-image", "url(./assets/deco/grad-yelNil.svg)");
+    			set_style(span, "background-position", "bottom");
+    			set_style(span, "background-repeat", "no-repeat");
+    			set_style(span, "background-size", "80% 0.25em");
+    			add_location(span, file$3, 2, 2, 145);
+    			attr_dev(h1, "class", "carTitle");
+    			set_style(h1, "text-transform", "uppercase");
+    			set_style(h1, "width", "100%");
+    			set_style(h1, "text-align", "center");
+    			set_style(h1, "line-height", "0.66em");
+    			add_location(h1, file$3, 1, 1, 39);
     			attr_dev(div0, "class", "slides");
-    			add_location(div0, file$3, 1, 1, 39);
+    			set_style(div0, "height", "100%");
+    			add_location(div0, file$3, 10, 1, 359);
     			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty("carousel " + /*localizer*/ ctx[0]) + " svelte-poqy6m"));
     			add_location(div1, file$3, 0, 0, 0);
     		},
@@ -1445,38 +1468,44 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
+    			append_dev(div1, h1);
+    			append_dev(h1, span);
+    			append_dev(span, t0);
+    			append_dev(div1, t1);
     			append_dev(div1, div0);
 
     			if (default_slot) {
     				default_slot.m(div0, null);
     			}
 
-    			/*div0_binding*/ ctx[26](div0);
-    			append_dev(div1, t0);
+    			/*div0_binding*/ ctx[27](div0);
+    			append_dev(div1, t2);
     			if (if_block0) if_block0.m(div1, null);
-    			append_dev(div1, t1);
+    			append_dev(div1, t3);
     			if (if_block1) if_block1.m(div1, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
+    			if (!current || dirty[0] & /*CarTitle*/ 2) set_data_dev(t0, /*CarTitle*/ ctx[1]);
+
     			if (default_slot) {
-    				if (default_slot.p && dirty[0] & /*$$scope*/ 16777216) {
-    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[24], dirty, null, null);
+    				if (default_slot.p && dirty[0] & /*$$scope*/ 33554432) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[25], dirty, null, null);
     				}
     			}
 
-    			if (/*controls*/ ctx[3]) {
+    			if (/*controls*/ ctx[4]) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
 
-    					if (dirty[0] & /*controls*/ 8) {
+    					if (dirty[0] & /*controls*/ 16) {
     						transition_in(if_block0, 1);
     					}
     				} else {
     					if_block0 = create_if_block_1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
-    					if_block0.m(div1, t1);
+    					if_block0.m(div1, t3);
     				}
     			} else if (if_block0) {
     				group_outros();
@@ -1488,7 +1517,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*dots*/ ctx[2]) {
+    			if (/*dots*/ ctx[3]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
@@ -1519,7 +1548,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (default_slot) default_slot.d(detaching);
-    			/*div0_binding*/ ctx[26](null);
+    			/*div0_binding*/ ctx[27](null);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     		}
@@ -1540,12 +1569,13 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Carousel", slots, ['default','left-control','right-control']);
     	let { localizer = "" } = $$props;
+    	let { CarTitle = "" } = $$props;
     	let { dotStyle = "" } = $$props;
     	let { perPage = 3 } = $$props;
     	let { loop = true } = $$props;
     	let { autoplay = 0 } = $$props;
-    	let { duration = 200 } = $$props;
-    	let { easing = "ease-out" } = $$props;
+    	let { duration = 300 } = $$props;
+    	let { easing = "ease" } = $$props;
     	let { startIndex = 0 } = $$props;
     	let { draggable = true } = $$props;
     	let { multipleDrag = true } = $$props;
@@ -1560,7 +1590,7 @@ var app = (function () {
     	const dispatch = createEventDispatcher();
 
     	onMount(() => {
-    		$$invalidate(28, controller = new siema_min({
+    		$$invalidate(29, controller = new siema_min({
     				selector: siema,
     				perPage: typeof perPage === "object" ? perPage : Number(perPage),
     				loop,
@@ -1612,7 +1642,7 @@ var app = (function () {
     	}
 
     	function handleChange(event) {
-    		$$invalidate(8, currentIndex = controller.currentSlide);
+    		$$invalidate(9, currentIndex = controller.currentSlide);
 
     		dispatch("change", {
     			currentSlide: controller.currentSlide,
@@ -1622,6 +1652,7 @@ var app = (function () {
 
     	const writable_props = [
     		"localizer",
+    		"CarTitle",
     		"dotStyle",
     		"perPage",
     		"loop",
@@ -1644,7 +1675,7 @@ var app = (function () {
     	function div0_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
     			siema = $$value;
-    			$$invalidate(9, siema);
+    			$$invalidate(10, siema);
     		});
     	}
 
@@ -1652,20 +1683,21 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ("localizer" in $$props) $$invalidate(0, localizer = $$props.localizer);
-    		if ("dotStyle" in $$props) $$invalidate(1, dotStyle = $$props.dotStyle);
-    		if ("perPage" in $$props) $$invalidate(12, perPage = $$props.perPage);
-    		if ("loop" in $$props) $$invalidate(13, loop = $$props.loop);
-    		if ("autoplay" in $$props) $$invalidate(14, autoplay = $$props.autoplay);
-    		if ("duration" in $$props) $$invalidate(15, duration = $$props.duration);
-    		if ("easing" in $$props) $$invalidate(16, easing = $$props.easing);
-    		if ("startIndex" in $$props) $$invalidate(17, startIndex = $$props.startIndex);
-    		if ("draggable" in $$props) $$invalidate(18, draggable = $$props.draggable);
-    		if ("multipleDrag" in $$props) $$invalidate(19, multipleDrag = $$props.multipleDrag);
-    		if ("dots" in $$props) $$invalidate(2, dots = $$props.dots);
-    		if ("controls" in $$props) $$invalidate(3, controls = $$props.controls);
-    		if ("threshold" in $$props) $$invalidate(20, threshold = $$props.threshold);
-    		if ("rtl" in $$props) $$invalidate(21, rtl = $$props.rtl);
-    		if ("$$scope" in $$props) $$invalidate(24, $$scope = $$props.$$scope);
+    		if ("CarTitle" in $$props) $$invalidate(1, CarTitle = $$props.CarTitle);
+    		if ("dotStyle" in $$props) $$invalidate(2, dotStyle = $$props.dotStyle);
+    		if ("perPage" in $$props) $$invalidate(13, perPage = $$props.perPage);
+    		if ("loop" in $$props) $$invalidate(14, loop = $$props.loop);
+    		if ("autoplay" in $$props) $$invalidate(15, autoplay = $$props.autoplay);
+    		if ("duration" in $$props) $$invalidate(16, duration = $$props.duration);
+    		if ("easing" in $$props) $$invalidate(17, easing = $$props.easing);
+    		if ("startIndex" in $$props) $$invalidate(18, startIndex = $$props.startIndex);
+    		if ("draggable" in $$props) $$invalidate(19, draggable = $$props.draggable);
+    		if ("multipleDrag" in $$props) $$invalidate(20, multipleDrag = $$props.multipleDrag);
+    		if ("dots" in $$props) $$invalidate(3, dots = $$props.dots);
+    		if ("controls" in $$props) $$invalidate(4, controls = $$props.controls);
+    		if ("threshold" in $$props) $$invalidate(21, threshold = $$props.threshold);
+    		if ("rtl" in $$props) $$invalidate(22, rtl = $$props.rtl);
+    		if ("$$scope" in $$props) $$invalidate(25, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1673,6 +1705,7 @@ var app = (function () {
     		onMount,
     		createEventDispatcher,
     		localizer,
+    		CarTitle,
     		dotStyle,
     		perPage,
     		loop,
@@ -1705,26 +1738,27 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("localizer" in $$props) $$invalidate(0, localizer = $$props.localizer);
-    		if ("dotStyle" in $$props) $$invalidate(1, dotStyle = $$props.dotStyle);
-    		if ("perPage" in $$props) $$invalidate(12, perPage = $$props.perPage);
-    		if ("loop" in $$props) $$invalidate(13, loop = $$props.loop);
-    		if ("autoplay" in $$props) $$invalidate(14, autoplay = $$props.autoplay);
-    		if ("duration" in $$props) $$invalidate(15, duration = $$props.duration);
-    		if ("easing" in $$props) $$invalidate(16, easing = $$props.easing);
-    		if ("startIndex" in $$props) $$invalidate(17, startIndex = $$props.startIndex);
-    		if ("draggable" in $$props) $$invalidate(18, draggable = $$props.draggable);
-    		if ("multipleDrag" in $$props) $$invalidate(19, multipleDrag = $$props.multipleDrag);
-    		if ("dots" in $$props) $$invalidate(2, dots = $$props.dots);
-    		if ("controls" in $$props) $$invalidate(3, controls = $$props.controls);
-    		if ("threshold" in $$props) $$invalidate(20, threshold = $$props.threshold);
-    		if ("rtl" in $$props) $$invalidate(21, rtl = $$props.rtl);
-    		if ("currentIndex" in $$props) $$invalidate(8, currentIndex = $$props.currentIndex);
-    		if ("siema" in $$props) $$invalidate(9, siema = $$props.siema);
-    		if ("controller" in $$props) $$invalidate(28, controller = $$props.controller);
+    		if ("CarTitle" in $$props) $$invalidate(1, CarTitle = $$props.CarTitle);
+    		if ("dotStyle" in $$props) $$invalidate(2, dotStyle = $$props.dotStyle);
+    		if ("perPage" in $$props) $$invalidate(13, perPage = $$props.perPage);
+    		if ("loop" in $$props) $$invalidate(14, loop = $$props.loop);
+    		if ("autoplay" in $$props) $$invalidate(15, autoplay = $$props.autoplay);
+    		if ("duration" in $$props) $$invalidate(16, duration = $$props.duration);
+    		if ("easing" in $$props) $$invalidate(17, easing = $$props.easing);
+    		if ("startIndex" in $$props) $$invalidate(18, startIndex = $$props.startIndex);
+    		if ("draggable" in $$props) $$invalidate(19, draggable = $$props.draggable);
+    		if ("multipleDrag" in $$props) $$invalidate(20, multipleDrag = $$props.multipleDrag);
+    		if ("dots" in $$props) $$invalidate(3, dots = $$props.dots);
+    		if ("controls" in $$props) $$invalidate(4, controls = $$props.controls);
+    		if ("threshold" in $$props) $$invalidate(21, threshold = $$props.threshold);
+    		if ("rtl" in $$props) $$invalidate(22, rtl = $$props.rtl);
+    		if ("currentIndex" in $$props) $$invalidate(9, currentIndex = $$props.currentIndex);
+    		if ("siema" in $$props) $$invalidate(10, siema = $$props.siema);
+    		if ("controller" in $$props) $$invalidate(29, controller = $$props.controller);
     		if ("timer" in $$props) timer = $$props.timer;
     		if ("pips" in $$props) pips = $$props.pips;
-    		if ("currentPerPage" in $$props) $$invalidate(10, currentPerPage = $$props.currentPerPage);
-    		if ("totalDots" in $$props) $$invalidate(11, totalDots = $$props.totalDots);
+    		if ("currentPerPage" in $$props) $$invalidate(11, currentPerPage = $$props.currentPerPage);
+    		if ("totalDots" in $$props) $$invalidate(12, totalDots = $$props.totalDots);
     	};
 
     	let pips;
@@ -1736,16 +1770,16 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*controller*/ 268435456) {
+    		if ($$self.$$.dirty[0] & /*controller*/ 536870912) {
     			 pips = controller ? controller.innerElements : [];
     		}
 
-    		if ($$self.$$.dirty[0] & /*controller, perPage*/ 268439552) {
-    			 $$invalidate(10, currentPerPage = controller ? controller.perPage : perPage);
+    		if ($$self.$$.dirty[0] & /*controller, perPage*/ 536879104) {
+    			 $$invalidate(11, currentPerPage = controller ? controller.perPage : perPage);
     		}
 
-    		if ($$self.$$.dirty[0] & /*controller, currentPerPage*/ 268436480) {
-    			 $$invalidate(11, totalDots = controller
+    		if ($$self.$$.dirty[0] & /*controller, currentPerPage*/ 536872960) {
+    			 $$invalidate(12, totalDots = controller
     			? Math.ceil(controller.innerElements.length / currentPerPage)
     			: []);
     		}
@@ -1753,6 +1787,7 @@ var app = (function () {
 
     	return [
     		localizer,
+    		CarTitle,
     		dotStyle,
     		dots,
     		controls,
@@ -1795,25 +1830,26 @@ var app = (function () {
     			safe_not_equal,
     			{
     				localizer: 0,
-    				dotStyle: 1,
-    				perPage: 12,
-    				loop: 13,
-    				autoplay: 14,
-    				duration: 15,
-    				easing: 16,
-    				startIndex: 17,
-    				draggable: 18,
-    				multipleDrag: 19,
-    				dots: 2,
-    				controls: 3,
-    				threshold: 20,
-    				rtl: 21,
-    				isDotActive: 4,
-    				left: 5,
-    				right: 6,
-    				go: 7,
-    				pause: 22,
-    				resume: 23
+    				CarTitle: 1,
+    				dotStyle: 2,
+    				perPage: 13,
+    				loop: 14,
+    				autoplay: 15,
+    				duration: 16,
+    				easing: 17,
+    				startIndex: 18,
+    				draggable: 19,
+    				multipleDrag: 20,
+    				dots: 3,
+    				controls: 4,
+    				threshold: 21,
+    				rtl: 22,
+    				isDotActive: 5,
+    				left: 6,
+    				right: 7,
+    				go: 8,
+    				pause: 23,
+    				resume: 24
     			},
     			[-1, -1]
     		);
@@ -1831,6 +1867,14 @@ var app = (function () {
     	}
 
     	set localizer(value) {
+    		throw new Error("<Carousel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get CarTitle() {
+    		throw new Error("<Carousel>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set CarTitle(value) {
     		throw new Error("<Carousel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
@@ -1939,7 +1983,7 @@ var app = (function () {
     	}
 
     	get isDotActive() {
-    		return this.$$.ctx[4];
+    		return this.$$.ctx[5];
     	}
 
     	set isDotActive(value) {
@@ -1947,7 +1991,7 @@ var app = (function () {
     	}
 
     	get left() {
-    		return this.$$.ctx[5];
+    		return this.$$.ctx[6];
     	}
 
     	set left(value) {
@@ -1955,7 +1999,7 @@ var app = (function () {
     	}
 
     	get right() {
-    		return this.$$.ctx[6];
+    		return this.$$.ctx[7];
     	}
 
     	set right(value) {
@@ -1963,7 +2007,7 @@ var app = (function () {
     	}
 
     	get go() {
-    		return this.$$.ctx[7];
+    		return this.$$.ctx[8];
     	}
 
     	set go(value) {
@@ -1971,7 +2015,7 @@ var app = (function () {
     	}
 
     	get pause() {
-    		return this.$$.ctx[22];
+    		return this.$$.ctx[23];
     	}
 
     	set pause(value) {
@@ -1979,7 +2023,7 @@ var app = (function () {
     	}
 
     	get resume() {
-    		return this.$$.ctx[23];
+    		return this.$$.ctx[24];
     	}
 
     	set resume(value) {
@@ -2260,7 +2304,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (52:4) <span class="control" slot="left-control">
+    // (62:4) <span class="control" slot="left-control">
     function create_left_control_slot(ctx) {
     	let span;
     	let chevronlefticon;
@@ -2271,9 +2315,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronlefticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-s8btni");
+    			attr_dev(span, "class", "control svelte-k9oqe9");
     			attr_dev(span, "slot", "left-control");
-    			add_location(span, file$6, 51, 4, 913);
+    			add_location(span, file$6, 61, 4, 1228);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2299,25 +2343,25 @@ var app = (function () {
     		block,
     		id: create_left_control_slot.name,
     		type: "slot",
-    		source: "(52:4) <span class=\\\"control\\\" slot=\\\"left-control\\\">",
+    		source: "(62:4) <span class=\\\"control\\\" slot=\\\"left-control\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:4) {#each tmons as tmn}
+    // (65:4) {#each tmons as tmn}
     function create_each_block$2(ctx) {
     	let div;
-    	let h1;
-    	let t0_value = /*tmn*/ ctx[1].text + "";
+    	let h2;
+    	let t0_value = /*tmn*/ ctx[1].text.slice(0, 180) + "";
     	let t0;
     	let t1;
-    	let span1;
+    	let p;
     	let t2_value = /*tmn*/ ctx[1].name + "";
     	let t2;
     	let t3;
-    	let span0;
+    	let span;
     	let t4;
     	let t5_value = /*tmn*/ ctx[1].via + "";
     	let t5;
@@ -2325,39 +2369,39 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			h1 = element("h1");
+    			h2 = element("h2");
     			t0 = text(t0_value);
     			t1 = space();
-    			span1 = element("span");
+    			p = element("p");
     			t2 = text(t2_value);
     			t3 = space();
-    			span0 = element("span");
+    			span = element("span");
     			t4 = text(", ");
     			t5 = text(t5_value);
-    			attr_dev(h1, "class", "tmonText svelte-s8btni");
-    			add_location(h1, file$6, 56, 8, 1061);
-    			set_style(span0, "font-weight", "600");
-    			set_style(span0, "font-size", "0.9em");
-    			add_location(span0, file$6, 59, 10, 1170);
-    			set_style(span1, "font-size", "1.25em");
-    			add_location(span1, file$6, 57, 8, 1106);
-    			attr_dev(div, "class", "slide-content svelte-s8btni");
-    			add_location(div, file$6, 55, 6, 1025);
+    			attr_dev(h2, "class", "tmonText svelte-k9oqe9");
+    			add_location(h2, file$6, 66, 8, 1376);
+    			set_style(span, "font-weight", "600");
+    			set_style(span, "font-size", "0.9em");
+    			add_location(span, file$6, 69, 10, 1484);
+    			attr_dev(p, "class", "tmnBy svelte-k9oqe9");
+    			add_location(p, file$6, 67, 8, 1435);
+    			attr_dev(div, "class", "slide-content svelte-k9oqe9");
+    			add_location(div, file$6, 65, 6, 1340);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, h1);
-    			append_dev(h1, t0);
+    			append_dev(div, h2);
+    			append_dev(h2, t0);
     			append_dev(div, t1);
-    			append_dev(div, span1);
-    			append_dev(span1, t2);
-    			append_dev(span1, t3);
-    			append_dev(span1, span0);
-    			append_dev(span0, t4);
-    			append_dev(span0, t5);
+    			append_dev(div, p);
+    			append_dev(p, t2);
+    			append_dev(p, t3);
+    			append_dev(p, span);
+    			append_dev(span, t4);
+    			append_dev(span, t5);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*tmons*/ 1 && t0_value !== (t0_value = /*tmn*/ ctx[1].text + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*tmons*/ 1 && t0_value !== (t0_value = /*tmn*/ ctx[1].text.slice(0, 180) + "")) set_data_dev(t0, t0_value);
     			if (dirty & /*tmons*/ 1 && t2_value !== (t2_value = /*tmn*/ ctx[1].name + "")) set_data_dev(t2, t2_value);
     			if (dirty & /*tmons*/ 1 && t5_value !== (t5_value = /*tmn*/ ctx[1].via + "")) set_data_dev(t5, t5_value);
     		},
@@ -2370,14 +2414,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(55:4) {#each tmons as tmn}",
+    		source: "(65:4) {#each tmons as tmn}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:4) <span class="control" slot="right-control">
+    // (74:4) <span class="control" slot="right-control">
     function create_right_control_slot(ctx) {
     	let span;
     	let chevronrighticon;
@@ -2388,9 +2432,9 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			create_component(chevronrighticon.$$.fragment);
-    			attr_dev(span, "class", "control svelte-s8btni");
+    			attr_dev(span, "class", "control svelte-k9oqe9");
     			attr_dev(span, "slot", "right-control");
-    			add_location(span, file$6, 63, 4, 1282);
+    			add_location(span, file$6, 73, 4, 1593);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2416,14 +2460,14 @@ var app = (function () {
     		block,
     		id: create_right_control_slot.name,
     		type: "slot",
-    		source: "(64:4) <span class=\\\"control\\\" slot=\\\"right-control\\\">",
+    		source: "(74:4) <span class=\\\"control\\\" slot=\\\"right-control\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:2) <Carousel localizer="tmonCar" perPage="1" dotStyle="tmonDots">
+    // (57:2) <Carousel     CarTitle="Testimonials"     localizer="tmonCarMain"     perPage="1"     dotStyle="tmonDots">
     function create_default_slot(ctx) {
     	let t0;
     	let t1;
@@ -2492,7 +2536,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(51:2) <Carousel localizer=\\\"tmonCar\\\" perPage=\\\"1\\\" dotStyle=\\\"tmonDots\\\">",
+    		source: "(57:2) <Carousel     CarTitle=\\\"Testimonials\\\"     localizer=\\\"tmonCarMain\\\"     perPage=\\\"1\\\"     dotStyle=\\\"tmonDots\\\">",
     		ctx
     	});
 
@@ -2500,14 +2544,14 @@ var app = (function () {
     }
 
     function create_fragment$6(ctx) {
-    	let main;
-    	let t;
+    	let section;
     	let carousel;
     	let current;
 
     	carousel = new Carousel({
     			props: {
-    				localizer: "tmonCar",
+    				CarTitle: "Testimonials",
+    				localizer: "tmonCarMain",
     				perPage: "1",
     				dotStyle: "tmonDots",
     				$$slots: {
@@ -2522,19 +2566,17 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			main = element("main");
-    			t = text("Testimonials\n  ");
+    			section = element("section");
     			create_component(carousel.$$.fragment);
-    			attr_dev(main, "class", "svelte-s8btni");
-    			add_location(main, file$6, 48, 0, 822);
+    			attr_dev(section, "class", "tmonCar svelte-k9oqe9");
+    			add_location(section, file$6, 55, 0, 1089);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			append_dev(main, t);
-    			mount_component(carousel, main, null);
+    			insert_dev(target, section, anchor);
+    			mount_component(carousel, section, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -2556,7 +2598,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
+    			if (detaching) detach_dev(section);
     			destroy_component(carousel);
     		}
     	};
@@ -2741,71 +2783,74 @@ var app = (function () {
     			span6 = element("span");
     			span6.textContent = "Phone";
     			attr_dev(span0, "class", "level1");
-    			add_location(span0, file$7, 29, 6, 391);
-    			attr_dev(h1, "class", "svelte-1v1km6o");
-    			add_location(h1, file$7, 29, 2, 387);
+    			add_location(span0, file$7, 44, 6, 639);
+    			attr_dev(h1, "class", "svelte-1vzp1t");
+    			add_location(h1, file$7, 44, 2, 635);
     			set_style(p, "font-size", "1.5em");
     			set_style(p, "font-weight", "400");
     			set_style(p, "padding", "0.25em");
-    			add_location(p, file$7, 30, 2, 440);
+    			add_location(p, file$7, 45, 2, 688);
     			attr_dev(path0, "d", "M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z");
-    			add_location(path0, file$7, 38, 70, 797);
+    			add_location(path0, file$7, 55, 70, 1070);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 512 512");
-    			attr_dev(svg0, "class", "svelte-1v1km6o");
-    			add_location(svg0, file$7, 38, 8, 735);
-    			add_location(div0, file$7, 37, 6, 721);
+    			attr_dev(svg0, "class", "svelte-1vzp1t");
+    			add_location(svg0, file$7, 55, 8, 1008);
+    			add_location(div0, file$7, 54, 6, 994);
     			set_style(span1, "font-weight", "700");
     			set_style(span1, "line-height", "2em");
-    			add_location(span1, file$7, 42, 8, 1075);
-    			add_location(br0, file$7, 43, 8, 1153);
-    			add_location(span2, file$7, 44, 8, 1168);
-    			add_location(div1, file$7, 41, 6, 1061);
+    			add_location(span1, file$7, 59, 8, 1348);
+    			add_location(br0, file$7, 60, 8, 1426);
+    			add_location(span2, file$7, 61, 8, 1441);
+    			add_location(div1, file$7, 58, 6, 1334);
+    			attr_dev(div2, "class", "deet svelte-1vzp1t");
     			set_style(div2, "align-items", "center");
     			set_style(div2, "margin", "0 auto");
     			set_style(div2, "text-align", "center");
-    			add_location(div2, file$7, 36, 4, 649);
-    			add_location(br1, file$7, 47, 4, 1215);
+    			add_location(div2, file$7, 51, 4, 897);
+    			add_location(br1, file$7, 64, 4, 1488);
     			attr_dev(path1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(path1, "d", "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z");
-    			add_location(path1, file$7, 51, 70, 1395);
+    			add_location(path1, file$7, 70, 70, 1693);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 384 512");
-    			attr_dev(svg1, "class", "svelte-1v1km6o");
-    			add_location(svg1, file$7, 51, 8, 1333);
-    			add_location(div3, file$7, 50, 6, 1319);
+    			attr_dev(svg1, "class", "svelte-1vzp1t");
+    			add_location(svg1, file$7, 70, 8, 1631);
+    			add_location(div3, file$7, 69, 6, 1617);
     			set_style(span3, "font-weight", "700");
     			set_style(span3, "line-height", "2em");
-    			add_location(span3, file$7, 56, 8, 1751);
-    			add_location(br2, file$7, 57, 8, 1831);
-    			add_location(span4, file$7, 58, 8, 1846);
-    			add_location(div4, file$7, 55, 6, 1737);
+    			add_location(span3, file$7, 75, 8, 2049);
+    			add_location(br2, file$7, 76, 8, 2129);
+    			add_location(span4, file$7, 77, 8, 2144);
+    			add_location(div4, file$7, 74, 6, 2035);
+    			attr_dev(div5, "class", "deet svelte-1vzp1t");
     			set_style(div5, "align-items", "center");
     			set_style(div5, "margin", "0 auto");
     			set_style(div5, "text-align", "center");
-    			add_location(div5, file$7, 49, 4, 1247);
-    			add_location(br3, file$7, 60, 10, 1890);
+    			add_location(div5, file$7, 66, 4, 1520);
+    			add_location(br3, file$7, 79, 10, 2188);
     			attr_dev(path2, "d", "M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z");
-    			add_location(path2, file$7, 64, 70, 2069);
+    			add_location(path2, file$7, 85, 70, 2392);
     			attr_dev(svg2, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg2, "viewBox", "0 0 512 512");
-    			attr_dev(svg2, "class", "svelte-1v1km6o");
-    			add_location(svg2, file$7, 64, 8, 2007);
-    			add_location(div6, file$7, 63, 6, 1993);
+    			attr_dev(svg2, "class", "svelte-1vzp1t");
+    			add_location(svg2, file$7, 85, 8, 2330);
+    			add_location(div6, file$7, 84, 6, 2316);
     			set_style(span5, "font-weight", "700");
     			set_style(span5, "line-height", "2em");
-    			add_location(span5, file$7, 68, 8, 2398);
-    			add_location(br4, file$7, 69, 8, 2476);
-    			add_location(span6, file$7, 70, 8, 2491);
-    			add_location(div7, file$7, 67, 6, 2384);
+    			add_location(span5, file$7, 89, 8, 2721);
+    			add_location(br4, file$7, 90, 8, 2799);
+    			add_location(span6, file$7, 91, 8, 2814);
+    			add_location(div7, file$7, 88, 6, 2707);
+    			attr_dev(div8, "class", "deet svelte-1vzp1t");
     			set_style(div8, "align-items", "center");
     			set_style(div8, "margin", "0 auto");
     			set_style(div8, "text-align", "center");
-    			add_location(div8, file$7, 62, 4, 1921);
-    			attr_dev(div9, "class", "details svelte-1v1km6o");
-    			add_location(div9, file$7, 34, 2, 604);
-    			attr_dev(section, "class", "svelte-1v1km6o");
-    			add_location(section, file$7, 28, 0, 375);
+    			add_location(div8, file$7, 81, 4, 2219);
+    			attr_dev(div9, "class", "details svelte-1vzp1t");
+    			add_location(div9, file$7, 49, 2, 852);
+    			attr_dev(section, "class", "svelte-1vzp1t");
+    			add_location(section, file$7, 43, 0, 623);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2986,7 +3031,7 @@ var app = (function () {
     	{
     		name: "Debapriya Kar",
     		via: "Instagram",
-    		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
+    		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit? This makes it 180 chars."
     	},
     	{
     		name: "Test Name",

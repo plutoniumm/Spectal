@@ -25,7 +25,7 @@
     flex-direction: column;
     width: 100%;
     margin: 1em;
-    height: 400px;
+    height: 350px;
     border: 0.25em solid transparent;
     &:hover {
       border: 0.25em solid white;
@@ -38,7 +38,6 @@
       height: 100%;
     }
   }
-
   .flip-card-inner {
     flex: 7;
     position: relative;
@@ -49,12 +48,29 @@
 
   .flip-card-front,
   .flip-card-back {
-    font-size: 1.5em;
+    font-size: 1.25em;
     position: absolute;
     width: 100%;
     height: 100%;
   }
-
+  @media screen and (min-width: 768px) {
+    .flip-card {
+      width: 40%;
+      height: 400px;
+    }
+    .flip-card-back {
+      font-size: 1.25em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .flip-card {
+      width: 30%;
+      height: 450px;
+    }
+    .flip-card-back {
+      font-size: 1.75em;
+    }
+  }
   .flip-card-back {
     display: flex;
     text-align: center;
@@ -72,7 +88,7 @@
     width: 100%;
     background-color: #111;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.33em;
   }
 
   .flip-card:hover {
@@ -84,18 +100,6 @@
       background: white;
       color: black;
       transition: all 0.3s ease;
-    }
-  }
-  @media screen and (min-width: 505px) {
-    .flip-card {
-      width: 45%;
-      height: 450px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    .flip-card {
-      width: 30%;
-      height: 450px;
     }
   }
 </style>
@@ -114,7 +118,7 @@
           <div class="flip-card-back">
             <span
               style="padding:1.5em;text-align:left;font-weight:500;line-height:1.5em">
-              {me.text}
+              {me.text.slice(0, 180)}
             </span>
           </div>
         </div>

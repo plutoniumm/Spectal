@@ -131,22 +131,3 @@ home.doc( 'events' ).get().then( function ( q ) {
                   </div> `
       } ); getDat( 'evensList' ).innerHTML = `${ list } `; lateCall();
 } );
-home.doc( 'testimonials' ).get()
-      .then( function ( q ) {
-            getDat( 'tmonHead' ).innerHTML = q.data().heading;
-            getDat( 'tmonPara' ).innerHTML = q.data().paragraph;
-            list = "";
-            q.data().tmons.forEach( tmon => {
-                  list += `
-                  <div class="col text-center" style="margin-top:0.75em;">
-                        <p style="padding:1.5em;font-size:150%;" class"movetext"> "${ tmon.paragraph }"</p>
-                        <h2 class"movetext"> ${ tmon.name }</h3>
-                        <h5 class"movetext"> ${ tmon.via }</h5>
-                  </div>
-            `
-            } )
-            getDat( 'tmonList' ).innerHTML = list;
-            $( document ).ready( function () {
-                  $( '.tmonials' ).slick( { centerMode: true, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000, draggable: true, dots: true, infinite: true, cssEase: 'ease', touchThreshold: 100 } );
-            } );
-      } )
