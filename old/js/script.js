@@ -1,6 +1,5 @@
 function getDat ( id ) { return document.getElementById( id ) }; const firebaseConfig = { apiKey: 'AIzaSyDCHqrIu7LTjcElbyTEjkjB3zqN_LMJHFc', authDomain: 'spectal.firebaseapp.com', databaseURL: 'https://spectal.firebaseio.com', projectId: 'spectal' }; var app = firebase.initializeApp( firebaseConfig ), list = "", artsFull; const db = firebase.firestore( app ); const home = db.collection( 'home' ); function wi () { w = window.innerWidth; if ( w > 991 ) return ( w / 3 - 125 ); if ( w > 600 && w < 991 ) return ( w / 2 - 50 ); if ( w < 600 ) return ( w - 25 ) }
 
-home.doc( 'about' ).get().then( function ( q ) { getDat( 'aboutHead' ).innerHTML = q.data().heading; getDat( 'aboutPara' ).innerHTML = q.data().paragraph; } );
 function artModal ( id ) {
       home.doc( 'artists' ).collection( 'artists' ).doc( id ).get().then(
             function ( q ) {
