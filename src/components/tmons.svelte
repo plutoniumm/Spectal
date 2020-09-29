@@ -75,7 +75,7 @@
 
 <section class="tmonCar">
   <h1 class="title">Testimonials</h1>
-  <Carousel perPage="1" dotStyle="tmonDots">
+  <Carousel perPage="1">
     <span class="control" slot="left-control">
       <ChevronLeftIcon />
     </span>

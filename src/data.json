@@ -74,5 +74,22 @@
                   "via": "Facebook",
                   "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, suscipit?"
             }
+      ],
+      "brands": [
+            {
+                  "name": "Realme",
+                  "img": "../assets/brands/realme.png",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti! magnam corrupti elit. Tempora tenetu!"
+            },
+            {
+                  "name": "Gaana",
+                  "img": "../assets/brands/gaana.png",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti! magnam corrupti elit. Tempora tenetu!"
+            },
+            {
+                  "name": "Monster",
+                  "img": "../assets/brands/monster.png",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti! magnam corrupti elit. Tempora tenetu!"
+            }
       ]
 }

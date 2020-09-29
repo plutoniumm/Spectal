@@ -1,5 +1,5 @@
 <script>
-  export let team = []
+  export let team = [];
 </script>
 
 <style type="text/scss">
@@ -11,7 +11,6 @@
     color: #fff;
     font-size: 4em;
     line-height: 0.5em;
-    font-weight: 600;
   }
   .meContainer {
     display: flex;

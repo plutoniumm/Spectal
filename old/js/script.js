@@ -85,39 +85,3 @@ home.doc( 'artists' ).get()
                         } );
                   } );
       } );
-home.doc( 'brands' ).get()
-      .then( function ( q ) {
-            getDat( 'brandsHead' ).innerHTML = q.data().heading; getDat( 'brandsPara' ).innerHTML = q.data().paragraph; list = "";
-            q.data().brands.forEach( b => {
-                  list += `
-                  <div class="card">
-                  <img class="card-img-top" src="${ b.image }" alt="Card image cap">
-                        <div class="card-img-overlay" style="background-color:${ b.color };mix-blend-mode:multiply;"></div>
-                        <div class="card-body">
-                              <p class="card-text" style="line-height:2em">${ b.description }</p>
-                        </div>
-                  </div>
-      `
-            } );
-            getDat( 'brands' ).innerHTML += `<div id="brandsMain" class="brands row" style="padding: 0 0.5em;"> ${ list }</div> `;
-            $( document ).ready( function () {
-                  $( '.brands' ).slick( {
-                        cssEase: 'linear', speed: 500, infinite: true, slidesToShow: 4, slidesToScroll: 1,
-                        responsive: [
-                              {
-                                    breakpoint: 1600,
-                                    settings: { slidesToShow: 3, }
-                              },
-                              {
-                                    breakpoint: 1400,
-                                    settings: { slidesToShow: 2, }
-                              },
-                              {
-                                    breakpoint: 991,
-                                    settings: { slidesToShow: 1, }
-                              },
-
-                        ]
-                  } );
-            } );
-      } );

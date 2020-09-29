@@ -22,7 +22,6 @@
     color: #fff;
     font-size: 4em;
     line-height: 0.5em;
-    font-weight: 600;
   }
   .whatwedo {
     display: flex;

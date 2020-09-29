@@ -1,7 +1,7 @@
 <script>
   setTimeout(() => {
-    video.play()
-  }, 0)
+    video.play();
+  }, 0);
 </script>
 
 <style>
@@ -22,6 +22,7 @@
 
 <div class="videoBgWrapper">
   <video loop autoplay class="videoBg">
+    <track kind="captions" />
     <source src="./assets/video.mp4" type="video/mp4" />
   </video>
 </div>
