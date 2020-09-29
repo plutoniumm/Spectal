@@ -6,7 +6,28 @@
             "in": "https://linkedin.com/company/spectal-talent-management/",
             "wa": ""
       },
-      "about": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, recusandae. Lorem ipsum dolor sit amet. <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi corporis nulla voluptas laudantium, sunt fugiat nihil atque. Molestiae, at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus eius tenetur fuga pariatur magni.",
+      "about": {
+            "big": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, recusandae. Lorem ipsum dolor sit amet ",
+            "small": " corporis nulla voluptas laudantium, sunt fugiat nihil atque. Molestiae, at? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus eius tenetur fuga pariatur magni."
+      },
+      "events": [
+            {
+                  "name": "Shows",
+                  "value": 100
+            },
+            {
+                  "name": "Artists",
+                  "value": 50
+            },
+            {
+                  "name": "Cities",
+                  "value": 80
+            },
+            {
+                  "name": "Audience",
+                  "value": "1L"
+            }
+      ],
       "contact": {
             "email": "support.spectalmanagement.com",
             "phone": "+91 98765 43210",

@@ -121,12 +121,3 @@ home.doc( 'brands' ).get()
                   } );
             } );
       } );
-home.doc( 'events' ).get().then( function ( q ) {
-      getDat( 'evensHead' ).innerHTML = q.data().heading; getDat( 'evensPara' ).innerHTML = q.data().paragraph; list = ""; q.data().events.forEach( event => {
-            list +=
-                  `<div class="col d-inline-block">
-            <h1><span data-purecounter-start="${ event.value - 40 }" data-purecounter-end="${ event.value }" data-purecounter-duration="4" class="purecounter">0</span>+</h1>
-            <p>${ event.name }</p>
-                  </div> `
-      } ); getDat( 'evensList' ).innerHTML = `${ list } `; lateCall();
-} );

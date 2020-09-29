@@ -1,13 +1,22 @@
 <script>
-  export let tmons = []
-  import Carousel from '@beyonk/svelte-carousel'
-  import { ChevronLeftIcon, ChevronRightIcon } from 'svelte-feather-icons'
+  export let tmons = [];
+  import Carousel from "@beyonk/svelte-carousel";
+  import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
 </script>
 
 <style type="text/scss">
   section {
     z-index: 1;
     padding: 1em 0;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: +6px;
+    transform: scaleY(0.75);
   }
   .control :global(svg) {
     width: 32px;
@@ -34,9 +43,6 @@
       yellow 105%
     );
   }
-  :global(.tmonCarMain) {
-    flex: 11;
-  }
   .slide-content {
     position: relative;
     padding: 0 1em;
@@ -61,15 +67,15 @@
       padding: 0 2em;
       padding-bottom: 3em;
     }
+    .title {
+      letter-spacing: +10px;
+    }
   }
 </style>
 
 <section class="tmonCar">
-  <Carousel
-    CarTitle="Testimonials"
-    localizer="tmonCarMain"
-    perPage="1"
-    dotStyle="tmonDots">
+  <h1 class="title">Testimonials</h1>
+  <Carousel perPage="1" dotStyle="tmonDots">
     <span class="control" slot="left-control">
       <ChevronLeftIcon />
     </span>
