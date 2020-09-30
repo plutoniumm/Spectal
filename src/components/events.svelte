@@ -32,18 +32,18 @@
       width: 100%;
       h1 {
         text-transform: uppercase;
-        padding: 0.5em;
+        padding: 0.75em;
         margin: 20%;
         text-align: center;
         color: white;
-        border: 0.5em solid white;
+        border: 0.2em solid white;
       }
       &:hover {
         h1 {
+          cursor: pointer;
           background: white;
           color: black;
           transition: all 0.3s ease;
-          padding: 0.5em;
         }
       }
     }
@@ -75,7 +75,7 @@
     {/each}
   </div>
   <div class="whatwedo">
-    <div style="background: purple">
+    <div style="background: DarkViolet">
       <h1>Bookings</h1>
     </div>
     <div style="background: red">

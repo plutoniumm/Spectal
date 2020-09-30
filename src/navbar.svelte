@@ -1,6 +1,6 @@
 <script>
-  const logo = './assets/logo.png'
-  export let socials
+  const logo = "./assets/logo.png";
+  export let socials;
 </script>
 
 <style type="text/scss">
@@ -100,7 +100,7 @@
         width: 18px;
         &:before {
           background: #333;
-          content: '';
+          content: "";
           display: block;
           height: 100%;
           position: absolute;
@@ -110,7 +110,7 @@
         }
         &:after {
           background: #333;
-          content: '';
+          content: "";
           display: block;
           height: 100%;
           position: absolute;

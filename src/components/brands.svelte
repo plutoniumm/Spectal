@@ -1,5 +1,5 @@
 <script>
-  import { slide, fade } from "svelte/transition";
+  import { slide } from "svelte/transition";
 
   let i = 0;
   setInterval(() => {
@@ -41,9 +41,13 @@
     height: 14em;
   }
   ul {
+    float: right;
+    position: relative;
     list-style: none;
-    right: 2.25em;
-    top: 19em;
+    top: 5em;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
     li::before {
       content: "\2022";
       font-size: 2em;
@@ -90,7 +94,7 @@
     ipsum dolor sit amet.
   </p>
   <div class="carousel">
-    <!-- <ul style="position: absolute;">
+    <ul style="position: relative;">
       {#each data as bnd, idx}
         {#if idx == i}
           <li style="color: orange;" />
@@ -98,7 +102,7 @@
           <li style="color: #333; " />
         {/if}
       {/each}
-    </ul> -->
+    </ul>
     {#each data as bnd, idx}
       {#if idx == i}
         <div class="slide-content" transition:slide={{ y: 50, duration: 1000 }}>

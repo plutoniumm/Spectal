@@ -14,12 +14,12 @@
 </style>
 
 <main>
-  <Navbar socials={data.socials} />
-  <Video />
-  <About data={data.about} />
-  <Events data={data.events} />
+  <!-- <Navbar socials={data.socials} /> -->
+  <!-- <Video /> -->
+  <!-- <About data={data.about} /> -->
+  <!-- <Events data={data.events} /> -->
   <Brands data={data.brands} />
-  <Tmons tmons={data.tmons} />
-  <Team team={data.team} />
-  <Contact details={data.contact} />
+  <!-- <Tmons tmons={data.tmons} /> -->
+  <!-- <Team team={data.team} /> -->
+  <!-- <Contact details={data.contact} /> -->
 </main>
