@@ -110,14 +110,14 @@
 </style>
 
 <section>
-  <h1><span class="level1">Our Brands.</span></h1>
+  <h1><span class="level1">Our Artists.</span></h1>
   <p style="font-size:1.5em;font-weight:400;padding:0.25em;">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, qui? Lorem
     ipsum dolor sit amet.
   </p>
   <div class="carousel">
     <ul style="position: relative;">
-      {#each data as bnd, idx}
+      <!-- {#each data as bnd, idx}
         {#if idx == i}
           <li style="color: orange;" />
         {:else}
@@ -139,6 +139,7 @@
           </div>
         </div>
       {/if}
-    {/each}
+    {/each} -->
+    </ul>
   </div>
 </section>
