@@ -34,8 +34,9 @@
       <script>function SelectText( element ) { var doc = document, text = doc.getElementById( element ), range, selection; if ( doc.body.createTextRange ) { range = document.body.createTextRange(); range.moveToElementText( text ); range.select(); } else if ( window.getSelection ) { selection = window.getSelection(); range = document.createRange(); range.selectNodeContents( text ); selection.removeAllRanges(); selection.addRange( range ); } }</script>
       <div id="cordis"></div>
       <script defer>
-            var signs = JSON.parse( '[{"img":"https://i.imgur.com/7msVdjU.png"},{"img":"https://i.imgur.com/hL0Vjzs.png"},{"img":"https://i.imgur.com/trawKQy.png"},{"img":"https://i.imgur.com/VdCPnqZ.png"},{"img":"https://i.imgur.com/KPNh4Gb.png"}]' ); function Obs( signs ) {
-                  return `
+            var signs =
+                  JSON.parse( '[{"img":"https://i.imgur.com/7msVdjU.png", "num":"9810107829"},{"img":"https://i.imgur.com/hL0Vjzs.png", "num":"8390903109"},{"img":"https://i.imgur.com/trawKQy.png", "num":"9971069731"},{"img":"https://i.imgur.com/VdCPnqZ.png", "num":"9811171066"},{"img":"https://i.imgur.com/KPNh4Gb.png", "num":"9990984505"}]' ); function Obs( signs ) {
+                        return `
                   <div id="${ signs.img.slice( 14 ) }" style="border:1px solid black;">
                   <table CELLSPACING=0>
                   <tr><td rowspan="3"><img src="https://i.imgur.com/WwTTPQe.png" width="100px" height="auto" alt="Logo"></td></tr>
@@ -47,13 +48,13 @@
                   <a href="https://fb.com/spectalmanagement/"><img class="icon" src="https://i.imgur.com/FIeZsKS.png"></a>
                   <a href="https://twitter.com/spectalmngmnt"><img class="icon" src="https://i.imgur.com/mtYEY5u.png"></a>
                   <a href="https://linkedin.com/company/spectal-talent-management"><img class="icon" src="https://i.imgur.com/U0etk7P.png"></a>
-                  <a href="+9819321130"><img class="icon" src="https://i.imgur.com/MvnFVZJ.png"></a>
+                  <a href="https://wa.me/91${ signs.num }"><img class="icon" src="https://i.imgur.com/MvnFVZJ.png"></a>
                   </td></tr>
 
                   </table>
                   </div><button onclick="SelectText('${ signs.img.slice( 14 ) }')"> Select This ^</button>
                   `
-            }; document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
+                  }; document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
       </script>
 </body>
 
