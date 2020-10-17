@@ -1,145 +1,200 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { fade } from "svelte/transition";
+  import Tags from "../micro/tags.svelte";
 
-  let i = 0;
-  setInterval(() => {
-    i = (i + 1) % data.length;
-  }, 3000);
   export let data;
+
+  const artists = data.map((el) => {
+    return el.name;
+  });
+  $: i = 0;
+  $: artist = artists[i];
+
+  const left = () => {
+    i = i == 0 ? artists.length - 1 : i - 1;
+  };
+  const right = () => {
+    i = i == artists.length - 1 ? 0 : i + 1;
+  };
+
+  setInterval(() => right(), 2000);
 </script>
 
 <style type="text/scss">
   section {
-    z-index: 1;
-    padding: 1em;
-  }
-  h1 {
-    color: #fff;
-    font-size: 4em;
-    line-height: 0.5em;
-  }
-  .carousel {
-    background: #111;
-    margin: 1em;
-    padding: 1em;
-    min-height: 17em;
-    border-radius: 0.5em;
-    box-shadow: inset 0 -0.5em 1.5rem 4px #66666644,
-      1.5rem 3rem 3.5rem 0.5rem rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-  }
-  .slide-content {
-    display: flex;
-    padding: 1em;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .bar {
-    background-image: url(../assets/deco/grad-redYel.svg);
-    background-position: bottom left 0.1em;
-    background-repeat: no-repeat;
-    background-size: 33% 100%;
-    height: 14em;
-  }
-  ul {
-    float: right;
     position: relative;
-    list-style: none;
-    top: 5em;
-    margin: 0;
-    box-sizing: border-box;
-    border: 0;
-    li::before {
-      content: "\2022";
-      font-size: 2em;
-      font-weight: bold;
-      width: 1em;
-      margin-left: -1em;
-    }
-  }
-  .learn {
-    font-size: 0.66em;
-    text-align: center;
-    width: auto;
-    border: 0;
-    border-radius: 0.25em;
-    background: #333;
-    color: #dddddd88;
-    text-transform: uppercase;
-    padding: 1em 1.5em;
-    margin: 1em 35%;
-    font-weight: 500;
-    letter-spacing: 5px;
-    outline: none;
-    &:hover {
+    .left,
+    .right {
+      outline: none;
+      background: #eee;
+      padding: 2.5em;
+      color: #888;
+      border-radius: 5em;
+      border: 0;
       cursor: pointer;
-      background: #fff;
-      color: black;
-      transition: all 0.3s ease;
+      position: absolute;
+      top: 40%;
+    }
+    .right {
+      right: -55px;
+      svg {
+        position: relative;
+        right: 25px;
+      }
+    }
+    .left {
+      left: -55px;
+      svg {
+        position: relative;
+        left: 25px;
+      }
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        display: flex;
+        max-height: 350px;
+        .databox {
+          padding: 1em;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          position: relative;
+        }
+        h1 {
+          font-size: 2.5em;
+          line-height: 0.25em;
+        }
+        img {
+          width: 50%;
+          position: relative;
+          bottom: 0;
+          object-fit: cover;
+          filter: grayscale(100%);
+          transition: all 0.3s ease;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+    .artists {
+      height: auto;
+      width: 100%;
+      background: linear-gradient(to right, BlueViolet, Red);
+      svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        color: #000;
+        stroke-width: 2px;
+        stroke: currentcolor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .bottomBox {
+        width: 90%;
+        padding-top: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5em;
+        margin: 0 auto;
+      }
+      .learnMore {
+        border: 2px solid #fff;
+        background: transparent;
+        font-weight: 600;
+        color: #fff;
+        outline: none;
+        margin: 0.5em;
+        font-size: 0.66em;
+        position: relative;
+        top: -0.5em;
+        padding: 0.33em;
+        border-radius: 0.5em;
+        transition: all 0.3s ease;
+        &:hover {
+          border: 2px solid transparent;
+          background: #fff;
+          color: #111;
+        }
+      }
     }
   }
   @media screen and (max-width: 768px) {
-    .carousel {
-      margin: 1em 0.25em;
-      padding: 0.25em 1em;
-      height: 14em;
+    ul {
+      li {
+        img {
+          width: 100% !important;
+          position: relative;
+          bottom: 0;
+          object-fit: contain !important;
+          transition: none;
+          filter: unset !important;
+          &:hover {
+            pointer-events: none;
+            transform: none !important;
+          }
+        }
+      }
     }
-    .bar {
-      height: 12em;
+    .artists {
+      height: auto;
+      width: 100%;
+      background: linear-gradient(to right, BlueViolet, Red);
+      .bottomBox {
+        position: relative;
+        top: -1em;
+        width: 95% !important;
+        padding-top: 0 !important;
+      }
     }
   }
   @media screen and (max-width: 500px) {
-    .carousel {
-      font-size: 0.5em;
-      margin: 0.25em;
-      padding: 0.25em;
-      height: 10em;
-    }
-    .slide-content {
-      position: relative;
-      top: -1em;
-      font-weight: 300;
-    }
-    .bar {
-      height: 8em;
-    }
-    ul {
-      top: 43em;
-    }
   }
 </style>
 
 <section>
-  <h1><span class="level1">Our Artists.</span></h1>
-  <p style="font-size:1.5em;font-weight:400;padding:0.25em;">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, qui? Lorem
-    ipsum dolor sit amet.
-  </p>
-  <div class="carousel">
-    <ul style="position: relative;">
-      <!-- {#each data as bnd, idx}
-        {#if idx == i}
-          <li style="color: orange;" />
-        {:else}
-          <li style="color: #333; " />
+  <div style="z-index: 1;padding: 1em;">
+    <h1><span class="level1">Our Artists.</span></h1>
+    <p style="font-size:1.5em;font-weight:400;padding:0.25em;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, qui? Lorem
+      ipsum dolor sit amet.
+    </p>
+  </div>
+  <ul style="position: relative;">
+    <div class="artists">
+      {#each data as art}
+        {#if art.name == artist}
+          <li in:fade>
+            <img src={art.img} alt="" />
+            {#if innerWidth > 768}
+              <div class="databox">
+                <h1>{art.name}</h1>
+                <p>{art.desc}</p>
+                <Tags tags={art.links} />
+              </div>
+            {/if}
+          </li>
+          <div class="bottomBox">
+            {art.name}
+            <button class="learnMore">Learn More</button>
+          </div>
         {/if}
       {/each}
-    </ul>
-    {#each data as bnd, idx}
-      {#if idx == i}
-        <div class="slide-content" transition:slide={{ y: 50, duration: 1000 }}>
-          <img
-            style="width:20%;max-height:10em;flex:10;padding:1em;object-fit:contain;"
-            src={bnd.img}
-            alt="brandlogo" />
-          <div style="flex:0.25" class="bar">&nbsp;</div>
-          <div style="flex:20;padding: 2em 1em;font-weight:500;font-size:1.5em">
-            {bnd.desc.slice(0, 180)}
-            <p class="learn">Learn More</p>
-          </div>
-        </div>
-      {/if}
-    {/each} -->
-    </ul>
-  </div>
+      <button class="left" on:click={left}>
+        <svg viewBox="0 0 32 32">
+          <path d="M20 30 L8 16 20 2" />
+        </svg>
+      </button>
+      <button class="right" on:click={right}>
+        <svg viewBox="0 0 32 32">
+          <path d="M12 30 L24 16 12 2" />
+        </svg>
+      </button>
+    </div>
+  </ul>
 </section>

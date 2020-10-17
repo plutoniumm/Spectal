@@ -91,5 +91,37 @@
                   "img": "../assets/brands/monster.png",
                   "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti! magnam corrupti elit. Tempora tenetu!"
             }
+      ],
+      "artists": [
+            {
+                  "name": "The Local Train",
+                  "img": "./assets/artists/tlt.png",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti! magnam corrupti elit. Tempora tenetu!",
+                  "links": {
+                        "apple": "insta",
+                        "spotify": "insta",
+                        "amzn": "insta",
+                        "learn": "insta",
+                        "insta": "insta",
+                        "fb": "insta",
+                        "twt": "insta",
+                        "web": "insta",
+                        "merch": "insta"
+                  }
+            },
+            {
+                  "name": "When Chai Met Toast",
+                  "img": "../assets/brands/gaana.png",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur veniam optio corporis magnam corrupti! magnam corrupti elit. Tempora tenetu!",
+                  "links": {
+                        "apple": "insta",
+                        "spotify": "insta",
+                        "amzn": "insta",
+                        "learn": "insta",
+                        "insta": "insta",
+                        "fb": "insta",
+                        "twt": "insta"
+                  }
+            }
       ]
 }
