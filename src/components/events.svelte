@@ -1,6 +1,18 @@
 <script>
   import Counter from "../micro/counter.svelte";
 
+  let i = 0;
+  $: currOb = evns[i].name;
+
+  const evns = [
+    { name: "Production", color: "red" },
+    { name: "College", color: "orange" },
+  ];
+
+  setInterval(() => {
+    i = (i + 1) % evns.length;
+  }, 3000);
+
   export let data;
 </script>
 
@@ -18,7 +30,7 @@
   }
 
   h1 {
-    padding: 0 1em;
+    padding: 0 0.25em;
     color: #fff;
     font-size: 4em;
     line-height: 0.5em;
@@ -78,8 +90,12 @@
     <div style="background: DarkViolet">
       <h1>Bookings</h1>
     </div>
-    <div style="background: red">
-      <h1>Production</h1>
-    </div>
+    {#each evns as ob}
+      {#if ob.name == currOb}
+        <div style="background: {ob.color}">
+          <h1>{ob.name}</h1>
+        </div>
+      {/if}
+    {/each}
   </div>
 </section>

@@ -1,5 +1,5 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { fade } from "svelte/transition";
 
   let i = 0;
   setInterval(() => {
@@ -127,7 +127,7 @@
     </ul>
     {#each data as bnd, idx}
       {#if idx == i}
-        <div class="slide-content" transition:slide={{ y: 50, duration: 1000 }}>
+        <div class="slide-content" in:fade>
           <img
             style="width:20%;max-height:10em;flex:10;padding:1em;object-fit:contain;"
             src={bnd.img}

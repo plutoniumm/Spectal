@@ -4,6 +4,8 @@
 
   export let data;
 
+  var x = setInterval(() => right(), 3000);
+
   const artists = data.map((el) => {
     return el.name;
   });
@@ -11,13 +13,15 @@
   $: artist = artists[i];
 
   const left = () => {
-    i = i == 0 ? artists.length - 1 : i - 1;
+    i = (i - 1 + artists.length) % artists.length;
+    clearInterval(x);
+    x = setInterval(() => right(), 3000);
   };
   const right = () => {
-    i = i == artists.length - 1 ? 0 : i + 1;
+    i = (i + 1 + artists.length) % artists.length;
+    clearInterval(x);
+    x = setInterval(() => right(), 3000);
   };
-
-  setInterval(() => right(), 2000);
 </script>
 
 <style type="text/scss">
@@ -44,6 +48,7 @@
     }
     .left {
       left: -55px;
+      height: 400px;
       svg {
         position: relative;
         left: 25px;
@@ -68,9 +73,10 @@
         }
         img {
           width: 50%;
+          min-width: 50%;
           position: relative;
           bottom: 0;
-          object-fit: cover;
+          object-fit: scale-down;
           filter: grayscale(100%);
           transition: all 0.3s ease;
           &:hover {
@@ -171,7 +177,7 @@
         {#if art.name == artist}
           <li in:fade>
             <img src={art.img} alt="" />
-            {#if innerWidth > 768}
+            {#if window.innerWidth > 768}
               <div class="databox">
                 <h1>{art.name}</h1>
                 <p>{art.desc}</p>
