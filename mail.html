@@ -1,4 +1,8 @@
-<body style="background-color: #ccc">
+<link rel="stylesheet" href="./mail.css">
+<link rel="preconnect" href="https://i.imgur.com/">
+
+<body>
+
       <style>
             tr {
                   background-color: white
@@ -26,19 +30,69 @@
             }
       </style>
 
-      <script>function SelectText( element ) { var doc = document, text = doc.getElementById( element ), range, selection; if ( doc.body.createTextRange ) { range = document.body.createTextRange(); range.moveToElementText( text ); range.select(); } else if ( window.getSelection ) { selection = window.getSelection(); range = document.createRange(); range.selectNodeContents( text ); selection.removeAllRanges(); selection.addRange( range ); } }</script>
+      <script>
+            function SelectText( element ) {
+                  console.log( element );
+                  let text = document.getElementById( element ), range, selection;
+                  if ( document.body.createTextRange ) {
+                        range = document.body.createTextRange();
+                        range.moveToElementText( text );
+                        range.select();
+                  }
+                  else if ( window.getSelection ) {
+                        selection = window.getSelection();
+                        range = document.createRange();
+                        range.selectNodeContents( text );
+                        selection.removeAllRanges();
+                        selection.addRange( range );
+                  }
+            }
+
+            var signs = [
+                  { img: "7msVdjU", num: "9810107829" },
+                  { img: "hL0Vjzs", num: "8390903109" },
+                  { img: "trawKQy", num: "9971069731" },
+                  { img: "VdCPnqZ", num: "9811171066" },
+                  { img: "KPNh4Gb", num: "9990984505" },
+                  { img: "WEByKmV", num: "8527029024" }
+            ];
+      </script>
+
       <div id="cordis"></div>
+
       <script defer>
-            var signs =
-                  JSON.parse( '[{"img":"7msVdjU", "num":"9810107829"},{"img":"hL0Vjzs", "num":"8390903109"},{"img":"trawKQy", "num":"9971069731"},{"img":"VdCPnqZ", "num":"9811171066"},{"img":"KPNh4Gb", "num":"9990984505"},{"img":"WEByKmV", "num":"8527029024"}]' ); function Obs( signs ) {
-                        return `<div id="${ signs.img.slice( 14 ) }" style="border:1px solid black;"><table CELLSPACING=0><tr><td rowspan="3"><img src="https://i.imgur.com/WwTTPQe.png" width="100px" height="auto" alt="Logo"></td></tr>
+            function Obs( signs ) {
+                  const image = ( id, w = '22px', h = '22px' ) =>
+                        `<img height="${ h }" width="${ w }" src="https://i.imgur.com/${ id }.png">`;
 
-                  <tr><td style="padding-top:0.5em;"><a href="https://www.spectalmanagement.com"><img width="200px" src="https://i.imgur.com/${ signs.img }.png"></a></td></tr>
-                  
-                  <tr><td style="padding-bottom:0.25em;"><a href="https://instagr.am/spectal.management/"><img class="icon" src="https://i.imgur.com/1QF8DOk.png"></a><a href="https://fb.com/spectalmanagement/"><img class="icon" src="https://i.imgur.com/FIeZsKS.png"></a><a href="https://twitter.com/spectalmngmnt"><img class="icon" src="https://i.imgur.com/mtYEY5u.png"></a><a href="https://linkedin.com/company/spectal-talent-management"><img class="icon" src="https://i.imgur.com/U0etk7P.png"></a><a href="https://wa.me/91${ signs.num }"><img class="icon" src="https://i.imgur.com/MvnFVZJ.png"></a>
-                  </td></tr>
+                  return `
+      <div class="article">
+            <table CELLSPACING=0 id="${ signs.img }">
+                  <tr>
+                        <td rowspan="3">
+                              ${ image( 'WwTTPQe', '100px', 'auto' ) }
+                        </td>
+                  </tr>
+                  <tr>
+                        <td style="padding-top:0.5em;">
+                              <a href="https://www.spectalmanagement.com">
+                                    ${ image( signs.img, '200px', 'auto' ) }
+                              </a>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td style="padding-bottom:0.25em;">
+                              <a href="https://instagr.am/spectal.management/">${ image( '1QF8DOk' ) }</a>
+                              <a href="https://fb.com/spectalmanagement/">${ image( 'FIeZsKS' ) }</a>
+                              <a href="https://twitter.com/spectalmngmnt">${ image( 'mtYEY5u' ) }</a>
+                              <a href="https://linkedin.com/company/spectal-talent-management">${ image( 'U0etk7P' ) }</a>
+                              <a href="https://wa.me/91${ signs.num }">${ image( 'MvnFVZJ' ) }</a>
+                        </td>
+                  </tr>
 
-                  </table></div><button onclick="SelectText('${ signs.img.slice( 14 ) }')"> Select ^</button>`
-                  }; document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
+            </table>
+            <button onclick="SelectText('${ signs.img }')">Select</button>
+      </div>`};
+            document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
       </script>
 </body>

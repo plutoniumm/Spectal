@@ -1,0 +1,27 @@
+button {
+    background: #55B;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: white;
+    border: 0;
+    margin: 5px;
+}
+
+.article{
+    border:1px solid #8888;
+    padding:10px;
+    border-radius:5px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+body {
+    background-color: #ccd;
+}
+
+#cordis {
+    display: flex;
+    flex-wrap: wrap;
+}
