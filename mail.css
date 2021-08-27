@@ -6,6 +6,11 @@ button {
     color: white;
     border: 0;
     margin: 5px;
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+button:hover{
+    background: #55E;
 }
 
 .article{
@@ -18,7 +23,7 @@ button {
 }
 
 body {
-    background-color: #ccd;
+    background-color: #eef;
 }
 
 #cordis {
