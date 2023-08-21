@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="./mail.css">
+<link rel="preconnect" href="https://i.imgur.com/">
+
+<body>
+      You can select and then <kbd>ctrl</kbd> + <kbd>C</kbd> and <kbd>ctrl</kbd> + <kbd>V</kbd> to copy-paste
+      <style>
+            tr {
+                  background-color: white
+            }
+
+            td {
+                  padding: 0 0.5em;
+                  background-image: url(https://www.iconsdb.com/icons/preview/white/square-xxl.png);
+                  background-size: cover;
+                  background-repeat: no-repeat;
+            }
+
+            table {
+                  background-image: url(https://www.iconsdb.com/icons/preview/white/square-xxl.png);
+                  background-size: cover;
+                  color: black;
+            }
+
+            .icon {
+                  padding: 4px 0;
+                  width: 22px;
+                  height: 22px;
+                  object-fit: cover;
+                  border-radius: 5px;
+            }
+      </style>
+
+      <script>
+            function SelectText ( element ) {
+                  console.log( element );
+                  let text = document.getElementById( element ), range, selection;
+                  if ( document.body.createTextRange ) {
+                        range = document.body.createTextRange();
+                        range.moveToElementText( text );
+                        range.select();
+                  }
+                  else if ( window.getSelection ) {
+                        selection = window.getSelection();
+                        range = document.createRange();
+                        range.selectNodeContents( text );
+                        selection.removeAllRanges();
+                        selection.addRange( range );
+                  }
+            }
+
+            // const removedSigns = [
+            // { img: "VdCPnqZ", num: "9811 171066" }, URVI
+            // { img: "KPNh4Gb", num: "9990 984505" }, DIKSHA
+            // { img: "WEByKmV", num: "8527 029024" }, ROHAN
+            // { img: "8vrSPQj", num: "8368 538351" }, NAVYA
+            // { img: "CX0weq3", num: "6387 239480" }, SPRIHA
+            // { img: "7msVdjU", num: "9810 107829" }, AKRITI
+            // { img: "1WKbQjj", num: "9818 118970" }, NEHA
+            // { img: "clEsEJf", num: "8619 613146" } LOKIT
+            // { img: "ryBu1rF", num: "9971 069731" }, // Ridhi
+            // { img: "8vitj7L", num: "8808 158816" }, // Anshika
+            // { img: "aZ8tJ02", num: "8105 103146" }, // Nilasha
+            // { img: "p6FhsTW", num: "9230 599990" }, // Rajeshwari
+            // { img: "O9r6Xhv", num: "8808 158816" }, // Anshika
+            // { img: "pUAQndQ", num: "9587 464620" }, // Arshita
+            // ]
+
+            var signs = [
+                  // ALBUM: https://imgur.com/a/UXabZOL
+                  { img: "9LRTDVI", num: "8390903109" }, // Chow
+                  { img: "EBzwnWD", num: "9958694329" }, // Raveen
+                  { img: "4hphuF8", num: "7498960309" }, // Sourav
+                  { img: "4WvdA4W", num: "9637066416" }, // Abhishek
+                  { img: "4WVL4CU", num: "7678030748" }, // Shruti
+                  { img: "f0gcbcn", num: "9711217727" }, // Pawan
+                  { img: "pFG6sNq", num: "9711217727" }, // Pawan Sr
+                  { img: "CVl6yqq", num: "9319855019" }, // Luvya
+                  { img: "4GejVkZ", num: "9717218929" }, // Saloni
+                  { img: "ANg53m9", num: "9717218929" }, // Saloni Sr
+                  { img: "NS773TZ", num: "7837666365" }, // Mansukhman
+                  { img: "7gMVnoZ", num: "7837666365" }, // Mansukhman Sr
+            ];
+      </script>
+
+      <div id="cordis"></div>
+
+      <script defer>
+            const image = ( id, w = '22px', h = '22px' ) =>
+            /*html*/`<img
+                  height="${ h }" width="${ w }"
+                  src="https://i.imgur.com/${ id }.png"
+            >`;
+
+            const Obs = ( signs ) =>/*html*/`
+  <div class="article">
+    <table CELLSPACING=0 id="${ signs.img }" style="border-collapse:separate;">
+      <tr>
+        <td id="spectalLogo" rowspan="2" style="padding-top:0.5em;padding-bottom:0.2em">
+          <a href="https://www.spectalmanagement.com">
+            ${ image( 'MSQnhki', '100px', 'auto' ) }
+          </a>
+        </td>
+      </tr>
+      <tr style="border-spacing: 1em 0;">
+        <td id="person" style="border-left:1px solid #000;" rowspan="3">
+          <a href="https://wa.me/91${ signs.num }">
+            ${ image( signs.img, '200px', 'auto' ) }
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-bottom:0.25em;text-align:center;">
+          <a href="https://instagr.am/spectal.management/">${ image( 'Iv2FKDR' ) }</a>
+          <a href="https://linkedin.com/company/spectal-talent-management">${ image( 'KBAwhQU' ) }</a>
+        </td>
+      </tr>
+      </table>
+    <button onclick="SelectText('${ signs.img }')">Select</button>
+  </div>`;
+            document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
+      </script>
+</body>
