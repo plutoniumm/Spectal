@@ -1,13 +1,26 @@
 <script>
   import Person from "./person.svelte";
-  import { onMount } from "svelte";
   import data from "./data.json";
 
-  onMount(() => {
-    const saved = localStorage.getItem("spec-data") || "[]";
-    const sdata = JSON.parse(saved);
-    sdata.forEach((person) => data.push(person));
-  });
+  String.prototype.l = function () {
+    return this.toLowerCase();
+  };
+
+  $: demo = { n: "", r: "", nu: "" };
+  $: filter = "";
+
+  function valid(person) {
+    if (
+      person.n.length > 3 &&
+      person.n.length > 22 &&
+      person.r.length > 3 &&
+      person.r.length < 38 &&
+      person.nu.length > 8 &&
+      person.nu.length < 15
+    ) {
+      return true;
+    }
+  }
 
   function SelectText(element) {
     let text = document.getElementById(element),
@@ -27,12 +40,11 @@
   }
 
   function addPerson() {
-    const name = document.getElementById("name").value;
-    const role = document.getElementById("role").value;
-    const number = document.getElementById("number").value;
-    const person = { n: name, r: role, nu: number };
+    if (!valid(demo)) {
+      return;
+    }
+    const person = { ...demo };
     data.push(person);
-    localStorage.setItem("spec-data", JSON.stringify(data));
     document.getElementById("form").reset();
   }
 </script>
@@ -48,28 +60,63 @@
 
   <details>
     <summary>Create New</summary>
-    <div class="f">
-      <form id="form" on:submit|preventDefault={addPerson}>
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="text" id="role" placeholder="Role" required />
-        <input type="tel" id="number" placeholder="Number" required />
+    <div class="create">
+      <form on:submit|preventDefault={addPerson}>
+        <input type="text" placeholder="Name" bind:value={demo.n} />
+        <input type="text" placeholder="Role" bind:value={demo.r} />
+        <input type="number" placeholder="Number" bind:value={demo.nu} />
         <button type="submit">Add</button>
       </form>
 
-      <div id="demo"></div>
+      <div id="demo">
+        <Person person={demo} />
+        <button on:click={() => SelectText(demo.n)}>Select</button>
+      </div>
     </div>
   </details>
 
+  <div id="filter" style="width: 100%;text-align:center;">
+    <input
+      style="border-radius: 5px;padding:5px;font-size:18px;border:0;min-width:330px;"
+      type="text"
+      placeholder="Search"
+      bind:value={filter}
+    />
+  </div>
+
   <div id="cordis">
     {#each data as person}
-      <div class="article">
-        <Person {person} />
-        <button on:click={() => SelectText(person.n)}>Select</button>
-      </div>
+      {#if (filter.length && person.n
+          .l()
+          .includes(filter.l())) || !filter.length}
+        <div class="article">
+          <Person {person} />
+          <button on:click={() => SelectText(person.n)}>Select</button>
+        </div>
+      {/if}
     {/each}
   </div>
 </body>
 
 <style>
-  /* Add your CSS here or import your stylesheet */
+  details {
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  .create,
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  form {
+    text-align: center;
+    flex-direction: column;
+  }
+  input {
+    margin: 5px;
+  }
 </style>

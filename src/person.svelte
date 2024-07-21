@@ -29,8 +29,8 @@
   <tr style="font-size: 1em;line-height:0.8em;">
     <td id="number">{person.r}</td>
   </tr>
-  <tr style="font-size: 0.9em;">
-    <td id="number" style="padding-top: 0.5em;padding-bottom: 0.5em;">
+  <tr style="font-size: 0.95em;">
+    <td id="number" style="padding-top: 0.5em;padding-bottom: 0.25em;">
       <a style="text-decoration:none;color: #888;" href="tel:{person.nu}"
         >{person.nu}</a
       >
