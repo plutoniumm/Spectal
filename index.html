@@ -1,83 +1,18 @@
-<link rel="stylesheet" href="./mail.css">
-<link rel="preconnect" href="https://i.imgur.com/">
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="/global.css">
+  <title>Vite + Svelte</title>
+</head>
 
 <body>
-      You can select and then <kbd>ctrl</kbd> + <kbd>C</kbd> and <kbd>ctrl</kbd> + <kbd>V</kbd> to copy-paste
-
-      <script>
-            function SelectText ( element ) {
-                  console.log( element );
-                  let text = document.getElementById( element ), range, selection;
-                  if ( document.body.createTextRange ) {
-                        range = document.body.createTextRange();
-                        range.moveToElementText( text );
-                        range.select();
-                  }
-                  else if ( window.getSelection ) {
-                        selection = window.getSelection();
-                        range = document.createRange();
-                        range.selectNodeContents( text );
-                        selection.removeAllRanges();
-                        selection.addRange( range );
-                  }
-            }
-
-
-
-            const data = [
-                  { n: "Himanshu Chowdhry", nu: "+91 83909 03109", r: "Founder Partner" },
-                  { n: "Jatin Sharma", nu: "+91 82786 37830", r: "Associate - Brand Solutions" },
-                  { n: "Luvya Kario", nu: "+91 93198 55019", r: "Senior Associate - Brand Solutions" },
-                  { n: "Raveen Bishnoi", nu: "+91 99586 94329", r: "Head - Live Business Development & Ops" },
-                  { n: "Spandana Banothu", nu: "+91 83319 83435", r: "Senior Associate - Brand Solutions" },
-                  { n: "Aakash Bansal", nu: "+91 95488 24428", r: "Associate - Artist Operations" },
-                  { n: "Eshaa Wahie", nu: "+91 99107 58920", r: "Creative Strategist- Brand Solutions" },
-                  { n: "Pawan Jethwa", nu: "+91 97112 17727", r: "Associate-Production & Operations" },
-                  { n: "Revti Sain", nu: "+91 95828 61962", r: "Associate - Brand Solutions" },
-                  { n: "Sourav Yadav", nu: "+91 74989 60309", r: "Lead - Artist Operations" },
-                  { n: "Pankaj Atal", nu: "+91 95824 37607", r: "Associate - Artist Operations" },
-                  { n: "Prisha Kothari", nu: "+91 94795 00854", r: "Associate - Brand Solutions" },
-            ]
-      </script>
-
-      <div id="cordis"></div>
-
-      <script defer>
-            const image = ( id, w = '22px', h = '22px' ) => /*html*/`<img
-                  height="${ h }" width="${ w }" src="https://i.imgur.com/${ id }.png"
-            >`;
-
-            const Obs = ( person ) =>/*html*/`
-  <div class="article">
-    <table CELLSPACING=0 id="${ person.n }" style="border-collapse:separate;font-family:sans-serif;text-transform:uppercase;font-size:16px;">
-      <tr>
-        <td id="spectalLogo" rowspan="6" style="padding-right:1.5em;">
-          <a href="https://www.spectalmanagement.com">
-            ${ image( 'reiboGk', '150px', 'auto' ) }
-          </a>
-        </td>
-      </tr>
-
-      <tr>
-        <td id="person" style="color:rgb(201,70,60);font-weight:500;font-size:1.25em;min-width: 300px;padding-top:0.5em;line-height:0.8em;">${ person.n }</td>
-      </tr>
-      <tr style="font-size: 1em;line-height:0.8em;">
-        <td id="number">${ person.r }</td>
-      </tr>
-      <tr style="font-size: 0.9em;">
-        <td id="number" style="padding-top: 0.5em;padding-bottom: 0.5em;">
-              <a style="text-decoration:none;color: #888;" href="tel:${ person.nu }">${ person.nu }</a>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding-bottom:0.5em;">
-          <a href="https://instagr.am/spectal.management/">${ image( '8G8uVuC' ) }</a>
-          <a href="https://linkedin.com/company/spectal-talent-management">${ image( 'cJuTJAf' ) }</a>
-        </td>
-      </tr>
-      </table>
-    <button onclick="SelectText('${ person.n }')">Select</button>
-  </div>`;
-            document.getElementById( "cordis" ).innerHTML = `${ data.map( Obs ).join( '' ) }`
-      </script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
+
+</html>
