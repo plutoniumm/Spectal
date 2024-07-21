@@ -3,32 +3,6 @@
 
 <body>
       You can select and then <kbd>ctrl</kbd> + <kbd>C</kbd> and <kbd>ctrl</kbd> + <kbd>V</kbd> to copy-paste
-      <style>
-            tr {
-                  background-color: white
-            }
-
-            td {
-                  padding: 0 0.5em;
-                  background-image: url(https://i.imgur.com/HbAPhl6.png);
-                  background-size: cover;
-                  background-repeat: no-repeat;
-            }
-
-            table {
-                  background-image: url(https://i.imgur.com/HbAPhl6.png);
-                  background-size: cover;
-                  color: black;
-            }
-
-            .icon {
-                  padding: 4px 0;
-                  width: 22px;
-                  height: 22px;
-                  object-fit: cover;
-                  border-radius: 5px;
-            }
-      </style>
 
       <script>
             function SelectText ( element ) {
@@ -48,75 +22,62 @@
                   }
             }
 
-            // const removedSigns = [
-            // { img: "VdCPnqZ", num: "9811171066" }, URVI
-            // { img: "KPNh4Gb", num: "9990984505" }, DIKSHA
-            // { img: "WEByKmV", num: "8527029024" }, ROHAN
-            // { img: "8vrSPQj", num: "8368538351" }, NAVYA
-            // { img: "CX0weq3", num: "6387239480" }, SPRIHA
-            // { img: "7msVdjU", num: "9810107829" }, AKRITI
-            // { img: "1WKbQjj", num: "9818118970" }, NEHA
-            // { img: "clEsEJf", num: "8619613146" } LOKIT
-            // { img: "ryBu1rF", num: "9971069731" }, // Ridhi
-            // { img: "8vitj7L", num: "8808158816" }, // Anshika
-            // { img: "aZ8tJ02", num: "8105103146" }, // Nilasha
-            // { img: "p6FhsTW", num: "9230599990" }, // Rajeshwari
-            // { img: "O9r6Xhv", num: "8808158816" }, // Anshika
-            // { img: "pUAQndQ", num: "9587464620" }, // Arshita
-            // { img: "4GejVkZ", num: "9717218929" }, // Saloni
-            // { img: "ANg53m9", num: "9717218929" }, // Saloni Sr
-            // { img: "NS773TZ", num: "7837666365" }, // Mansukhman
-            // { img: "7gMVnoZ", num: "7837666365" }, // Mansukhman Sr
-            // ]
 
-            var signs = [
-                  { img: "9LRTDVI", num: "8390903109" }, // Chow
-                  { img: "EBzwnWD", num: "9958694329" }, // Raveen
-                  { img: "4hphuF8", num: "7498960309" }, // Sourav
-                  { img: "4WvdA4W", num: "9637066416" }, // Abhishek
-                  { img: "4WVL4CU", num: "7678030748" }, // Shruti
-                  { img: "f0gcbcn", num: "9711217727" }, // Pawan
-                  { img: "pFG6sNq", num: "9711217727" }, // Pawan Sr
-                  { img: "CVl6yqq", num: "9319855019" }, // Luvya
-                  { img: "F8oWFrg", num: "8331983435" }, // Spandana
-            ];
+
+            const data = [
+                  { n: "Himanshu Chowdhry", nu: "+91 83909 03109", r: "Founder Partner" },
+                  { n: "Jatin Sharma", nu: "+91 82786 37830", r: "Associate - Brand Solutions" },
+                  { n: "Luvya Kario", nu: "+91 93198 55019", r: "Senior Associate - Brand Solutions" },
+                  { n: "Raveen Bishnoi", nu: "+91 99586 94329", r: "Head - Live Business Development & Ops" },
+                  { n: "Spandana Banothu", nu: "+91 83319 83435", r: "Senior Associate - Brand Solutions" },
+                  { n: "Aakash Bansal", nu: "+91 95488 24428", r: "Associate - Artist Operations" },
+                  { n: "Eshaa Wahie", nu: "+91 99107 58920", r: "Creative Strategist- Brand Solutions" },
+                  { n: "Pawan Jethwa", nu: "+91 97112 17727", r: "Associate-Production & Operations" },
+                  { n: "Revti Sain", nu: "+91 95828 61962", r: "Associate - Brand Solutions" },
+                  { n: "Sourav Yadav", nu: "+91 74989 60309", r: "Lead - Artist Operations" },
+                  { n: "Pankaj Atal", nu: "+91 95824 37607", r: "Associate - Artist Operations" },
+                  { n: "Prisha Kothari", nu: "+91 94795 00854", r: "Associate - Brand Solutions" },
+            ]
       </script>
 
       <div id="cordis"></div>
 
       <script defer>
-            const image = ( id, w = '22px', h = '22px' ) =>
-            /*html*/`<img
-                  height="${ h }" width="${ w }"
-                  src="https://i.imgur.com/${ id }.png"
+            const image = ( id, w = '22px', h = '22px' ) => /*html*/`<img
+                  height="${ h }" width="${ w }" src="https://i.imgur.com/${ id }.png"
             >`;
 
-            const Obs = ( signs ) =>/*html*/`
+            const Obs = ( person ) =>/*html*/`
   <div class="article">
-    <table CELLSPACING=0 id="${ signs.img }" style="border-collapse:separate;">
+    <table CELLSPACING=0 id="${ person.n }" style="border-collapse:separate;font-family:sans-serif;text-transform:uppercase;font-size:16px;">
       <tr>
-        <td id="spectalLogo" rowspan="2" style="padding-top:0.5em;padding-bottom:0.2em">
+        <td id="spectalLogo" rowspan="6" style="padding-right:1.5em;">
           <a href="https://www.spectalmanagement.com">
-            ${ image( 'MSQnhki', '100px', 'auto' ) }
+            ${ image( 'reiboGk', '150px', 'auto' ) }
           </a>
         </td>
       </tr>
-      <tr style="border-spacing: 1em 0;">
-        <td id="person" style="border-left:1px solid #000;" rowspan="3">
-          <a href="https://wa.me/91${ signs.num }">
-            ${ image( signs.img, '200px', 'auto' ) }
-          </a>
+
+      <tr>
+        <td id="person" style="color:rgb(201,70,60);font-weight:500;font-size:1.25em;min-width: 300px;padding-top:0.5em;line-height:0.8em;">${ person.n }</td>
+      </tr>
+      <tr style="font-size: 1em;line-height:0.8em;">
+        <td id="number">${ person.r }</td>
+      </tr>
+      <tr style="font-size: 0.9em;">
+        <td id="number" style="padding-top: 0.5em;padding-bottom: 0.5em;">
+              <a style="text-decoration:none;color: #888;" href="tel:${ person.nu }">${ person.nu }</a>
         </td>
       </tr>
       <tr>
-        <td style="padding-bottom:0.25em;text-align:center;">
-          <a href="https://instagr.am/spectal.management/">${ image( 'Iv2FKDR' ) }</a>
-          <a href="https://linkedin.com/company/spectal-talent-management">${ image( 'KBAwhQU' ) }</a>
+        <td style="padding-bottom:0.5em;">
+          <a href="https://instagr.am/spectal.management/">${ image( '8G8uVuC' ) }</a>
+          <a href="https://linkedin.com/company/spectal-talent-management">${ image( 'cJuTJAf' ) }</a>
         </td>
       </tr>
       </table>
-    <button onclick="SelectText('${ signs.img }')">Select</button>
+    <button onclick="SelectText('${ person.n }')">Select</button>
   </div>`;
-            document.getElementById( "cordis" ).innerHTML = `${ signs.map( Obs ).join( '' ) }`
+            document.getElementById( "cordis" ).innerHTML = `${ data.map( Obs ).join( '' ) }`
       </script>
 </body>

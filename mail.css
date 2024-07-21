@@ -9,13 +9,14 @@ button {
     cursor: pointer;
     transition: background 0.1s ease;
 }
-button:hover{
+
+button:hover {
     background: #55E;
 }
 
-.article{
+.article {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border-radius:5px;
+    border-radius: 5px;
     text-align: center;
     padding: 5px;
     margin: 10px;
@@ -30,4 +31,20 @@ body {
     margin: 5px auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+tr {
+    background-color: white
+}
+
+td {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+table {
+    background-image: url(https://i.imgur.com/HbAPhl6.png);
+    background-size: cover;
+    color: black;
 }
