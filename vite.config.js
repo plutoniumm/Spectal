@@ -4,9 +4,10 @@ import { defineConfig } from 'vite';
 export default defineConfig( {
   plugins: [ svelte() ],
   server: {
+    origin: "./Spectal",
     port: 3000,
     fs: {
       allow: [ '.' ],
     }
-  }
+  },
 } );

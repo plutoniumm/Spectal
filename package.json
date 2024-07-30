@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && sh replace.sh",
     "deploy": "gh-pages -d dist -t true"
   },
   "devDependencies": {
